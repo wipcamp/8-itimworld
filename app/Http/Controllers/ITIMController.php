@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use Theme;
 
-class WIPPERController extends Controller
+class ITIMController extends Controller
 {
     protected $theme;
 
