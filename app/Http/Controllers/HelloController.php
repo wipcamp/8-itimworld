@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\AccountRepositoryInterface;
 
-class HelloController extends WIPPERController
+class HelloController extends ITIMController
 {
     protected $account;
     public function __construct(AccountRepositoryInterface $AccountRepository)

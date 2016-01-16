@@ -1,8 +1,6 @@
 <?php
 
-// Route::group(['middleware' => ['web']], function () {
-//     //
-// });
+//Route::get('/upload', 'AdminDocumentController@index');
+//Route::get('/upload/show', 'AdminDocumentController@show');
 
-
-Route::controller('/', 'HelloController');
+Route::controller('document', 'AdminDocumentController');
