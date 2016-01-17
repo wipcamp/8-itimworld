@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'wipcamp_db',
-            'username'  => 'root',
-            'password'  => 'nathawat@1',
+            'host'      => 'db.chakree.me',
+            'database'  => 'wipcamp_dev',
+            'username'  => 'wipcamp_dev',
+            'password'  => 'Gmb2d2UXA68Enevb',
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => '',
