@@ -13,7 +13,8 @@ class AdminDocumentController extends ITIMController
     }
 
     public function getShow(){
-        echo "hello from get show action";
+        $this->theme->setTitle("WIPCAMP #8");
+        return $this->theme->scope('document.index')->render();
     }
 
     public function getABC(){

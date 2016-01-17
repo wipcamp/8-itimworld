@@ -10,6 +10,6 @@ class ITIMController extends Controller
     public function __construct()
     {
         //this->middleware('auth');
-        $this->theme = Theme::uses('wipper_world')->layout('index');
+        $this->theme = Theme::uses('itim_world')->layout('default');
     }
 }
