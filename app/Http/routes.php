@@ -5,11 +5,8 @@
 
 Route::controller('itim', 'RegisterController');
 
-Route::get('hash',function(){
+Route::get('/',function(){
   $password = Hash::make(123);
   $pass = bcrypt(123);
-  if (Hash::check('secret', $hashedPassword))
-  {
-      return "correct";
-  }
+  return $pass;
 });
