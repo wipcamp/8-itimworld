@@ -8,5 +8,5 @@ Route::controller('itim', 'RegisterController');
 Route::get('/',function(){
   $password = Hash::make(123);
   $pass = bcrypt(123);
-  return $pass;
+  return "Taro request";
 });
