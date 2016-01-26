@@ -54,7 +54,7 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'http://vanilla.wip.camp/',
+            'host'      => 'vanilla.wip.camp',
             'database'  => 'wipcamp',
             'username'  => 'wipcamp',
             'password'  => 'teamdev',
