@@ -3,11 +3,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/**
- *
- */
-class Profile extends Model
-{
-
+class Wip8_account extends Model{
   public $timestamps = false;
 }

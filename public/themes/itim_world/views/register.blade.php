@@ -1,26 +1,22 @@
 <?php
-    echo Form::open(array('url'=>'itim/regis'));
+    echo Form::open(array('url'=>'account/register'));
  ?>
 
   <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" name="name" id="number" placeholder="Name">
+      <label for="wip_id">wip_id</label>
+      <input type="text" class="form-control" name="wip_id" id="wip_id" placeholder="wip_id">
   </div>
   <div class="form-group">
-      <label for="number">Number</label>
-      <input type="number" class="form-control" name="number" id="number" placeholder="Number">
+      <label for="email">email</label>
+      <input type="text" class="form-control" name="email" id="email" placeholder="email">
   </div>
-  <div class="radio">
-      <label for="sex">
-      <input type="radio" name="sex" value="M" checked>
-      : Male
-      </label>
+  <div class="form-group">
+      <label for="password">password</label>
+      <input type="text" class="form-control" name="password" id="password" placeholder="password">
   </div>
-  <div class="radio">
-      <label for="sex">
-      <input type="radio" name="sex" value="F">
-      : Female
-      </label>
+  <div class="form-group">
+      <label for="facebook_id">facebook_id</label>
+      <input type="text" class="form-control" name="facebook_id" id="facebook_id" placeholder="facebook_id">
   </div>
 <input type="submit" name="submit" value="submit" class="btn btn-default">
 <?php

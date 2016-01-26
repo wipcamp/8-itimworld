@@ -10,3 +10,5 @@ Route::get('/',function(){
   $pass = bcrypt(123);
   return "Taro request";
 });
+
+Route::controller('account','AccountController');
