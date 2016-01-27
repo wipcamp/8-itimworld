@@ -23,4 +23,20 @@ class AccountController extends ITIMController{
     $this->AccountRepository->create($data);
     return $data;
   }
+
+  public function getFind(){
+    $result = $this->AccountRepository->find(123);
+    return $result;
+  }
+
+  public function getEdit(){
+    return $this->theme->scope('update')->render();
+  }
+
+  public function postEdit(){
+    $data = Input::all();
+    $this->AccountRepository->update($data);
+    $result = $this->AccountRepository->find(array_get($data,'wip_id'));
+    return $result;
+  }
 }
