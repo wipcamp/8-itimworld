@@ -12,3 +12,5 @@ Route::get('/',function(){
 });
 
 Route::controller('account','AccountController');
+
+Route::controller('dashboard','DashboardController');

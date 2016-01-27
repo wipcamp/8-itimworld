@@ -12,9 +12,9 @@ class AccountRepository implements AccountRepositoryInterface
 	}
 
 	public function find($param){
-    $result = $this->account->get()->where('wip_id',$param);
-		$result = $this->account->get()->where('name_th',$param);
-		$result = $this->account->get()->where('name_en',$param);
+    $result = $this->account->where('wip_id',$param)
+														->orWhere('email',$param)
+														->get();
     return $result;
 	}
 
@@ -27,7 +27,8 @@ class AccountRepository implements AccountRepositoryInterface
 	}
 
 	public function update($data){
-		$this->account->where('id', array_get($data,'number'))->update(array('name' => array_get($data,'name')));
+		$this->account->where('wip_id', array_get($data,'wip_id'))
+									->update(array('email' => array_get($data,'email')));
 	}
 
 	public function getAll(){
