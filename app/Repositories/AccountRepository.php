@@ -28,7 +28,8 @@ class AccountRepository implements AccountRepositoryInterface
 
 	public function update($data){
 		$this->account->where('wip_id', array_get($data,'wip_id'))
-									->update(array('email' => array_get($data,'email')));
+									->update(array('email' => array_get($data,'email'),
+																 'facebook_id' => array_get($data,'facebook_id')));
 	}
 
 	public function getAll(){

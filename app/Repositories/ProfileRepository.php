@@ -40,4 +40,44 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $this->test->gpax = array_get($data,'gpax');
 		$this->$test->save();
   }
+
+  public function edit($data){
+    $this->profile->where('wip_id',array_get($data,'wip_id'))
+                  ->update(array('citizen_id' => array_get($data,'citizen_id'),
+                          'name_th' => array_get($data,'name_th'),
+                          'surname_th' => array_get($data,'surname_th'),
+                          'name_en' => array_get($data,'name_en'),
+                          'surname_en' => array_get($data,'surname_en'),
+                          'nickname' => array_get($data,'nickname'),
+                          'dob' => array_get($data,'dob'),
+                          'address' => array_get($data,'address'),
+                          'tel' => array_get($data,'tel'),
+                          'sex' => array_get($data,'sex'),
+                          'religion' => array_get($data,'religion'),
+                          'allergy' => array_get($data,'allergy'),
+                          'disease' => array_get($data,'disease'),
+                          'email' => array_get($data,'email'),
+                          'computer_skill' => array_get($data,'computer_skill'),
+                          'activitys' => array_get($data,'activitys'),
+                          'facebook' => array_get($data,'facebook'),
+                          'twitter' => array_get($data,'twitter'),
+                          'referal' => array_get($data,'referal'),
+                          'parent_relation' => array_get($data,'parent_relation'),
+                          'parent_name' => array_get($data,'parent_name'),
+                          'parent_tel' => array_get($data,'parent_tel'),
+                          'school_id' => array_get($data,'school_id'),
+                          'level' => array_get($data,'level'),
+                          'program' => array_get($data,'program'),
+                          'gpax' => array_get($data,'gpax')));
+    $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
+    return $result;
+  }
+
+  public function find($param){
+    $result = $this->account->where('wip_id',$param)
+                            ->orWhere('name_th',$param)
+                            ->orWhere('name_en',$param)
+                            ->get();
+    return $result;
+  }
 }
