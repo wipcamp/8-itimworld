@@ -14,3 +14,12 @@ Route::get('/',function(){
 Route::controller('account','AccountController');
 
 Route::controller('dashboard','DashboardController');
+
+Route::controller('taro/login','taro\LoginController');
+ 
+// Start Online Page
+Route::group(['prefix'=>'taro','middleware'=>'auth','namespace'=>'taro'],function(){
+ Route::get('index',function(){
+ return 'Login Success!!';
+ });
+});
