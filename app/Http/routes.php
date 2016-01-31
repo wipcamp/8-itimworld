@@ -15,7 +15,6 @@ Route::controller('account','AccountController');
 
 Route::controller('dashboard','DashboardController');
 
-Route::controller('taro/login','taro\LoginController');
  
 // Start Online Page
 
