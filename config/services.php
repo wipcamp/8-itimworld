@@ -34,5 +34,11 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    
+    'facebook' => [
+        'client_id' => '1496263460682357',
+        'client_secret' => '74414e7fd7d9924f0a974f388862edeb',
+        'redirect' => 'http://itim.wip.loc/account/login/facebook',
+    ],
 
 ];

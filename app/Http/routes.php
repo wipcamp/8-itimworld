@@ -7,7 +7,12 @@ Route::get('/',function(){
   $pass = bcrypt(123);
   return "Taro request";
 });
-Route::controller('account','AccountController');
 Route::controller('dashboard','DashboardController');
 Route::controller('document','DocumentController');
+
+
+Route::group(['middleware' => ['web']], function () {
+    Route::controller('auth','Auth\AuthController');
+    Route::any('account/login/{provider?}','Auth\AuthController@handle_login');
+});
 

@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -69,4 +70,15 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    
+    public function getLogin(){
+        $theme = \Theme::uses('itim_world')->layout('default');
+        return $theme->scope("account.login")->render();
+        
+    }
+    
+    public function handle_login(AuthenticateUser $authenticateUser, Request $request, $provider = null){
+        return $authenticateUser->execute($request->all(), $this, $provider);
+    }
+
 }
