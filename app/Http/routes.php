@@ -9,7 +9,7 @@ Route::get('/',function(){
   }
 });
 Route::get('hash',function(){
-    return ;
+    return ; 
 });
 Route::controller('dashboard','DashboardController');
 Route::controller('document','DocumentController');
