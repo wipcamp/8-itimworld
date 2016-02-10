@@ -42,6 +42,10 @@
                     <span style="color:#ff0000;"> * </span><label for="">นามสกุล (ภาษาไทย)</label>
                     <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="surname_th">
                   </div>
+                  <div class="form-group">
+                    <span style="color:#ff0000;"> * </span><label for="">เลขบัตรประจำตัวประชาชน</label>
+                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="cid">
+                  </div>
                   <input type="submit" value="send">
                 <?php echo Form::close(); ?>
 
