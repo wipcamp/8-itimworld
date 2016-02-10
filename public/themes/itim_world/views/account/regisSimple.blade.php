@@ -50,7 +50,7 @@
                 <?php echo Form::close(); ?>
 
 
-   <!-- ถ้า Login ผ่าน Facebook จะเป็นฟอร์มข้างล่างนี้ -->
+                <!-- ถ้า Login ผ่าน Facebook จะเป็นฟอร์มข้างล่างนี้ -->
 
                 <!-- <form action="" method="post">
                   <center>
