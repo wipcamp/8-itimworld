@@ -92,7 +92,7 @@ class AccountRepository implements AccountRepositoryInterface
 			'wip_id' => $wip_id_gen
 	  ];
 		return $dataMail;
-	}
+	} 
 
 	public function checkVerify($wip_id,$verify){
 		$data = $this->account->where('wip_id',$wip_id)->get();
