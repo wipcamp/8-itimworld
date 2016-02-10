@@ -1,21 +1,4 @@
-<html>
-
-<head>
-  <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
-  <link rel="icon" type="image/png" href="http://itim.wip.loc/themes/itim_world/assets/img/favicon.ico">
-  {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
-  {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
-  {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
-  <!-- Latest compiled and minified JavaScript -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <style>
-
-  </style>
-
-  <body>
-    <div class="container-fluid">
+<div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
         <div class="layer layout">
@@ -272,38 +255,35 @@
     <script src="assets/js/js.js"></script>
     <script src="assets/js/jquery.bootstrap.wizard.js"></script>
     <script>
-	$(document).ready(function() {
-	  	$('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-			var $total = navigation.find('li').length;
-			var $current = index+1;
-			var $percent = ($current/$total) * 100;
-			$('#rootwizard').find('.bar').css({width:$percent+'%'});
-		}});
-	});
-	</script>
+  $(document).ready(function() {
+      $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+      var $total = navigation.find('li').length;
+      var $current = index+1;
+      var $percent = ($current/$total) * 100;
+      $('#rootwizard').find('.bar').css({width:$percent+'%'});
+    }});
+  });
+  </script>
   <script>
     $(document).ready(function() {
-      	var $validator = $("#regisForm").validate({
-    		  rules: {
-    		    namefield: {
-    		      required: true,
-    		      minlength: 3
-    		    }
-    		  }
-    		});
+        var $validator = $("#regisForm").validate({
+          rules: {
+            namefield: {
+              required: true,
+              minlength: 3
+            }
+          }
+        });
 
-    	  	$('#rootwizard').bootstrapWizard({
-    	  		'tabClass': 'nav nav-pills',
-    	  		'onNext': function(tab, navigation, index) {
-    	  			var $valid = $("#regisForm").valid();
-    	  			if(!$valid) {
-    	  				$validator.focusInvalid();
-    	  				return false;
-    	  			}
-    	  		}
-    	  	});
+          $('#rootwizard').bootstrapWizard({
+            'tabClass': 'nav nav-pills',
+            'onNext': function(tab, navigation, index) {
+              var $valid = $("#regisForm").valid();
+              if(!$valid) {
+                $validator.focusInvalid();
+                return false;
+              }
+            }
+          });
     });
     </script>
-  </body>
-
-</html>

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Itim</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
+        <link rel="icon" type="image/png" href="http://itim.wip.loc/themes/itim_world/assets/img/favicon.ico">
+        {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
+        {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
+        {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
         <meta charset="utf-8">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-        <?php echo HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css');?>
-        <?php echo HTML::style('themes/itim_world/assets/css/style.css');?>        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </head>
     <body>
         <div class="container">
