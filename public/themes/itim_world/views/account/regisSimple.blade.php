@@ -1,14 +1,4 @@
-<html>
-<head>
-    <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
-    <link rel="icon" type="image/png" href="http://itim.wip.loc/themes/itim_world/assets/img/favicon.ico">
-    {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
-    {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
-    {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-</head>
-<body>
+
   <div class="container-fluid">
         <div id="scene">
           <div class="layer layout">
@@ -33,8 +23,8 @@
               <div class="row center" id="form-signup">
                 <center>
                   <h1>สมัครเข้าค่าย</h1></center>
-                <form action="" method="post">
-                  <center><img src="http://itim.wip.loc/themes/itim_world/assets/img/facebook.png" alt="" width="200"></center>
+                <?php echo Form::open(array('url' => 'account/register')); ?>
+                  <center><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="200"></center>
                   <hr>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">อีเมลล์</label>
@@ -53,7 +43,7 @@
                     <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="surname_th">
                   </div>
                   <input type="submit" value="send">
-                </form>
+                <?php echo Form::close(); ?>
 
 
    <!-- ถ้า Login ผ่าน Facebook จะเป็นฟอร์มข้างล่างนี้ -->
@@ -84,10 +74,3 @@
           Chat
         </div>
       </div>
-
-        <!-- Javascript -->
-        {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    </body>
-
-</html>
