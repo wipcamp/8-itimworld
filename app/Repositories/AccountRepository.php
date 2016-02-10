@@ -76,7 +76,7 @@ class AccountRepository implements AccountRepositoryInterface
 		$account->verify = $verify_code;
     $account->password = bcrypt(array_get($data,'password'));
 		$profile->wip_id = $wip_id_gen;
-		$profile->citizen_id = 111156319443;
+		$profile->citizen_id = 1565319441;
 		$profile->name_th = array_get($data,'name_th');
 		$profile->surname_th = array_get($data,'surname_th');
 		$profile->nickname = array_get($data,'nickname');
@@ -91,8 +91,12 @@ class AccountRepository implements AccountRepositoryInterface
 			'verify' => $verify_code,
 			'wip_id' => $wip_id_gen
 	  ];
+		Mail::send('emails.welcome',$dataMail,function($message) use ($data){
+	    $message->to(array_get($data,'email'),array_get($data,'nickname'))
+							->subject('Test Laravel');
+	  });
 		return $dataMail;
-	} 
+	}
 
 	public function checkVerify($wip_id,$verify){
 		$data = $this->account->where('wip_id',$wip_id)->get();

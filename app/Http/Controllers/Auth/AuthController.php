@@ -70,13 +70,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    
+
     public function getLogin(){
         $theme = \Theme::uses('itim_world')->layout('default');
         return $theme->scope("account.login")->render();
-        
+
     }
-    
+
     public function handle_login(AuthenticateUser $authenticateUser, Request $request, $provider = null){
         return $authenticateUser->execute($request->all(), $this, $provider);
     }

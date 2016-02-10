@@ -21,11 +21,6 @@ class AccountController extends ITIMController{
   public function postRegister(){
     $data = Input::all();
     $dataMail = $this->AccountRepository->createSimpleRegister($data);
-    $content_mail = $this->theme->scope('email.welcome')->content();
-		Mail::send($content_mail,$dataMail,function($message) use ($data){
-	    $message->to(array_get($data,'email'),array_get($data,'nickname'))
-							->subject('Test Laravel');
-	  });
     return $dataMail;
   }
 
