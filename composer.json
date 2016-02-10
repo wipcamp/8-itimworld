@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "teepluss/theme": "dev-master",
         "laravelcollective/html": "5.2.*",
-        "laravel/socialite": "^2.0"
+        "laravel/socialite": "^2.0",
+        "bogardo/mailgun": "4.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

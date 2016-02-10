@@ -20,8 +20,12 @@ class ProfileController extends ITIMController{
         echo "show";
     }
 
+    public function getIndex(){
+        return $this->theme->scope('profile.profile')->layout('blank')->render();
+    }
+
     public function getRegister(){
-        return $this->theme->scope('regist')->render();
+        return $this->theme->scope('profile.register')->layout('blank')->render();
     }
 
     public function postRegister(){

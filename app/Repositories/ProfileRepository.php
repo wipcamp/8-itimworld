@@ -11,34 +11,79 @@ class ProfileRepository implements ProfileRepositoryInterface{
   }
 
   public function create($data){
-    $this->test->wip_id = array_get($data,'wip_id');
-    $this->test->citizen_id = array_get($data,'citizen_id');
-    $this->test->name_th = array_get($data,'name_th');
-    $this->test->surname_th = array_get($data,'surname_th');
-    $this->test->name_en = array_get($data,'name_en');
-    $this->test->surname_en = array_get($data,'surname_en');
-    $this->test->nickname = array_get($data,'nickname');
-    $this->test->dob = array_get($data,'dob');
-    $this->test->address = array_get($data,'address');
-    $this->test->tel = array_get($data,'tel');
-    $this->test->sex = array_get($data,'sex');
-    $this->test->religion = array_get($data,'religion');
-    $this->test->allergy = array_get($data,'allergy');
-    $this->test->disease = array_get($data,'disease');
-    $this->test->email = array_get($data,'email');
-    $this->test->computer_skill = array_get($data,'computer_skill');
-    $this->test->activitys = array_get($data,'activitys');
-    $this->test->facebook = array_get($data,'facebook');
-    $this->test->twitter = array_get($data,'twitter');
-    $this->test->referal = array_get($data,'referal');
-    $this->test->parent_relation = array_get($data,'parent_relation');
-    $this->test->parent_name = array_get($data,'parent_name');
-    $this->test->parent_tel = array_get($data,'parent_tel');
-    $this->test->school_id = array_get($data,'school_id');
-    $this->test->level = array_get($data,'level');
-    $this->test->program = array_get($data,'program');
-    $this->test->gpax = array_get($data,'gpax');
-		$this->$test->save();
+    $this->profile->wip_id = array_get($data,'wip_id');
+    $this->profile->citizen_id = array_get($data,'citizen_id');
+    $this->profile->name_th = array_get($data,'name_th');
+    $this->profile->surname_th = array_get($data,'surname_th');
+    $this->profile->name_en = array_get($data,'name_en');
+    $this->profile->surname_en = array_get($data,'surname_en');
+    $this->profile->nickname = array_get($data,'nickname');
+    $this->profile->dob = array_get($data,'dob');
+    $this->profile->address = array_get($data,'address');
+    $this->profile->tel = array_get($data,'tel');
+    $this->profile->sex = array_get($data,'sex');
+    $this->profile->religion = array_get($data,'religion');
+    $this->profile->allergy = array_get($data,'allergy');
+    $this->profile->disease = array_get($data,'disease');
+    $this->profile->email = array_get($data,'email');
+    $this->profile->computer_skill = array_get($data,'computer_skill');
+    $this->profile->activitys = array_get($data,'activitys');
+    $this->profile->facebook = array_get($data,'facebook');
+    $this->profile->twitter = array_get($data,'twitter');
+    $this->profile->referal = array_get($data,'referal');
+    $this->profile->parent_relation = array_get($data,'parent_relation');
+    $this->profile->parent_name = array_get($data,'parent_name');
+    $this->profile->parent_tel = array_get($data,'parent_tel');
+    $this->profile->school_id = array_get($data,'school_id');
+    $this->profile->level = array_get($data,'level');
+    $this->profile->program = array_get($data,'program');
+    $this->profile->gpax = array_get($data,'gpax');
+		$this->profile->save();
+  }
+
+  public function firstDivRegis($data){
+    $this->profile->name_th = array_get($data,'name_th');
+    $this->profile->surname_th = array_get($data,'surname_th');
+    $this->profile->name_en = array_get($data,'name_en');
+    $this->profile->surname_en = array_get($data,'surname_en');
+    $this->profile->nickname = array_get($data,'nickname');
+    $this->profile->religion = array_get($data,'religion');
+    $this->profile->dob = array_get($data,'dob');
+    $this->profile->sex = array_get($data,'sex');
+    $this->profile->email = array_get($data,'email');
+    $this->profile->tel = array_get($data,'tel');
+    $this->profile->allergy = array_get($data,'allergy');
+    $this->profile->disease = array_get($data,'disease');
+    $this->profile->save();
+  }
+
+  public function secondDivRegis($data){
+    $this->profile->address = array_get($data,'address');
+    $this->profile->facebook = array_get($data,'facebook');
+    $this->profile->twitter = array_get($data,'twitter');
+    $this->profile->save();
+  }
+
+  public function thirdDivRegis($data){
+    $this->profile->school_id = array_get($data,'school_id');
+    $this->profile->level = array_get($data,'level');
+    $this->profile->program = array_get($data,'program');
+    $this->profile->gpax = array_get($data,'gpax');
+    $this->profile->save();
+  }
+
+  public function fourthDivRegis($data){
+    $this->profile->parent_name = array_get($data,'parent_name');
+    $this->profile->parent_relation = array_get($data,'parent_relation');
+    $this->profile->parent_tel = array_get($data,'parent_tel');
+    $this->profile->save();
+  }
+
+  public function lastDivRegis($data){
+    $this->profile->computer_skill = array_get($data,'computer_skill');
+    $this->profile->referal = array_get($data,'referal');
+    $this->profile->activitys = array_get($data,'activitys');
+    $this->profile->save();
   }
 
   public function edit($data){

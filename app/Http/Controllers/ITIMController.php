@@ -11,5 +11,6 @@ class ITIMController extends Controller
     {
         //this->middleware('auth');
         $this->theme = Theme::uses('itim_world')->layout('default');
+      
     }
 }

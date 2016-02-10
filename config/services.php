@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'wipcamp.com',
+        'secret' => 'key-f5e816772361d2a1f569a2b07b0e72d0',
     ],
 
     'mandrill' => [
@@ -34,7 +34,7 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-    
+
     'facebook' => [
         'client_id' => '1496263460682357',
         'client_secret' => '74414e7fd7d9924f0a974f388862edeb',

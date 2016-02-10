@@ -158,11 +158,11 @@ return [
 
         App\Providers\RepositoryServiceProvider::class,
 
-
+        Bogardo\Mailgun\MailgunServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
         'Teepluss\Theme\ThemeServiceProvider',
-        Laravel\Socialite\SocialiteServiceProvider::class,
+      //  Laravel\Socialite\SocialiteServiceProvider::class,
 
 
     ],
@@ -211,12 +211,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Input'      => Illuminate\Support\Facades\Input::class,
-        
+
         'Theme' => 'Teepluss\Theme\Facades\Theme',
 
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+      //  'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
 
     ],
