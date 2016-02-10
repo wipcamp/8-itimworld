@@ -72,15 +72,12 @@ class AccountRepository implements AccountRepositoryInterface
 		$verify_code = md5(Hash::make('wipcamp'));
 		$account->wip_id = $wip_id_gen;
     $account->email = array_get($data,'email');
-		$account->avatar = array_get($data,'avatar');
 		$account->verify = $verify_code;
     $account->password = bcrypt(array_get($data,'password'));
 		$profile->wip_id = $wip_id_gen;
-		$profile->citizen_id = 1565319441;
+		$profile->citizen_id = 156531441;
 		$profile->name_th = array_get($data,'name_th');
 		$profile->surname_th = array_get($data,'surname_th');
-		$profile->nickname = array_get($data,'nickname');
-		$profile->dob = array_get($data,'dob');
 		$profile->email = array_get($data,'email');
 		$profile->save();
     $account->save();
@@ -92,7 +89,7 @@ class AccountRepository implements AccountRepositoryInterface
 			'wip_id' => $wip_id_gen
 	  ];
 		Mail::send('emails.welcome',$dataMail,function($message) use ($data){
-	    $message->to(array_get($data,'email'),array_get($data,'nickname'))
+	    $message->to(array_get($data,'email'),array_get($data,'name_th'))
 							->subject('Test Laravel');
 	  });
 		return $dataMail;
