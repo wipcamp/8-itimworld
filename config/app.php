@@ -162,7 +162,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
         'Teepluss\Theme\ThemeServiceProvider',
-      //  Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
 
     ],
@@ -216,7 +216,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
-      //  'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
 
     ],
