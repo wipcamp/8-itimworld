@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
     <meta name="viewport" content="width=device-width" />
     <title> </title>
     <style type="text/css">
@@ -270,7 +271,9 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
 
             <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
       <div class="btn btn--flat" style="text-align:center;">
-        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" data-width="89">&#3618;&#3639;&#3609;&#3618;&#3633;&#3609;&#3585;&#3634;&#3619;&#3626;&#3617;&#3633;&#3588;&#3619;</a><![endif]>
+        <![if !mso]>
+        <a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" data-width="89">&#3618;&#3639;&#3609;&#3618;&#3633;&#3609;&#3585;&#3634;&#3619;&#3626;&#3617;&#3633;&#3588;&#3619;</a>
+        <![endif]>
       <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" style="width:159px" arcsize="9%" fillcolor="#80BFC4" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#171E24;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">&#3618;&#3639;&#3609;&#3618;&#3633;&#3609;&#3585;&#3634;&#3619;&#3626;&#3617;&#3633;&#3588;&#3619;</center></v:textbox></v:roundrect><![endif]--></div>
     </div>
 
@@ -286,10 +289,6 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
             <table class="footer__right" style="border-collapse: collapse;table-layout: auto;border-spacing: 0;" align="right">
               <tbody><tr>
                 <td class="footer__inner" style="padding: 0;">
-
-
-
-
                 </td>
               </tr>
             </tbody></table>
@@ -299,7 +298,6 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
                   <table class="footer__links emb-web-links" style="border-collapse: collapse;table-layout: fixed;"><tbody><tr>
                     </tr></tbody></table>
                   <div style="Margin-top: 26px;">
-
                   </div>
                   <div class="footer__permission" style="Margin-top: 18px;">
 
