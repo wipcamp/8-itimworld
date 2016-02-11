@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -79,6 +80,10 @@ class AuthController extends Controller
 
     public function handle_login(AuthenticateUser $authenticateUser, Request $request, $provider = null){
         return $authenticateUser->execute($request->all(), $this, $provider);
+    }
+    
+    public function getLogout(){
+        Auth::logout();
     }
 
 }
