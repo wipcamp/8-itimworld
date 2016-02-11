@@ -24,9 +24,10 @@ Route::group(['middleware' => ['web']], function () {
         Route::controller('dashboard','DashboardController');
         Route::controller('profile','ProfileController');
         Route::controller('question','QuestionController');
-        Route::controller('document','DocumentController');
+        
         
     });
     
     
 });
+Route::controller('document','DocumentController');

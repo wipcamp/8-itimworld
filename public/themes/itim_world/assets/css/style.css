@@ -1787,3 +1787,28 @@ input[type=submit]:active, input[type=submit]:focus {
 }
 
 /*mask password*/
+.buttonupload{
+ background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+        opacity: 0;
+    filter: alpha(opacity=0);
+}
+.buttonupload:hover{
+   background-color: #000;
+   opacity: 0.3;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.img:hover{
+  width: 120%;
+  height: 120%;
+}

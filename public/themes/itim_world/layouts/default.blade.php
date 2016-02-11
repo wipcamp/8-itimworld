@@ -21,5 +21,6 @@
         {!!HTML::script('themes/itim_world/assets/js/jquery-1.12.0.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery.bootstrap.wizard.js')!!}
         {!! Theme::asset()->container('footer')->scripts() !!}
+        
     </body>
 </html>
