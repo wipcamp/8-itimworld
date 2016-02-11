@@ -21,7 +21,7 @@
       <div class="header">
         <div class="container">
           <div class="col-xs-2 avatar">
-            <img class="img-circle img-responsive" src="http://itim.wip.loc/themes/itim_world/assets/img/pro3.png">
+            <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/img/pro3.png">
           </div>
           <div class="col-xs-6">
             <h1>สวัสดีครับ น้องออฟ</h1>
@@ -251,9 +251,8 @@
     </div>
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="assets/js/js.js"></script>
-    <script src="assets/js/jquery.bootstrap.wizard.js"></script>
+    <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/js.js"></script>
+    <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/jquery.bootstrap.wizard.js"></script>
     <script>
   $(document).ready(function() {
       $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {

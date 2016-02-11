@@ -21,7 +21,7 @@
          <div class="header">
             <div class="container">
                <div class="col-xs-2 avatar">
-                  <img class="img-circle img-responsive" src="assets/img/pro3.png">
+                  <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/img/pro3.png">
                </div>
                <div class="col-xs-6">
                   <h1>สวัสดีครับ น้องออฟ</h1>
@@ -39,7 +39,7 @@
             <div class="container">
               <br>
               <br>
-              <a href="register.html" style="color:#fff;">
+              <a href="profile/register" style="color:#fff;">
                    <div class="col-xs-12 row main-button">
                       <div class="overlay"></div>
                       <div class="text row">
@@ -51,7 +51,7 @@
                          </div>
                       </div>
                       <div class="bg-btn">
-                         <img src="assets/bar/Bar-Cap.png" class="img-responsive" alt="">
+                         <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Cap.png" class="img-responsive" alt="">
                       </div>
                    </div>
                </a>
@@ -66,7 +66,7 @@
                      </div>
                   </div>
                   <div class="bg-btn">
-                     <img src="assets/bar/Bar-Scarlet.png" class="img-responsive" alt="">
+                     <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Scarlet.png" class="img-responsive" alt="">
                   </div>
                </div>
                <div class="col-xs-12 row main-button active">
@@ -80,7 +80,7 @@
                      </div>
                   </div>
                   <div class="bg-btn">
-                     <img src="assets/bar/Bar-Hulk.png" class="img-responsive" alt="">
+                     <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Hulk.png" class="img-responsive" alt="">
                   </div>
                </div>
             </div>
