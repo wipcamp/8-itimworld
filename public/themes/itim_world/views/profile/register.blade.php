@@ -250,39 +250,40 @@
       </div>
     </div>
     <!-- Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/js.js"></script>
     <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/jquery.bootstrap.wizard.js"></script>
     <script>
-  $(document).ready(function() {
-      $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-      var $total = navigation.find('li').length;
-      var $current = index+1;
-      var $percent = ($current/$total) * 100;
-      $('#rootwizard').find('.bar').css({width:$percent+'%'});
-    }});
-  });
-  </script>
+	$(document).ready(function() {
+	  	$('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+			var $total = navigation.find('li').length;
+			var $current = index+1;
+			var $percent = ($current/$total) * 100;
+			$('#rootwizard').find('.bar').css({width:$percent+'%'});
+		}});
+	});
+	</script>
   <script>
     $(document).ready(function() {
-        var $validator = $("#regisForm").validate({
-          rules: {
-            namefield: {
-              required: true,
-              minlength: 3
-            }
-          }
-        });
+      	var $validator = $("#regisForm").validate({
+    		  rules: {
+    		    namefield: {
+    		      required: true,
+    		      minlength: 3
+    		    }
+    		  }
+    		});
 
-          $('#rootwizard').bootstrapWizard({
-            'tabClass': 'nav nav-pills',
-            'onNext': function(tab, navigation, index) {
-              var $valid = $("#regisForm").valid();
-              if(!$valid) {
-                $validator.focusInvalid();
-                return false;
-              }
-            }
-          });
+    	  	$('#rootwizard').bootstrapWizard({
+    	  		'tabClass': 'nav nav-pills',
+    	  		'onNext': function(tab, navigation, index) {
+    	  			var $valid = $("#regisForm").valid();
+    	  			if(!$valid) {
+    	  				$validator.focusInvalid();
+    	  				return false;
+    	  			}
+    	  		}
+    	  	});
     });
     </script>
