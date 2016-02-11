@@ -100,8 +100,8 @@ class AccountRepository implements AccountRepositoryInterface
 		$result = json_decode($data , true);
 		if($verify === array_get($result, '0.verify')){
 			$this->account->where('wip_id',$wip_id)->update(['verify'=>1]);
-			return 'in';
 		}
+		return $data;
 	}
 
 	public function create($data){

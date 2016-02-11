@@ -73,7 +73,7 @@ class AuthController extends Controller
 
     public function getLogin(){
         $theme = \Theme::uses('itim_world')->layout('default');
-        return $theme->scope("account.login")->render();
+        return $theme->scope("account.login")->layout('blank')->render();
 
     }
 

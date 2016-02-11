@@ -130,12 +130,8 @@
         </div>
       </div>
       <!-- Javascript -->
-      <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-      <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/js.js"></script>
-      <script src="<?php echo url(""); ?>/themes/itim_world/assets/js/jquery.bootstrap.wizard.js"></script>
       <script>
-        $(document).ready(function() {
+        $( document ).ready(function() {
           $('#rootwizard').bootstrapWizard({
             onTabShow: function(tab, navigation, index) {
               var $total = navigation.find('li').length;
@@ -147,9 +143,8 @@
             }
           });
         });
-      </script>
-      <script>
-        $(document).ready(function() {
+
+        $( document ).ready(function() {
           var $validator = $("#").validate({
             rules: {
               namefield: {

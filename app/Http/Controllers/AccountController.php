@@ -21,7 +21,7 @@ class AccountController extends ITIMController{
   public function postRegister(){
     $data = Input::all();
     $dataMail = $this->AccountRepository->createSimpleRegister($data);
-    return $dataMail;
+    return $this->theme->scope('email.verify',$dataMail)->layout('blank')->render();
   }
 
   public function getForget(){
