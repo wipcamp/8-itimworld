@@ -254,7 +254,7 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
           <td class="column" style="font-size: 14px;line-height: 21px;padding: 0;text-align: left;vertical-align: top;color: #e0dce0;font-family: Ubuntu,sans-serif;" width="600">
 
         <div class="image" style="font-size: 12px;font-style: normal;font-weight: 400;" align="center">
-          <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="display: block;border: 0;max-width: 660px;" src="images/1473-banner.png" alt="" width="600" height="300" />
+          <img class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="display: block;border: 0;max-width: 660px;" src="http://www.camphub.in.th/wp-content/uploads/2016/02/1473-banner.png" alt="" width="600" height="300" />
         </div>
 
             <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 20px;">
