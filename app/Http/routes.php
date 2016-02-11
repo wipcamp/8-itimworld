@@ -12,6 +12,7 @@ Route::get('hash',function(){
     return ;
 });
 Route::controller('dashboard','DashboardController');
+Route::controller('question','QuestionController');
 Route::controller('document','DocumentController');
 Route::controller('account','AccountController');
 Route::controller('profile','ProfileController');

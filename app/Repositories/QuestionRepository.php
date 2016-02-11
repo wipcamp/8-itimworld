@@ -1,8 +1,13 @@
 <?php
-namespace App/Repositories;
+namespace App\Repositories;
+
 
 class QuestionRepository implements QuestionRepositoryInterface{
+
+
   public function __construct(){
-    
+
   }
+
+
 }
