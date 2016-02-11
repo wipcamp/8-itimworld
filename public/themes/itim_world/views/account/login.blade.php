@@ -50,7 +50,7 @@
               <div class="col-sm-6">
                 <div class="center">
                   <center>
-                    <a href="add-selfdata.html"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="400"></a>
+                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="400"></a>
                   </center>
                 </div>
               </div>

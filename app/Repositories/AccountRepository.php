@@ -75,7 +75,7 @@ class AccountRepository implements AccountRepositoryInterface
 		$account->verify = $verify_code;
     $account->password = bcrypt(array_get($data,'password'));
 		$profile->wip_id = $wip_id_gen;
-		$profile->citizen_id = 15653141;
+		$profile->citizen_id = array_get($data,'citizen_id');
 		$profile->name_th = array_get($data,'name_th');
 		$profile->surname_th = array_get($data,'surname_th');
 		$profile->email = array_get($data,'email');
