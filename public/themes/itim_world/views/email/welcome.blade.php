@@ -1,4 +1,4 @@
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
     <meta name="viewport" content="width=device-width" />
@@ -217,9 +217,14 @@ a[x-apple-data-detectors] {
 }
 </style>
 
-  <!--[if !mso]><!--><style type="text/css">
+  <!--[if !mso]><!-->
+<style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
-</style><link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css" /><!--<![endif]--><style type="text/css">
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+<!--<![endif]--><style type="text/css">
 body,.wrapper{background-color:#171e24}.wrapper h1{color:#80bfc4}.wrapper h2{color:#80bfc4}.wrapper h3{color:#80bfc4}.wrapper a{color:#c5dee0}.wrapper a:hover{color:#83b8bc !important}.column,.column__background td{color:#e0dce0}.column,.column__background td{font-family:Ubuntu,sans-serif}.mso .column,.mso .column__background td{font-family:sans-serif !important}.border{background-color:#000}.layout--no-gutter.layout--has-border:not(.layout--full-width),.layout--has-gutter.layout--has-border .column__background,.layout--full-width.layout--has-border{border-top:1px solid #000;border-bottom:1px solid #000}.wrapper blockquote{border-left:4px solid #000}.divider{background-color:#000}.wrapper .btn a{color:#171e24}.wrapper .btn a{font-family:Ubuntu,sans-serif}.mso .wrapper .btn a{font-family:sans-serif !important}.wrapper .btn a:hover{color:#171e24 !important}.btn--flat a,.btn--shadow
 a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}.preheader--inline,.footer__left{color:#fff}.preheader--inline,.footer__left{font-family:Ubuntu,sans-serif}.mso .preheader--inline,.mso .footer__left{font-family:sans-serif !important}.wrapper .preheader--inline a,.wrapper .footer__left a{color:#fff}.wrapper .preheader--inline a:hover,.wrapper .footer__left a:hover{color:#fff !important}.header__logo{color:#41637e}.header__logo{font-family:Avenir,sans-serif}.mso .header__logo{font-family:sans-serif !important}.wrapper .header__logo a{color:#41637e}.wrapper .header__logo a:hover{color:#7096b5 !important}.footer__share-button{background-color:#0c0f12}.footer__share-button{font-family:Ubuntu,sans-serif}.mso .footer__share-button{font-family:sans-serif !important}.layout__separator--inline{font-size:20px;line-height:20px;mso-line-height-rule:exactly}
 </style><meta name="robots" content="noindex,nofollow" />
@@ -305,9 +310,6 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
           </td>
         </tr>
       </tbody></table>
-      <badge>
-
-      </badge>
     </div>
   </body>
 </html>
