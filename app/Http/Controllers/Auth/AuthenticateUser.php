@@ -33,6 +33,7 @@ class AuthenticateUser {
                                'password' => array_get($request, 'password', ''));
 //            $user = $this->users->validateByEmail($user_data, $provider);
             $user = Auth::attempt($user_data);
+            $user = Auth::login($user_data);
             echo Hash::make(array_get($request, 'password', ''));
             dd($user);
         }else{
