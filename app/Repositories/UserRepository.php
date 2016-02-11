@@ -30,7 +30,7 @@ class UserRepository {
     }
     
     public function validateByEmail($user_data, $provider){
-        $hash_password = Hash::check(array_get('$user_data', 'password', ''),DB::table('wip8_account')->->where('email',array_get('$user_data', 'email', ''))->value('password');
+        $hash_password = Hash::check(array_get('$user_data', 'password', ''),DB::table('wip8_account')->where('email',array_get('$user_data', 'email', ''))->value('password');
                                     );
         $where_claue = array("email" => array_get('$user_data', 'email', ''),
                              "password" => $hash_password);
