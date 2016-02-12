@@ -17,6 +17,7 @@ class QuestionController extends ITIMController{
   }
 
   public function getIndex(){
+    $this->QuestionRepository->insertQuestion(22222);
     return $this->theme->scope('question.question')->layout('blank')->render();
   }
 }

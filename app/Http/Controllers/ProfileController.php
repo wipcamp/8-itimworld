@@ -25,7 +25,38 @@ class ProfileController extends ITIMController{
     }
 
     public function getRegister(){
-        return $this->theme->scope('profile.register')->layout('blank')->render();
+        $result = $this->ProfileRepository->find(22222);
+        $data = json_decode($result,true);
+        return $this->theme->scope('profile.register',array_get($data,'0'))->layout('blank')->render();
+    }
+
+    public function postFormfirst(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->firstDivRegis($data);
+      return $result;
+    }
+    public function postFormsecond(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->secondDivRegis($data);
+      return $result;
+    }
+
+    public function postFormthird(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->thirdDivRegis($data);
+      return $result;
+    }
+
+    public function postFormfour(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->fourDivRegis($data);
+      return $result;
+    }
+
+    public function postFormfive(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->fiveDivRegis($data);
+      return $result;
     }
 
     public function postRegister(){
