@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Theme;
 use App\Models\Wip8_profile;
 use Input;
+use Session;
 use App\Repositories\ProfileRepositoryInterface;
 
 class ProfileController extends ITIMController{
