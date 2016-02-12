@@ -83,6 +83,7 @@ class AuthController extends Controller
     }
     
     public function getLogout(){
+        die();
         $this->auth->logout();
         Session::flush();
         return redirect('/');
