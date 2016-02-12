@@ -36,7 +36,7 @@ class AuthenticateUser {
             $user = Auth::attempt($user_data);
 //            echo Hash::make(array_get($request, 'password', ''));
 //            dd($user);
-            Session::push('user', '$user_data');
+            Session::push('user', array_get($request, 'email'));
             $value = Session::get('user');
             if($user){
                 echo "PASS";
