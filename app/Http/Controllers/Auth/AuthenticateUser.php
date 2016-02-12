@@ -22,13 +22,13 @@ class AuthenticateUser {
         $this->auth = $auth;
         $this->profile = new Wip8_profile();
     }
-    
+
     public function execute($request, $listener, $provider) {
 //        if (!$request) return $this->getAuthorizationFirst($provider);
 //        $user = $this->users->findByUserNameOrCreate($this->getSocialUser($provider), $provider);
 //        $this->auth->login($user, true);
 //        return $listener->userHasLoggedIn($user);
-        
+
          if (!$request && $provider != "email" ) return $this->getAuthorizationFirst($provider);
         if($provider == "email"){
            //$user = $this->users->findByEmail($request,$provider);
@@ -41,9 +41,9 @@ class AuthenticateUser {
 //            dd($user);
             $result = $this->profile->where('email',array_get($request, 'email'))->get();
             $data = json_decode($result,true);
-            Session::push('user',$data);
+            Session::put('user',$data);
             $value = Session::get('user');
-            
+
             if($user){
                 echo "PASS";
                 //echo $value;
@@ -56,11 +56,11 @@ class AuthenticateUser {
            $user = $this->users->findByUserName($social_data, $provider);
            dd($user);
         }
-        
-        
-        
+
+
+
     }
-    
+
     private function getAuthorizationFirst($provider) {
         return Socialite::driver($provider)->redirect();
     }
