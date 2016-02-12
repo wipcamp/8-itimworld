@@ -44,8 +44,9 @@
               <center><a href="" style="color:#fff;">Forget Password</a></center>
               <hr>
               <center>
-                <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt=""></a>
+                <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></a>
               </center>
+              <br>
             </div>
             <div class="col-xs-6">
               <div class="col-xs-6">

@@ -148,10 +148,12 @@
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Twitter</h3>
                     <input type="text" class="form-control" name="twitter" value="{{$twitter}}" style="font-size:1em;" placeholder="Twitter">
                   </div>
-                  <div class="col-xs-6">
-                      <img src="#" alt="your image" class="target" style="width: 200px; height: 200px; border-radius: 50%; display: block; margin: 10px auto;" />
-                      <label for="file" style="display: block; width: 120px; padding: 20px; cursor: pointer;margin: 20px auto;text-align: center;">Choose image</label>
-                      <input type="file" id="file" />
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offser-3" style="margin:0 auto;">
+                        <img src="#" alt="your image" class="target" style="width: 80px; height: 80px; border-radius: 50%; display: block; margin: 10px auto;" />
+                        <label for="file" style="display: block; width: 120px; cursor: pointer;margin: 20px auto;text-align: center;">Choose image</label>
+                        <input type="file" id="file" style="display:none;" />
+                    </div>
                   </div>
                 </div>
 
@@ -179,11 +181,23 @@
                 <div class="row">
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>ระดับชั้น</h3>
-                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <select class="selectbox1" name="level">
+                      <option>ระบุ</option>
+                      <option value="M3">ม.3 ขึ้น ม.4</option>
+                      <option value="M4">ม.4 ขึ้น ม.5</option>
+                      <option value="M5">ม.5 ขึ้น ม.6</option>
+                    </select>
                   </div>
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>แผนการเรียน</h3>
-                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <select class="selectbox2" name="program">
+                      <option>ระบุ</option>
+                      <option value="scimath">วิทย์ - คณิต</option>
+                      <option value="scicom">วิทย์ - คอม</option>
+                      <option value="artmath">ศิลป์ - คำนวน</option>
+                      <option value="artlang">ศิลป์ - ภาษา</option>
+                      <option value="other">อื่นๆ</option>
+                    </select>
                   </div>
                   <div class="col-sm-2">
                     <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>

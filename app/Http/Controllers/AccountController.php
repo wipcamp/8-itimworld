@@ -5,6 +5,9 @@ use Theme;
 use App\Models\Wip8_profile;
 use Input;
 use App\Repositories\AccountRepositoryInterface;
+//use Illuminate\Support\Facades\Auth;
+use Session;
+use Auth;
 
 class AccountController extends ITIMController{
   protected $AccountRepository;
@@ -72,7 +75,7 @@ class AccountController extends ITIMController{
   }
   
   public function getLogout(){
-        $this->auth->logout();
+        Auth::logout();
         Session::flush();
         return redirect('/');
     }

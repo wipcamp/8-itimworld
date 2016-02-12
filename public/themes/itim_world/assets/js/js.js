@@ -138,17 +138,17 @@ $(document).ready(function () {
         var id = $(this).attr('id');
         var urlForm;
         if(id==='reg-1'){
-          urlForm = "http://itim.wip.loc/profile/formfirst";
+          urlForm = "http://itim.freezer.wip.camp/profile/formfirst";
         }else if (id==='reg-2') {
-          urlForm = "http://itim.wip.loc/profile/formsecond";
+          urlForm = "http://itim.freezer.wip.camp/profile/formsecond";
         }else if (id==='reg-3') {
-          urlForm = "http://itim.wip.loc/profile/formthird";
+          urlForm = "http://itim.freezer.wip.camp/profile/formthird";
         }else if (id==='reg-4') {
-          urlForm = "http://itim.wip.loc/profile/formfour";
+          urlForm = "http://itim.freezer.wip.camp/profile/formfour";
         }else if (id==='reg-5') {
-          urlForm = "http://itim.wip.loc/profile/formfive";
+          urlForm = "http://itim.freezer.wip.camp/profile/formfive";
         }else if (id==='reg-6') {
-          urlForm = "http://itim.wip.loc/profile/formsix";
+          urlForm = "http://itim.freezer.wip.camp/profile/formsix";
         }
         // var
         e.preventDefault();
@@ -229,5 +229,29 @@ $(document).ready(function() {
                 }
             }
         }
+    });
+});
+
+//
+// photo
+
+$(function () {
+
+    "use strict";
+
+    function url(input) {
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(".target").attr("src", e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        }
+    }
+    $("#file").change(function () {
+        url(this);
     });
 });

@@ -1934,6 +1934,165 @@ dl.selectbox dd ul li {
   padding: 8px;
 }
 
+
+select.selectbox1 {
+  display: none;
+}
+
+dl.selectbox1 {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+dl.selectbox1 dt {
+  width: 100%;
+  background: #34495e;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  padding: 8px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+dl.selectbox1 dt::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-right: solid 1px #bdc3c7;
+  border-bottom: solid 1px #bdc3c7;
+  right: 10px;
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+dl.selectbox1 dt.open::after {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  top: 12px;
+}
+dl.selectbox1 dd {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+  transition: 300ms all;
+}
+dl.selectbox1 dd.open {
+  visibility: visible;
+  opacity: 1;
+}
+dl.selectbox1 dd ul{
+  list-style: none;
+  padding: 0;
+}
+dl.selectbox1 dd ul li {
+  width: 100%;
+  background: #344956;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  padding: 8px;
+}
+/*2*/
+
+select.selectbox2 {
+  display: none;
+}
+
+dl.selectbox2 {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+dl.selectbox2 dt {
+  width: 100%;
+  background: #34495e;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  padding: 8px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+dl.selectbox2 dt::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-right: solid 1px #bdc3c7;
+  border-bottom: solid 1px #bdc3c7;
+  right: 10px;
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+dl.selectbox2 dt.open::after {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  top: 12px;
+}
+dl.selectbox2 dd {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+  transition: 300ms all;
+}
+dl.selectbox2 dd.open {
+  visibility: visible;
+  opacity: 1;
+}
+dl.selectbox2 dd ul{
+  list-style: none;
+  padding: 0;
+}
+dl.selectbox2 dd ul li {
+  width: 100%;
+  background: #344956;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  padding: 8px;
+}
 input[type=submit] {
   display: block;
   -webkit-box-sizing: border-box;
