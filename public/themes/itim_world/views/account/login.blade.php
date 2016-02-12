@@ -39,8 +39,9 @@
                 <label for="">Password</label>
                 <input type="password" class="form-control" id="" placeholder="Password" name="password">
               </div>
-                <input type="submit" value="send">
+                <input type="submit" value="Login" style="font-size:1.7em;">
               <?php echo Form::close(); ?>
+              <center><a href="" style="color:#fff;">Forget Password</a></center>
               <hr>
               <center>
                 <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt=""></a>
