@@ -148,7 +148,7 @@ $(document).ready(function () {
         }else if (id==='reg-5') {
           urlForm = "http://itim.wip.loc/profile/formfive";
         }else if (id==='reg-6') {
-          urlForm = "http://itim.wip.loc/profile/formfive";
+          urlForm = "http://itim.wip.loc/profile/formsix";
         }
         // var
         e.preventDefault();
@@ -168,17 +168,17 @@ $(document).ready(function () {
         var id = $(this).attr('id');
         var urlForm;
         if(id==='reg-1'){
-          urlForm = "http://itim.wip.loc/profile/formfirst";
+          urlForm = "#";
         }else if (id==='reg-2') {
-          urlForm = "http://itim.wip.loc/profile/formsecond";
+          urlForm = "#";
         }else if (id==='reg-3') {
-          urlForm = "http://itim.wip.loc/profile/formthird";
+          urlForm = "#";
         }else if (id==='reg-4') {
-          urlForm = "http://itim.wip.loc/profile/formfour";
+          urlForm = "#";
         }else if (id==='reg-5') {
-          urlForm = "http://itim.wip.loc/profile/formfive";
+          urlForm = "#";
         }else if (id==='reg-6') {
-          urlForm = "http://itim.wip.loc/profile/formfive";
+          urlForm = "#";
         }
         // var
         e.preventDefault();
