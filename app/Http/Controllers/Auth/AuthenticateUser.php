@@ -26,12 +26,12 @@ class AuthenticateUser {
 //        return $listener->userHasLoggedIn($user);
 
          if (!$request && $provider != "email" ) return $this->getAuthorizationFirst($provider);
-        if($provider == "email"){
+         if($provider == "email"){
            //$user = $this->users->findByEmail($request,$provider);
 
             $user_data = array( 'email' => array_get($request, 'email', ''),
                                'password' => array_get($request, 'password', ''));
-            //$user = $this->users->validateByEmail($user_data, $provider);
+            $user = $this->users->validateByEmail($user_data, $provider);
             $auth_user = Auth::attempt($user_data);
             $users = Auth::login($user);
             $this->auth->login($user_data);
