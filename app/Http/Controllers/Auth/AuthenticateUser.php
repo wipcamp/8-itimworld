@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Auth;
 use Illuminate\Contracts\Auth\Guard;
 //use Laravel\Socialite\Contracts\Factory as Socialite;
-use Illuminate\Contracts\Auth\Authenticatable;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Socialite;
@@ -19,37 +18,38 @@ class AuthenticateUser {
         $this->users = $users;
         $this->auth = $auth;
     }
-
+    
     public function execute($request, $listener, $provider) {
 //        if (!$request) return $this->getAuthorizationFirst($provider);
 //        $user = $this->users->findByUserNameOrCreate($this->getSocialUser($provider), $provider);
 //        $this->auth->login($user, true);
 //        return $listener->userHasLoggedIn($user);
-
+        
          if (!$request && $provider != "email" ) return $this->getAuthorizationFirst($provider);
-         if($provider == "email"){
+        if($provider == "email"){
            //$user = $this->users->findByEmail($request,$provider);
 
             $user_data = array( 'email' => array_get($request, 'email', ''),
                                'password' => array_get($request, 'password', ''));
-            $user = $this->users->validateByEmail($user_data, $provider);
-            $auth_user = Auth::attempt($user_data);
-            $users = Auth::login($user);
-            $this->auth->login($user_data);
-            
-            echo Hash::make(array_get($request, 'password', ''));
-            dd($user);
-            die();
+//            $user = $this->users->validateByEmail($user_data, $provider);
+            $user = Auth::attempt($user_data);
+//            echo Hash::make(array_get($request, 'password', ''));
+//            dd($user);
+            if($user){
+                echo "PASS";
+            }else{
+                echo "FAIL";
+            }
         }else{
            $social_data = Socialite::driver($provider)->user();
            $user = $this->users->findByUserName($social_data, $provider);
            dd($user);
         }
-
-
-
+        
+        
+        
     }
-
+    
     private function getAuthorizationFirst($provider) {
         return Socialite::driver($provider)->redirect();
     }
