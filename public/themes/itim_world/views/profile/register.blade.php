@@ -179,11 +179,23 @@
                 <div class="row">
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>ระดับชั้น</h3>
-                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
-                  </div>
+                    <select class="selectbox" name="level">
+                      <option>ระบุ</option>
+                      <option value="M3">ม.3 ขึ้น ม.4</option>
+                      <option value="M4">ม.4 ขึ้น ม.5</option>
+                      <option value="M5">ม.5 ขึ้น ม.6</option>
+                    </select>
+                    </div>
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>แผนการเรียน</h3>
-                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <select class="selectbox" name="program">
+                      <option>ระบุ</option>
+                      <option value="scimath">วิทย์ - คณิต</option>
+                      <option value="scicom">วิทย์ - คอม</option>
+                      <option value="artmath">ศิลป์ - คำนวน</option>
+                      <option value="artlang">ศิลป์ - ภาษา</option>
+                      <option value="other">อื่นๆ</option>
+                    </select>
                   </div>
                   <div class="col-sm-2">
                     <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
