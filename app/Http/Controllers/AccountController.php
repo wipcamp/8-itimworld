@@ -7,6 +7,7 @@ use Input;
 use App\Repositories\AccountRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Session;
+use Auth;
 
 class AccountController extends ITIMController{
   protected $AccountRepository;
