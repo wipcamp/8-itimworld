@@ -8,9 +8,7 @@ Route::get('/',function(){
     return 'true';
   }
 });
-Route::get('hash',function(){
-    return ;
-});
+
 
 
 Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
