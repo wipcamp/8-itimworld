@@ -15,8 +15,12 @@ class CheckPermission
          $action = $request->segment(2);
         //echo $ctrl;
         //echo $action;
-        echo "CHECK";
-        die();
+        //echo "CHECK";
+        //die();
+        
+        if (isset($uid)) {
+            return $value_cache? $next($request) : redirect('access/denie');
+        }
         return $request->ajax ? response('Unauthorized.', 401) : redirect('/auth/login');
     }
     
