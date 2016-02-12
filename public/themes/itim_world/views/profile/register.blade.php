@@ -149,7 +149,6 @@
                     <input type="text" class="form-control" name="twitter" value="{{$twitter}}" style="font-size:1em;" placeholder="Twitter" class="required">
                   </div>
                   <div class="col-xs-6">
-                      @if (isset($avatar))
                       <img src="
                       " alt="your image" class="target" style="width: 200px; height: 200px; border-radius: 50%; display: block; margin: 10px auto;" />
                       <label for="file" style="display: block; width: 120px; padding: 20px; cursor: pointer;margin: 20px auto;text-align: center;">เลือกรูปภาพประจำตัว</label>
