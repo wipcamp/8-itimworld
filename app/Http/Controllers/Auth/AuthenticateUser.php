@@ -46,7 +46,7 @@ class AuthenticateUser {
             
             if($user){
                 echo "PASS";
-                echo $value;
+                //echo $value;
                 echo $data;
             }else{
                 echo "FAIL";
