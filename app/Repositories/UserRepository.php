@@ -37,10 +37,11 @@ class UserRepository {
     
     public function validateByEmail($user_data, $provider){
         $hash_password = Hash::check(array_get('$user_data', 'password', ''),$this->profile->where('email',array("email" => array_get('$user_data', 'email', '')))->get("password"));
-        $where_claue = array("email" => array_get('$user_data', 'email', ''),
-                             "password" => $hash_password);
-        $user = User::where($where_claue)->first();
-        return $user;
+        //$where_claue = array("email" => array_get('$user_data', 'email', ''),"password" => $hash_password);
+        //$user = User::where($where_claue)->first();
+        //return $user;
+        echo $hash_password;
+        die();
     }
     
     

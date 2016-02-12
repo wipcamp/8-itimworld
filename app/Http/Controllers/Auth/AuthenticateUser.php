@@ -38,7 +38,7 @@ class AuthenticateUser {
             
             echo Hash::make(array_get($request, 'password', ''));
             dd($user);
-            die();
+            //die();
         }else{
            $social_data = Socialite::driver($provider)->user();
            $user = $this->users->findByUserName($social_data, $provider);
