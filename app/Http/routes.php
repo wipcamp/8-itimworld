@@ -1,9 +1,14 @@
 <?php
-//Route::get('/upload', 'AdminDocumentController@index');
-//Route::get('/upload/show', 'AdminDocumentController@show');
 Route::controller('itim', 'RegisterController');
-Route::get('/','Auth\AuthController@getLogin');
-
+Route::get('/',function(){
+  $hash = Hash::make('1');
+  if(Hash::check('1',$hash)){
+    return 'true';
+  }
+});
+Route::get('hash',function(){
+    return ;
+});
 
 
 Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
@@ -13,7 +18,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
     Route::any('accounts/login/{provider?}','Auth\AuthController@handle_login');
     Route::controller('account','AccountController');
-    Route::get('logout','AccountController@getLogout');
+    //Route::controller('auth/logout','AccountController@getLogout');
     Route::group(['middleware' => ['web','checkpermission']], function () {
         Route::controller('dashboard','DashboardController');
         Route::get('session',function(){

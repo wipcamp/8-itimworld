@@ -38,6 +38,7 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $this->profile->level = array_get($data,'level');
     $this->profile->program = array_get($data,'program');
     $this->profile->gpax = array_get($data,'gpax');
+    $this->profile->avatar = array_get($data,'avatar');
 		$this->profile->save();
   }
 
