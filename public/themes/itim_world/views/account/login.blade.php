@@ -27,8 +27,8 @@
           </div>
         </center>
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <div class="col-md-6">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="col-xs-6">
               <h1>Login</h1>
               <?php echo Form::open(array('url' => 'accounts/login/email')); ?>
               <div class="form-group">
@@ -47,11 +47,11 @@
                 <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt=""></a>
               </center>
             </div>
-            <div class="col-sm-6">
-              <div class="col-sm-6">
+            <div class="col-xs-6">
+              <div class="col-xs-6">
                 <div class="center">
                   <center>
-                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="400"></a>
+                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="600"></a>
                   </center>
                 </div>
               </div>
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
+      <!-- <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
         Chat
-      </div>
+      </div> -->
     </div>
