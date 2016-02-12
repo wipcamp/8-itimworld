@@ -148,10 +148,12 @@
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Twitter</h3>
                     <input type="text" class="form-control" name="twitter" value="{{$twitter}}" style="font-size:1em;" placeholder="Twitter">
                   </div>
-                  <div class="col-xs-6">
-                      <img src="#" alt="your image" class="target" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: 10px auto;" />
-                      <label for="file" style="display: block; width: 120px; cursor: pointer;margin: 20px auto;text-align: center;">Choose image</label>
-                      <input type="file" id="file" />
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offser-3">
+                        <img src="#" alt="your image" class="target" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: 10px auto;" />
+                        <label for="file" style="display: block; width: 120px; cursor: pointer;margin: 20px auto;text-align: center;">Choose image</label>
+                        <input type="file" id="file" style="display:none;" />
+                    </div>
                   </div>
                 </div>
 
