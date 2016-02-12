@@ -36,7 +36,7 @@ class UserRepository {
     }
     
     public function validateByEmail($user_data, $provider){
-        $passdb = $this->profile->where('email',array("email" => array_get('$user_data', 'email', '')))->get("password");
+        $passdb = $this->profile->where('email',array("email" => array_get('$user_data', 'email', '')));
         $pass = json_decode($passdb, true);
         $hash_password = Hash::check(array_get('$user_data', 'password', ''),array_get('$pass','0.password'));
         $where_claue = array("email" => array_get('$user_data', 'email', ''),
