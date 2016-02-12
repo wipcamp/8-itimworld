@@ -6,6 +6,7 @@ use App\Models\Wip8_profile;
 use Input;
 use App\Repositories\AccountRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class AccountController extends ITIMController{
   protected $AccountRepository;
