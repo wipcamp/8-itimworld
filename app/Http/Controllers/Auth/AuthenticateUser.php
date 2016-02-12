@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Auth;
 use Illuminate\Contracts\Auth\Guard;
 //use Laravel\Socialite\Contracts\Factory as Socialite;
+use Illuminate\Contracts\Auth\Authenticatable;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Socialite;
@@ -38,7 +39,7 @@ class AuthenticateUser {
             
             echo Hash::make(array_get($request, 'password', ''));
             dd($user);
-            //die();
+            die();
         }else{
            $social_data = Socialite::driver($provider)->user();
            $user = $this->users->findByUserName($social_data, $provider);
