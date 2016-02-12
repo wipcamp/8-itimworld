@@ -12,14 +12,13 @@ Route::get('hash',function(){
     return ;
 });
 
-
+Route::any('accounts/logout}','Auth\AuthController@getLogout');
 Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
 Route::controller('profile','ProfileController');
 Route::controller('question','QuestionController');
 Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
     Route::any('accounts/login/{provider?}','Auth\AuthController@handle_login');
-    Route::any('accounts/logout}','Auth\AuthController@getLogout');
     Route::controller('account','AccountController');
     
     Route::group(['middleware' => ['web','checkpermission']], function () {
