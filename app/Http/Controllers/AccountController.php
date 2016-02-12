@@ -5,7 +5,7 @@ use Theme;
 use App\Models\Wip8_profile;
 use Input;
 use App\Repositories\AccountRepositoryInterface;
-use Illuminate\Support\Facades\Auth;
+//use Illuminate\Support\Facades\Auth;
 use Session;
 use Auth;
 
