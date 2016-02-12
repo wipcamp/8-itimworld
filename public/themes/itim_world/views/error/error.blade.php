@@ -1,0 +1,45 @@
+<div class="container-fluid">
+            <div id="scene">
+                <div class="layer layout">
+                    <div class="town">
+                        <div class="town-front"></div>
+                    </div>
+                </div>
+                <div class="layer layout">
+                    <div class="town">
+                        <div class="town-mid"></div>
+                    </div>
+                </div>
+                <div class="layer layout" style="z-index:-3;">
+                    <div class="town">
+                        <div class="town-back"></div>
+                    </div>
+                </div>
+            <center>
+                <div class="logo-wip">
+                   <div class="row">
+                       <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/layout/finalwip.png" alt="" width="40%">
+                   </div>
+                   <div class="row">
+                       <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/layout/finalway.png" alt="" width="30%" style="margin-top:-4%">
+                   </div>
+                </div>
+            </center>
+
+        <!--Content-->
+            <div class="row">
+               <center>
+                   <h1>เกิด Error บางอย่างน้าา~</h1>
+                   <h2>กดปุ่ม Back เพื่อย้อนกลับไปหน้าที่แล้วจ้า ~ </h2>
+                  <br>
+                  <div class="col-sm-4 col-sm-offset-4">
+                    <a href="javascript:history.back();"><input type="submit" value="ย้อนกลับไป"></a>
+                  </div>
+               </center>
+            </div>
+        <!--End Content-->
+            </div>
+            <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
+                Chat
+            </div>
+        </div>
