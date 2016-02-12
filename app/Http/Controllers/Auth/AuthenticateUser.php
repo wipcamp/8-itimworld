@@ -35,6 +35,7 @@ class AuthenticateUser {
             $auth_user = Auth::attempt($user_data);
             $users = Auth::login($user);
             $this->auth->login($user_data);
+            
             echo Hash::make(array_get($request, 'password', ''));
             dd($user);
         }else{
