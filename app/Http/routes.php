@@ -19,7 +19,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/',function(){
           $value = Session::get('user');
           $data = json_decode($value,true);
-          return $value;
+          return $data;
         });
         
         
