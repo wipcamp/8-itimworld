@@ -41,13 +41,13 @@ class AuthenticateUser {
 //            dd($user);
             $result = $this->profile->where('email',array_get($request, 'email'))->get();
             $data = json_decode($result,true);
-            Session::push('user',$result);
+            Session::push('user',$data);
             $value = Session::get('user');
             
             if($user){
                 echo "PASS";
                 //echo $value;
-                echo array_get($data, '0.name_th');
+                echo array_get($value, '0.name_th');
             }else{
                 echo "FAIL";
             }
