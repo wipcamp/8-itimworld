@@ -72,7 +72,6 @@ class AccountController extends ITIMController{
   }
   
   public function getLogout(){
-        die();
         $this->auth->logout();
         Session::flush();
         return redirect('/');
