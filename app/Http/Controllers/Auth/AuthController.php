@@ -83,6 +83,8 @@ class AuthController extends Controller
     }
     
     public function getLogout(){
+        echo "LOGOUT";
+        die();
         Auth::logout();
         Session::flush();
     }
