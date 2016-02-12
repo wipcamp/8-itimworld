@@ -24,33 +24,40 @@ class AuthenticateUser {
     }
 
     public function execute($request, $listener, $provider) {
-//        if (!$request) return $this->getAuthorizationFirst($provider);
-//        $user = $this->users->findByUserNameOrCreate($this->getSocialUser($provider), $provider);
-//        $this->auth->login($user, true);
-//        return $listener->userHasLoggedIn($user);
 
-         if (!$request && $provider != "email" ) return $this->getAuthorizationFirst($provider);
+
+        if (!$request && $provider != "email" ) return $this->getAuthorizationFirst($provider);
         if($provider == "email"){
-           //$user = $this->users->findByEmail($request,$provider);
-
             $user_data = array( 'email' => array_get($request, 'email', ''),
-                               'password' => array_get($request, 'password', ''));
-//            $user = $this->users->validateByEmail($user_data, $provider);
-            $user = Auth::attempt($user_data);
-//            echo Hash::make(array_get($request, 'password', ''));
-//            dd($user);
-            $result = $this->profile->where('email',array_get($request, 'email'))->get();
-            $data = json_decode($result,true);
-            Session::put('user',$data);
-            $value = Session::get('user');
+                                'password' => array_get($request, 'password', ''));
 
-            if($user){
-                echo "PASS";
-                //echo $value;
-                echo array_get($value, '0.name_th');
-            }else{
-                echo "FAIL";
-            }
+
+
+
+
+
+
+
+
+
+
+                                
+// //          $user = $this->users->validateByEmail($user_data, $provider);
+//             $user = Auth::attempt($user_data);
+// //            echo Hash::make(array_get($request, 'password', ''));
+// //            dd($user);
+//             $result = $this->profile->where('email',array_get($request, 'email'))->get();
+//             $data = json_decode($result,true);
+//             Session::put('user',$data);
+//             $value = Session::get('user');
+//
+//             if($user){
+//                 echo "PASS";
+//                 //echo $value;
+//                 echo array_get($value, '0.name_th');
+//             }else{
+//                 echo "FAIL";
+//             }
         }else{
            $social_data = Socialite::driver($provider)->user();
            $user = $this->users->findByUserName($social_data, $provider);

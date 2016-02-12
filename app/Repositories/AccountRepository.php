@@ -6,6 +6,7 @@ use App\Models\Wip8_allwipid;
 use App\Models\Wip8_profile;
 use Mail;
 use Hash;
+use App\User;
 
 class AccountRepository implements AccountRepositoryInterface
 {
@@ -14,7 +15,7 @@ class AccountRepository implements AccountRepositoryInterface
 	protected $profile;
 
 	public function __construct(){
-		$this->account = new Wip8_account();
+		$this->account = new User();
 		$this->allwipid = new Wip8_allwipid();
 		$profile = new Wip8_profile();
 	}
@@ -129,5 +130,41 @@ class AccountRepository implements AccountRepositoryInterface
 		$data = $this->account->all()->take($param);
 		$result = json_decode($data , true);
 		return $result;
+	}
+
+
+
+	public function createAccount($data){
+		$wip_id_gen = $this->wipId();
+		$verify_code = md5(Hash::make($wip_id_gen));
+
+		$User = new User();
+		$User->wip_id = $wip_id_gen;
+		$User->email = array_get($data,'email');
+		$User->verify = $verify_code;
+		$User->password = bcrypt(array_get($data,'password'));
+		$User->active = 0;
+		$User->provider = array_get($data,'provider');
+		$User->save();
+
+		$Profile = new Wip8_profile();
+		$Profile->wip_id = $wip_id_gen;
+		$Profile->citizen_id = array_get($data,'citizen_id');
+		$Profile->name_th = array_get($data,'name_th');
+		$Profile->surname_th = array_get($data,'lastname_th');
+		$Profile->email = array_get($data,'email');
+		$Profile->save();
+
+		return $User;
+	}
+
+	public function findSocialUser($data, $provider){
+
+		$result = $this->account->where('email',array_get($data,'email',''))
+					->where('provider',$provider)
+					->first();
+
+		return json_decode($result, true);
+
 	}
 }

@@ -18,7 +18,11 @@ class AccountController extends ITIMController{
   }
 
   public function getRegister(){
-      return $this->theme->scope('account.regisSimple')->layout('blank')->render();
+      $view = array(
+          'provider' => 'email'
+      );
+
+      return $this->theme->scope('account.regisSimple', $view)->layout('blank')->render();
   }
 
   public function postRegister(){
@@ -73,7 +77,7 @@ class AccountController extends ITIMController{
   public function getWipid(){
     return $this->AccountRepository->wipId();
   }
-  
+
   public function getLogout(){
         Auth::logout();
         Session::flush();

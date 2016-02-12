@@ -5,11 +5,16 @@ use Hash;
 use App\Models\Wip8_profile;
 
 class UserRepository {
-    
+
     public function __construct(){
         $this->profile = new Wip8_profile();
     }
-    
+
+
+    public function get($user_data, $provider){
+
+    }
+
     public function findByUserNameOrCreate($userData, $provider) {
         $user = User::where('provider_id', '=', $userData->id)->first();
         if(!$user) {
@@ -21,22 +26,22 @@ class UserRepository {
                 'avatar' => $userData->avatar,
                 'active' => 1,
                 'provider' => $provider,
-                'role' => 1    
+                'role' => 1
             ]);
         }
         $this->checkIfUserNeedsUpdating($userData, $user);
         return $user;
     }
-    
+
      public function findByUserName($userData, $provider) {
         $user = User::where('provider_id', '=', $userData->id)->first();
         if(!$user) {
                 echo "NO USER !!!";
         }
     }
-    
+
     public function validateByEmail($user_data, $provider){
-        $passdb = $this->profile->where('email',array("email" => array_get('$user_data', 'email', '')));
+        //$passdb = $this->profile->where('email',array("email" => array_get('$user_data', 'email', '')));
         //$pass = json_decode($passdb, true);
         $hash_password = Hash::check(array_get('$user_data', 'password', ''),array_get('$passdb', 'password', ''));
         $where_claue = array("email" => array_get('$user_data', 'email', ''),
@@ -44,8 +49,8 @@ class UserRepository {
         $user = User::where($where_claue)->first();
         return $user;
     }
-    
-    
+
+
     public function checkIfUserNeedsUpdating($userData, $user) {
         $socialData = [
             'avatar' => $userData->avatar,

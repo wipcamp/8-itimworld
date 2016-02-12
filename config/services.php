@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '119399881422143',
         'client_secret' => 'd48f8c164d325274f2637fbceab05356',
-        'redirect' => 'http://itim.freezer.wip.camp/accounts/login/facebook',
+        'redirect' => 'http://itim.wip.loc/auth/process-login/facebook',
     ],
 
 ];

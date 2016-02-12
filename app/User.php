@@ -8,7 +8,6 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Authenticatable
 {
-    protected $table= 'wip8_accounts';
     /**
      * The attributes that are mass assignable.
      *

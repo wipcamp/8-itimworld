@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class Wip8_profile extends Model
 {
 
-  public $timestamps = false;
+  public $timestamps = true;
 }

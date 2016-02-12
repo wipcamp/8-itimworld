@@ -23,52 +23,76 @@
               <div class="row center" id="form-signup">
                 <center>
                   <h1>สมัครเข้าค่าย</h1></center>
-                <?php echo Form::open(array('url' => 'account/register')); ?>
-                  <center><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></center>
+
+                <?php echo Form::open(array('url' => 'auth/register')); ?>
+                 @if ($provider != "facebook")
+                  <center>
+                      <a href="{{ url('auth/connect/facebook') }}">
+                          <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400">
+                      </a>
+                  </center>
                   <br>
                   <hr>
+
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">อีเมลล์</label>
                     <input type="email" class="form-control" id="" placeholder="กรอกอีเมลล์" name="email">
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">รหัสผ่าน</label>
                     <input type="password" class="password" id="" placeholder="กรอกรหัสผ่าน" name="password">
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
                   </div>
+                  @else
+
+                  <center>
+                       <img class="img-circle img-responsive" src="{{ array_get($user, 'avatar') }}">
+                       <h1>{{ array_get($user, 'name') }}</h1>
+                  </center>
+
+                  @endif
+
+
+
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">ชื่อ (ภาษาไทย)</label>
                     <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="name_th">
+                    @if ($errors->has('name_th'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('name_th') }}</strong>
+                        </span>
+                    @endif
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">นามสกุล (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="surname_th">
+                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="lastname_th">
+                    @if ($errors->has('lastname_th'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('lastname_th') }}</strong>
+                        </span>
+                    @endif
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">เลขบัตรประจำตัวประชาชน</label>
                     <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="citizen_id">
+                    @if ($errors->has('citizen_id'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('citizen_id') }}</strong>
+                        </span>
+                    @endif
                   </div>
+                  <input type="hidden" name="provider" value="{{ $provider }}" />
                   <input type="submit" value="send">
                 <?php echo Form::close(); ?>
-
-
-                <!-- ถ้า Login ผ่าน Facebook จะเป็นฟอร์มข้างล่างนี้ -->
-
-                <!-- <form action="" method="post">
-                  <center>
-                       <img class="img-circle img-responsive" src="assets/img/pro3.png">
-                       <h1>Kunchai Sodhom</h1>
-                  </center>
-                  <hr>
-                  <div class="form-group">
-                    <span style="color:#ff0000;"> * </span><label for="">ชื่อ (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="">
-                  </div>
-                  <div class="form-group">
-                    <span style="color:#ff0000;"> * </span><label for="">นามสกุล (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกนามสกุลภาษาไทย" name="">
-                  </div>
-                    <input type="submit" value="send">
-                </form> -->
 
               </div>
             </div>

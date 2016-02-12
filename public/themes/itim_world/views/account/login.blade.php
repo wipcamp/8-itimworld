@@ -30,7 +30,7 @@
           <div class="col-xs-10 col-xs-offset-1">
             <div class="col-xs-6">
               <h1>Login</h1>
-              <?php echo Form::open(array('url' => 'accounts/login/email')); ?>
+              <?php echo Form::open(array('url' => 'auth/login')); ?>
               <div class="form-group">
                 <label for="">Email address</label>
                 <input type="email" class="form-control" id="" placeholder="Email" name="email">
