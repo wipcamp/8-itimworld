@@ -47,7 +47,7 @@ class AuthenticateUser {
             if($user){
                 echo "PASS";
                 //echo $value;
-                echo $data[0];
+                echo array_get($data, 'wip_id', '');
             }else{
                 echo "FAIL";
             }
