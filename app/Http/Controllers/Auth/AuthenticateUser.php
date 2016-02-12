@@ -47,6 +47,7 @@ class AuthenticateUser {
             if($user){
                 echo "PASS";
                 //echo $value;
+                echo Session::all();
                 echo array_get($value, '0.name_th');
             }else{
                 echo "FAIL";
