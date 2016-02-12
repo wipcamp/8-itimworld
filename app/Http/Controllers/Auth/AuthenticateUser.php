@@ -40,7 +40,7 @@ class AuthenticateUser {
             $value = Session::get('user');
             if($user){
                 echo "PASS";
-                echo $value;
+                echo $value[0];
             }else{
                 echo "FAIL";
             }
