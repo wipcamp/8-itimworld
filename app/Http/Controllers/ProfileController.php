@@ -28,10 +28,10 @@ class ProfileController extends ITIMController{
     public function getRegister(){
         $value = Session::get('user');
         $result = $this->ProfileRepository->find(22222);
-        $data = array_get($value, '0');
+        $data = array_get($value, 'wip_id');
         $result = $this->ProfileRepository->find($data);
         $data = json_decode($result,true);
-        return $value;//$this->theme->scope('profile.register',array_get($data,'0'))->layout('blank')->render();
+        return $data;//$this->theme->scope('profile.register',array_get($data,'0'))->layout('blank')->render();
     }
 
     public function postFormfirst(){
