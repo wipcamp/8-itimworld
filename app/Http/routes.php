@@ -18,8 +18,7 @@ Route::group(['middleware' => ['web']], function () {
         });
         Route::get('/',function(){
           $value = Session::get('user');
-          $data = json_decode($value,true);
-          return $data;
+          return array_get($value,'0.0.wip_id');
         });
         
         
