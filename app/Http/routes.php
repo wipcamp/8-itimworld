@@ -2,7 +2,8 @@
 Route::controller('itim', 'RegisterController');
 Route::get('/',function(){
   $value = Session::get('user');
-  return array_get($value, 'wip_id');
+  $data = json_decode($value,true);
+  return array_get($data, '0.wip_id');
 });
 
 
