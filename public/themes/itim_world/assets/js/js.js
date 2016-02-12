@@ -84,3 +84,5 @@ $('.previous').on('click', goToPreviousSlide);
   });
 
 }) ();
+
+// add
