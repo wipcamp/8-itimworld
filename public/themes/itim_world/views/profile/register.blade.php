@@ -203,11 +203,11 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
-                    <input type="text" name="disease" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="disease" value="{{$disease}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
                   </div>
                   <div class="col-sm-6">
                     <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
-                    <input type="text" name="allergy" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="allergy" value="{{$allergy}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
                   </div>
                 </div>
               </div>
