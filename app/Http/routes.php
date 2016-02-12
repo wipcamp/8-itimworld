@@ -1,7 +1,7 @@
 <?php
 Route::controller('itim', 'RegisterController');
 Route::get('/',function(){
-  return Session::get('user');
+  return Session::get('user').'session';
 });
 
 
