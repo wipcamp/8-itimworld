@@ -43,7 +43,7 @@
               <?php echo Form::close(); ?>
               <hr>
               <center>
-                <a href= "<?php echo url("account/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt=""></a>
+                <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt=""></a>
               </center>
             </div>
             <div class="col-sm-6">
