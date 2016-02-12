@@ -40,11 +40,14 @@ class AuthenticateUser {
 //            echo Hash::make(array_get($request, 'password', ''));
 //            dd($user);
             $result = $this->profile->where('email',array_get($request, 'email'))->get();
+            $data = json_decode($result,true);
             Session::push('user',$result);
             $value = Session::get('user');
+            
             if($user){
                 echo "PASS";
-                echo $value[0];
+                echo $value;
+                echo $data;
             }else{
                 echo "FAIL";
             }
