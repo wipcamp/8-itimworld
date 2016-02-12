@@ -2,8 +2,14 @@
 namespace App\Repositories;
 use App\User;
 use Hash;
+use App\Models\Wip8_profile;
 
 class UserRepository {
+    
+    public function __construct(){
+        $this->profile = new Wip8_profile();
+    }
+    
     public function findByUserNameOrCreate($userData, $provider) {
         $user = User::where('provider_id', '=', $userData->id)->first();
         if(!$user) {
@@ -30,9 +36,7 @@ class UserRepository {
     }
     
     public function validateByEmail($user_data, $provider){
-        $hash_password = Hash::check(array_get('$user_data', 'password', ''),//hash from DB
-                                     //DB::table('wip8_account')->where('email',array_get('$user_data', 'email', ''))->value('password')
-                                    );
+        $hash_password = Hash::check(array_get('$user_data', 'password', ''),$this->profile->where(array("email" => array_get('$user_data', 'email', '')))->get("password");
         $where_claue = array("email" => array_get('$user_data', 'email', ''),
                              "password" => $hash_password);
         $user = User::where($where_claue)->first();
