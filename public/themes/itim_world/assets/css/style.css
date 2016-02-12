@@ -1575,7 +1575,7 @@ p { margin: 0; }
 margin: 10px 0 5px !important;
 }
 
-/*input {
+input {
   display: none;
 }
 
@@ -1933,7 +1933,7 @@ dl.selectbox dd ul li {
   color: #ecf0f1;
   padding: 8px;
 }
-/*1*/
+
 
 select.selectbox1 {
   display: none;
@@ -2110,7 +2110,7 @@ input[type=submit] {
 }
 input[type=submit]:active, input[type=submit]:focus {
   outline: none;
-}*/
+}
 
 .center{
   margin: 0 auto;
