@@ -2,7 +2,9 @@
 //Route::get('/upload', 'AdminDocumentController@index');
 //Route::get('/upload/show', 'AdminDocumentController@show');
 Route::controller('itim', 'RegisterController');
-Route::get('/','Auth\AuthController@getLogin');
+Route::get('/',function(){
+    return 'a';
+});
 
 
 
