@@ -31,8 +31,8 @@ class AuthenticateUser {
 
             $user_data = array( 'email' => array_get($request, 'email', ''),
                                'password' => array_get($request, 'password', ''));
-            $user = $this->users->validateByEmail($user_data, $provider);
-            //$auth_user = Auth::attempt($user_data);
+            //$user = $this->users->validateByEmail($user_data, $provider);
+            $auth_user = Auth::attempt($user_data);
             $users = Auth::login($user);
             $this->auth->login($user_data);
             echo Hash::make(array_get($request, 'password', ''));
