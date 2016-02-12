@@ -8,6 +8,7 @@ use Socialite;
 use Input;
 use Auth;
 use Hash;
+use Session;
 
 class AuthenticateUser {
      private $socialite;
@@ -38,6 +39,7 @@ class AuthenticateUser {
             Session::push('user', '$user');
             if($user){
                 echo "PASS";
+                echo "Session::get('key')";
             }else{
                 echo "FAIL";
             }
