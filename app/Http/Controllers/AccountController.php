@@ -70,5 +70,11 @@ class AccountController extends ITIMController{
   public function getWipid(){
     return $this->AccountRepository->wipId();
   }
-
+  
+  public function getLogout(){
+        die();
+        $this->auth->logout();
+        Session::flush();
+        return redirect('/');
+    }
 }
