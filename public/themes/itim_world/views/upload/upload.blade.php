@@ -41,13 +41,11 @@
               <div class="col-xs-12">
                   <center><h1>อัพโหลดเอกสาร</h1></center>
                </div>
-               
+                  
                <div class="col-xs-12 row main-button">
-                  <a href="#" onclick="">
+                     <a href="#">
                      @if(isset($parentdoc) && ($parentdoc=="0" ||$parentdoc=="2" ))
                      <input type="file" name="parentdoc" id="parentdoc" class="overlay buttonupload">
-                     @else
-                     <>
                      @endif
                   </a>
                   <div class="text row">
@@ -68,7 +66,7 @@
                </div>
                </a>
                <div class="col-xs-12 row main-button">
-                  <a href="#" onclick="">
+                     <a href="#">
                      @if(isset($schooldoc) && ($schooldoc=="0" || $schooldoc == "2"))
                      <input type="file" name="schooldoc" id="schooldoc" class="overlay buttonupload">
                      @endif</a>
