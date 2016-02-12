@@ -15,7 +15,7 @@ class CheckPermission
          $action = $request->segment(2);
         //echo $ctrl;
         //echo $action;
-        //die();
+        die();
         return $request->ajax ? response('Unauthorized.', 401) : redirect('/auth/login');
     }
     
