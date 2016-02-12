@@ -1,10 +1,6 @@
 <?php
 Route::controller('itim', 'RegisterController');
-Route::get('/',function(){
-  $value = Session::get('user');
-  $data = json_decode($value,true);
-  return array_get($data, '0.wip_id');
-});
+
 
 
 Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
@@ -20,7 +16,11 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('session',function(){
           return Session::get('user');
         });
-        
+        Route::get('/',function(){
+          $value = Session::get('user');
+          $data = json_decode($value,true);
+          return array_get($data, '0.wip_id');
+        });
         
         
     });
