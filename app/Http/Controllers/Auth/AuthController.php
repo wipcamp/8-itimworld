@@ -84,6 +84,7 @@ class AuthController extends Controller
     
     public function getLogout(){
         Auth::logout();
+        Session::flush();
     }
 
 }
