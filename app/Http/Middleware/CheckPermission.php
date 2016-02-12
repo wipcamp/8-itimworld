@@ -19,7 +19,7 @@ class CheckPermission
         //die();
         
         if (isset($uid)) {
-            return $value_cache? $next($request) : redirect('access/denie');
+            return $uid? $next($request) : redirect('access/denie');
         }
         return $request->ajax ? response('Unauthorized.', 401) : redirect('/auth/login');
     }
