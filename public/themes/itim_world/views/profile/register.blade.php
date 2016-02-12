@@ -77,37 +77,37 @@
                   </div>
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล</h3>
-                    <input type="text" class="form-control" value="{{$surname_th}}" name="surname_th" style="font-size:1em;" placeholder="นามสกุล">
+                    <input type="text" class="form-control" value="{{$surname_th}}" name="surname_th" style="font-size:1em;" placeholder="นามสกุล" class="required">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษอังกฤษ)</h3>
-                    <input type="text" class="form-control" value="{{$name_en}}" name='name_en' style="font-size:1em;" placeholder="ชื่อ (ภาษอังกฤษ)">
+                    <input type="text" class="form-control" value="{{$name_en}}" name='name_en' style="font-size:1em;" placeholder="ชื่อ (ภาษอังกฤษ)" class="required">
                   </div>
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษอังกฤษ)</h3>
-                    <input type="text" class="form-control" value="{{$surname_en}}" name='surname_en' style="font-size:1em;" placeholder="นามสกุล (ภาษอังกฤษ)">
+                    <input type="text" class="form-control" value="{{$surname_en}}" name='surname_en' style="font-size:1em;" placeholder="นามสกุล (ภาษอังกฤษ)" class="required">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-4">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น</h3>
-                    <input type="text" class="form-control" value="{{$nickname}}" name='nickname' style="font-size:1em;" placeholder="ชื่อเล่น">
+                    <input type="text" class="form-control" value="{{$nickname}}" name='nickname' style="font-size:1em;" placeholder="ชื่อเล่น" class="required">
                   </div>
                   <div class="col-xs-4">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ศาสนา</h3>
-                    <input type="text" class="form-control" value="{{$religion}}" name='religion' style="font-size:1em;" placeholder="ศาสนา">
+                    <input type="text" class="form-control" value="{{$religion}}" name='religion' style="font-size:1em;" placeholder="ศาสนา" class="required">
                   </div>
                   <div class="col-xs-4">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>วันเกิด</h3>
-                    <input type="date" class="form-control" value="{{$dob}}" name='dob' style="font-size:1em;" placeholder="วันเกิด">
+                    <input type="date" class="form-control" value="{{$dob}}" name='dob' style="font-size:1em;" placeholder="วันเกิด" class="required" >
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>เพศ</h3>
-                    <select class="selectbox" name="sex">
+                    <select class="selectbox" name="sex" class="required">
                       <option>ระบุ</option>
                       <option value="M" {!! ($sex=='M'?' selected':'') !!}>ชาย</option>
                       <option value="F" {!! ($sex=='F'?' selected':'') !!}>หญิง</option>
@@ -115,7 +115,7 @@
                   </div>
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>เบอร์โทรศัพท์</h3>
-                    <input type="text" name='tel' value="{{$tel}}" class="form-control" style="font-size:1em;" placeholder="เบอร์โทรศัพท์">
+                    <input type="text" name='tel' value="{{$tel}}" class="form-control" style="font-size:1em;" placeholder="เบอร์โทรศัพท์" class="required">
                   </div>
                 </div>
                 <div class="row">
@@ -136,7 +136,7 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ที่อยู่</h3>
-                    <textarea class="form-control" name="address" style="font-size:1em;" row tops="3">{{$address}}</textarea>
+                    <textarea class="form-control" name="address" style="font-size:1em;" row tops="3" class="required">{{$address}}</textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -146,7 +146,7 @@
                   </div>
                   <div class="col-xs-6">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Twitter</h3>
-                    <input type="text" class="form-control" name="twitter" value="{{$twitter}}" style="font-size:1em;" placeholder="Twitter">
+                    <input type="text" class="form-control" name="twitter" value="{{$twitter}}" style="font-size:1em;" placeholder="Twitter" class="required">
                   </div>
                   <div class="col-xs-6">
                       @if (isset($avatar))
@@ -176,21 +176,21 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <h3><span style="color:#ff0000;"> * </span>ชื่อโรงเรียน</h3>
-                    <input type="text" name="school_id" value="{{$school_id}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="school_id" value="{{$school_id}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>ระดับชั้น</h3>
-                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>แผนการเรียน</h3>
-                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                   <div class="col-sm-2">
                     <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
-                    <input type="text" name="gpax" value="{{$gpax}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="gpax" value="{{$gpax}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
               </div>
@@ -211,11 +211,11 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
-                    <input type="text" name="disease" value="{{$disease}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="disease" value="{{$disease}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                   <div class="col-sm-6">
                     <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
-                    <input type="text" name="allergy" value="{{$allergy}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="allergy" value="{{$allergy}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
               </div>
@@ -236,17 +236,17 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <h3><span style="color:#ff0000;"> * </span>ชื่อ</h3>
-                    <input type="text" name="parent_name" value="{{$parent_name}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="parent_name" value="{{$parent_name}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>ความสัมพันธ์</h3>
-                    <input type="text" name="parent_relation" value="{{$parent_relation}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="parent_relation" value="{{$parent_relation}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                   <div class="col-sm-7">
                     <h3><span style="color:#ff0000;"> * </span>เบอร์โทรศัพท์</h3>
-                    <input type="text" name="parent_tel" value="{{$parent_tel}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="parent_tel" value="{{$parent_tel}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
                 <div class="row">
@@ -273,13 +273,13 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>รู้จักค่ายนี้จากไหน</h3>
-                    <input type="text" name="referal" value="{{$referal}}" class="form-control" style="font-size:1em;" placeholder="รู้จักค่ายนี้จากไหน">
+                    <input type="text" name="referal" value="{{$referal}}" class="form-control" style="font-size:1em;" placeholder="รู้จักค่ายนี้จากไหน" class="required">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>กิจกรรมที่เคยทำ</h3>
-                    <input type="text" name="activitys" value="{{$activitys}}" class="form-control" style="font-size:1em;" placeholder="กิจกรรมที่เคยทำ">
+                    <input type="text" name="activitys" value="{{$activitys}}" class="form-control" style="font-size:1em;" placeholder="กิจกรรมที่เคยทำ" class="required">
                   </div>
                 </div>
                 <div class="row">
