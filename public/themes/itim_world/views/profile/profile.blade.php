@@ -87,6 +87,54 @@
          </div>
          <!--End Content-->
       <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
+        <div id="live-chat">
 
+    <header class="clearfix">
+
+      <h3>Chat With P'WIPPO</h3>
+
+      <span class="chat-message-counter">1</span>
+
+    </header>
+
+    <div class="chat">
+
+      <div class="chat-history">
+
+        <div class="chat-message clearfix">
+
+          <img src="http://lorempixum.com/32/32/people" alt="" width="32" height="32">
+
+          <div class="chat-message-content clearfix">
+
+            <span class="chat-time">13:35</span>
+
+            <h4>John Doe</h4>
+
+            <p style="font-size:1.1em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>
+
+          </div> <!-- end chat-message-content -->
+
+        </div> <!-- end chat-message -->
+
+        <hr>
+
+
+      </div> <!-- end chat-history -->
+
+      <p class="chat-feedback">Your partner is typing…</p>
+
+      <form action="#" method="post">
+
+        <fieldset>
+
+          <input type="text" placeholder="Type your message…" autofocus style="background-color:#fff; color:#333;">
+          <input type="hidden">
+
+        </fieldset>
+
+      </form>
+
+    </div> <!-- end chat -->
       </div>
     </div>
