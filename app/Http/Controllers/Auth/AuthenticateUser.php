@@ -9,15 +9,18 @@ use Input;
 use Auth;
 use Hash;
 use Session;
+use App\Models\Wip8_profile;
 
 class AuthenticateUser {
      private $socialite;
      private $auth;
      private $users;
+     protected $profile;
      public function __construct(Socialite $socialite, Guard $auth, UserRepository $users) {
         $this->socialite = $socialite;
         $this->users = $users;
         $this->auth = $auth;
+        $this->profile = new Wip8_profile();
     }
     
     public function execute($request, $listener, $provider) {
@@ -36,7 +39,8 @@ class AuthenticateUser {
             $user = Auth::attempt($user_data);
 //            echo Hash::make(array_get($request, 'password', ''));
 //            dd($user);
-            Session::push('user', array_get($request, 'email'));
+            $result = $this->profile->where('email',array_get($request, 'email'))->get();
+            Session::push('user',$result);
             $value = Session::get('user');
             if($user){
                 echo "PASS";
