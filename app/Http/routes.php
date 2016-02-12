@@ -20,7 +20,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
     Route::any('accounts/login/{provider?}','Auth\AuthController@handle_login');
     Route::controller('account','AccountController');
-    Route::controller('auth/logout}','AccountController@getLogout');
+    Route::controller('auth/logout','AccountController@getLogout');
     Route::group(['middleware' => ['web','checkpermission']], function () {
         Route::controller('dashboard','DashboardController');
         Route::get('session',function(){
