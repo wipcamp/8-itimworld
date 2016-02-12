@@ -49,11 +49,17 @@ class ProfileController extends ITIMController{
 
     public function postFormfour(){
       $data = Input::all();
-      $result = $this->ProfileRepository->fourDivRegis($data);
+      $result = $this->ProfileRepository->sixDivRegis($data);
       return $result;
     }
 
     public function postFormfive(){
+      $data = Input::all();
+      $result = $this->ProfileRepository->fourDivRegis($data);
+      return $result;
+    }
+
+    public function postFormsix(){
       $data = Input::all();
       $result = $this->ProfileRepository->fiveDivRegis($data);
       return $result;
