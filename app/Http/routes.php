@@ -23,6 +23,9 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::group(['middleware' => ['web','checkpermission']], function () {
         Route::controller('dashboard','DashboardController');
+        Route::get('session',function(){
+          return Session::get('user');
+        });
         
         
         
