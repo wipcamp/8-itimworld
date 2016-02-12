@@ -3,10 +3,7 @@
 //Route::get('/upload/show', 'AdminDocumentController@show');
 Route::controller('itim', 'RegisterController');
 Route::get('/',function(){
-  $hash = Hash::make('1');
-  if(Hash::check('1',$hash)){
-    return 'true';
-  }
+  
 });
 
 
