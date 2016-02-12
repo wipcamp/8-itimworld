@@ -263,7 +263,7 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
 
             <div style="Margin-left: 20px;Margin-right: 20px;">
       <h1 class="size-30" style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">&#3618;&#3636;&#3609;&#3604;&#3637;&#3605;&#3657;&#3629;&#3609;&#3619;&#3633;&#3610;&#3609;&#3657;&#3629;&#3591;&#3629;&#3629;&#3615;</h1><h1 class="size-30" style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">WIP {{$wip_id}}</h1>
-      <p class="size-18" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 18px;line-height: 26px;text-align: center;">คลิกปุ่มด้านล่างเพื่อยืนยันการสมัครค่าย</p>
+      <p class="size-18" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 18px;line-height: 26px;text-align: center;"> คลิกปุ่มด้านล่างเพื่อยืนยันการสมัครค่าย </p>
     </div>
 
             <div style="Margin-left: 20px;Margin-right: 20px;">
