@@ -43,6 +43,7 @@
               <?php echo Form::close(); ?>
               <center><a href="" style="color:#fff;">Forget Password</a></center>
               <hr>
+              <br>
               <center>
                 <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></a>
               </center>
