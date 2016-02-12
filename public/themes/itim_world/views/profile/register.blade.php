@@ -194,10 +194,39 @@
               </div>
               <?php echo Form::close(); ?>
             </li>
-            <li data-tag="ข้อมูลผู้ปกครอง" class="slide">
+            <li data-tag="ข้อมูลด้านสุขภาพ" class="slide">
               <div class="container">
                 <!-- form start -->
                 <?php echo Form::open(array('','id'=>'reg-4','class'=>'reg-form')); ?>
+                <h1>ข้อมูลด้านสุขภาพ</h1>
+                <input type="hidden" value="22222" name="wip_id"/>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
+                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                  </div>
+                  <div class="col-sm-4">
+                    <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร</h3>
+                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                  </div>
+                  <div class="col-sm-4">
+                    <h3><span style="color:#ff0000;"> * </span>แพ้อาหารอะไร</h3>
+                    <input type="text" name="gpax" value="{{$gpax}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="button-container container">
+                  <button type="submit" class="next">next</button>
+                  <button class="previous">previous</button>
+                </div>
+              </div>
+              <?php echo Form::close(); ?>
+            </li>
+            <li data-tag="ข้อมูลผู้ปกครอง" class="slide">
+              <div class="container">
+                <!-- form start -->
+                <?php echo Form::open(array('','id'=>'reg-5','class'=>'reg-form')); ?>
                 <h1>ข้อมูลผู้ปกครอง</h1>
                 <input type="hidden" value="22222" name="wip_id"/>
                 <div class="row">
@@ -228,7 +257,7 @@
             <li data-tag="ทักษะทางคอมพิวเตอร์" class="slide">
               <div class="container">
                 <!-- form start -->
-                <?php echo Form::open(array('','id'=>'reg-5','class'=>'reg-form')); ?>
+                <?php echo Form::open(array('','id'=>'reg-6','class'=>'reg-form')); ?>
                 <h1>ข้อมูลด้านอื่นๆ</h1>
                 <input type="hidden" value="22222" name="wip_id"/>
                 <div class="row">

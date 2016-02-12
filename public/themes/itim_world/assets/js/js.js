@@ -147,6 +147,8 @@ $(document).ready(function () {
           urlForm = "http://itim.wip.loc/profile/formfour";
         }else if (id==='reg-5') {
           urlForm = "http://itim.wip.loc/profile/formfive";
+        }else if (id==='reg-6') {
+          urlForm = "http://itim.wip.loc/profile/formfive";
         }
         // var
         e.preventDefault();
@@ -174,6 +176,8 @@ $(document).ready(function () {
         }else if (id==='reg-4') {
           urlForm = "http://itim.wip.loc/profile/formfour";
         }else if (id==='reg-5') {
+          urlForm = "http://itim.wip.loc/profile/formfive";
+        }else if (id==='reg-6') {
           urlForm = "http://itim.wip.loc/profile/formfive";
         }
         // var
