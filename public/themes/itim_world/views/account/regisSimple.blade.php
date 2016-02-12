@@ -24,7 +24,8 @@
                 <center>
                   <h1>สมัครเข้าค่าย</h1></center>
                 <?php echo Form::open(array('url' => 'account/register')); ?>
-                  <center><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="200"></center>
+                  <center><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></center>
+                  <br>
                   <hr>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">อีเมลล์</label>
