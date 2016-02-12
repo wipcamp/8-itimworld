@@ -201,17 +201,13 @@
                 <h1>ข้อมูลด้านสุขภาพ</h1>
                 <input type="hidden" value="22222" name="wip_id"/>
                 <div class="row">
-                  <div class="col-sm-4">
+                  <div class="col-sm-6">
                     <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
-                    <input type="text" name="level" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                    <input type="text" name="disease" value="{{$level}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
                   </div>
-                  <div class="col-sm-4">
-                    <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร</h3>
-                    <input type="text" name="program" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
-                  </div>
-                  <div class="col-sm-4">
-                    <h3><span style="color:#ff0000;"> * </span>แพ้อาหารอะไร</h3>
-                    <input type="text" name="gpax" value="{{$gpax}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
+                  <div class="col-sm-6">
+                    <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
+                    <input type="text" name="allergy" value="{{$program}}" class="form-control" style="font-size:1.4em;" placeholder="Text input">
                   </div>
                 </div>
               </div>
