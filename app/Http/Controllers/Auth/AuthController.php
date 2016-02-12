@@ -82,7 +82,7 @@ class AuthController extends Controller
         return $authenticateUser->execute($request->all(), $this, $provider);
     }
     
-    public function getLogout(){
+    public function getGoout(){
         echo "LOGOUT";
         die();
         Auth::logout();
