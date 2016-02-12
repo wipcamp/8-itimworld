@@ -92,6 +92,14 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     return $result;
   }
+  
+  public function sixDivRegis($data){
+    $this->profile->where('wip_id',array_get($data,'wip_id'))
+                  ->update(array('allergy' => array_get($data,'allergy'),
+                          'disease' => array_get($data,'disease')));
+    $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
+    return $result;
+  }
 
   public function find($param){
     $result = $this->profile->where('wip_id',$param)
