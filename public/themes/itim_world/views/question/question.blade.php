@@ -1,13 +1,13 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/froala_editor.css">
-<link rel="stylesheet" href="assets/css/froala_style.css">
-<link rel="stylesheet" href="assets/css/plugins/code_view.css">
-<link rel="stylesheet" href="assets/css/plugins/image_manager.css">
-<link rel="stylesheet" href="assets/css/plugins/image.css">
-<link rel="stylesheet" href="assets/css/plugins/table.css">
-<link rel="stylesheet" href="assets/css/plugins/video.css">
-<link rel="stylesheet" href="assets/css/plugins/colors.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/froala_editor.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/froala_style.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/code_view.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/image_manager.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/image.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/table.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/video.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/colors.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
 <style>
     body {
@@ -18,27 +18,30 @@
       margin: auto;
       text-align: left;
     }
+    textarea{
+      display: block;
+    }
   </style>
 <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
-<script type="text/javascript" src="assets/js/froala_editor.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/align.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/code_beautifier.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/code_view.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/image.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/image_manager.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/link.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/lists.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/paragraph_format.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/paragraph_style.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/font_family.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/table.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/video.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/url.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/entities.min.js"></script>
-<script type="text/javascript" src="assets/js/plugins/colors.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/froala_editor.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/align.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/code_view.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/image.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/image_manager.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/link.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/paragraph_format.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/paragraph_style.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/font_family.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/table.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/video.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/url.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/entities.min.js"></script>
+<script type="text/javascript" src="<?php echo url(""); ?>/themes/itim_world/assets/js/plugins/colors.min.js"></script>
 <script>
     $(function(){
       $('#mission1')
@@ -60,24 +63,24 @@
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
         $('#mission3')
         .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission2').parents('form').on('submit', function () {
-            console.log($('#mission2').val());
+          $('#mission3').parents('form').on('submit', function () {
+            console.log($('#mission3').val());
             return false;
           })
         })
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
         $('#mission4')
         .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission2').parents('form').on('submit', function () {
-            console.log($('#mission2').val());
+          $('#mission4').parents('form').on('submit', function () {
+            console.log($('#mission4').val());
             return false;
           })
         })
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
         $('#mission6')
         .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission2').parents('form').on('submit', function () {
-            console.log($('#mission2').val());
+          $('#mission6').parents('form').on('submit', function () {
+            console.log($('#mission6').val());
             return false;
           })
         })
