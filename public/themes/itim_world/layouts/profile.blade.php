@@ -5,7 +5,7 @@
         <link rel="icon" type="image/png" href="<?php echo url(""); ?>/themes/itim_world/assets/img/favicon.ico">
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
-        {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
+        <!-- {!!HTML::style('themes/itim_world/assets/css/style.css')!!} -->
 
         {!! Theme::asset()->styles() !!}
 
@@ -43,7 +43,7 @@
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery-1.12.0.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery.bootstrap.wizard.js')!!}
-        {!!HTML::script('themes/itim_world/assets/js/js.js')!!}
+        <!-- {!!HTML::script('themes/itim_world/assets/js/js.js')!!} -->
 
         {!! Theme::asset()->scripts() !!}
     </body>
