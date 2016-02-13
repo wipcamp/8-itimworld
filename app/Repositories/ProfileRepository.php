@@ -79,7 +79,7 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     if($i == null||$i==''){
       $this->school->school_name = array_get($data,'school_id');
-      $this->school->save();
+      $this->school->save(); 
       $in = $this->school->where('school_name',array_get($data,'school_id'))->get();
       $ij = json_decode($i,true);
       $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($in,'school_id')]);
