@@ -1,3 +1,25 @@
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/froala_editor.css">
+<link rel="stylesheet" href="../css/froala_style.css">
+<link rel="stylesheet" href="../css/plugins/code_view.css">
+<link rel="stylesheet" href="../css/plugins/image_manager.css">
+<link rel="stylesheet" href="../css/plugins/image.css">
+<link rel="stylesheet" href="../css/plugins/table.css">
+<link rel="stylesheet" href="../css/plugins/video.css">
+<link rel="stylesheet" href="../css/plugins/colors.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+<style>
+    body {
+      text-align: center;
+    }
+
+    div#editor {
+      width: 81%;
+      margin: auto;
+      text-align: left;
+    }
+  </style>
 <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
 
       <div class="container-fluid">
@@ -55,6 +77,12 @@
                    <form class="ques-form" id="qs-1" action="#">
                     <h1>MISSION I</h1>
                     <h2>กาลครั้งหนึ่งมีเมืองวิปแคม์อันทันสมัยและสวยสดงดงาม มีวายร้ายออกมาอาละวาด แล้วก็มีซุปเปอร์ฮีโร่ปรากฎตัวขึ้นเพื่อจัดการกับเจ้าวายร้าย ถ้าน้องเป็นซุปเปอร์ฮีโร่ที่มีพลังพิเศษ น้องอยากจะมีพลังพิเศษอะไร เพราะอะไร</h2>
+                    <div id="editor">
+                      <form method="get" action="google">
+                        <textarea id='mission1' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        </textarea>
+                      </form>
+                    </div>
                     <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
                     <div class="row">
                       <div class="button-container container">
@@ -71,7 +99,12 @@
                    <form class="ques-form" id="qs-2" action="#">
                     <h1>MISSION II</h1>
                     <h2>ถ้าระหว่างทำกิจกรรมภายในค่ายถ้าเราเห็นเพื่อนนั่งอยู่เงียบๆคนเดียวไม่ร่วมกิจกรรมใดๆ น้องจะเข้าหาเพื่อนหรือไม่เข้ายังไง เพราะอะไร</h2>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
+                    <div id="editor">
+                      <form method="get" action="google">
+                        <textarea id='mission2' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        </textarea>
+                      </form>
+                    </div>
                     <div class="row">
                       <div class="button-container container">
                         <button type="submit" class="next">next</button>
@@ -87,7 +120,12 @@
                    <form class="ques-form" id="qs-3" action="#">
                     <h1>MISSION III</h1>
                     <h2>ในค่ายวิปแคมป์คร้ังท่ี 8 หากน้องติดอยู่ในห้องคอมพิวเตอร์พร้อมกับ เพื่อนในค่ายอีก 1 คน และมีสายแลนอีก 1 เส้น น้องจะทำอย่างไร</h2>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
+                    <div id="editor">
+                      <form method="get" action="google">
+                        <textarea id='mission3' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        </textarea>
+                      </form>
+                    </div>
                     <div class="row">
                       <div class="button-container container">
                         <button type="submit" class="next">next</button>
@@ -105,7 +143,12 @@
                     <h2>ถ้าหากน้องได้รับการคัดเลือกให้เข้าร่วมในค่าย WIP Camp #8
                        น้องคาดหวังว่าจะได้อะไรจากการเข้าร่วมค่ายในครั้งนี้
                     </h2>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
+                    <div id="editor">
+                      <form method="get" action="google">
+                        <textarea id='mission4' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        </textarea>
+                      </form>
+                    </div>
                     <div class="row">
                       <div class="button-container container">
                         <button type="submit" class="next">next</button>
@@ -145,7 +188,12 @@
                     <h1>MISSION VI</h1>
                     <h2>จาก source code ในรูปเป็นโปรแกรมอะไร เอาไว้ใช้ทำอะไร</h2>
                     <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.png" alt="" />
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
+                    <div id="editor">
+                      <form method="get" action="google">
+                        <textarea id='mission6' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        </textarea>
+                      </form>
+                    </div>
                     <div class="row">
                       <div class="button-container container">
                         <button type="submit" class="next">next</button>
@@ -174,6 +222,82 @@
           </div>
         </div>
         <!-- Javascript -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+          <script type="text/javascript" src="../js/froala_editor.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/align.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/code_beautifier.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/code_view.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/image.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/image_manager.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/link.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/lists.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/paragraph_format.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/paragraph_style.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/font_family.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/table.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/video.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/url.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/entities.min.js"></script>
+          <script type="text/javascript" src="../js/plugins/colors.min.js"></script>
+          <script>
+              $(function(){
+                $('#mission1')
+                  .on('froalaEditor.initialized', function (e, editor) {
+                    $('#mission1').parents('form').on('submit', function () {
+                      console.log($('#mission1').val());
+                      return false;
+                    })
+                  })
+                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
 
-  </body>
-</html>
+                  $('#mission2')
+                  .on('froalaEditor.initialized', function (e, editor) {
+                    $('#mission2').parents('form').on('submit', function () {
+                      console.log($('#mission2').val());
+                      return false;
+                    })
+                  })
+                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+                  $('#mission3')
+                  .on('froalaEditor.initialized', function (e, editor) {
+                    $('#mission2').parents('form').on('submit', function () {
+                      console.log($('#mission2').val());
+                      return false;
+                    })
+                  })
+                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+                  $('#mission4')
+                  .on('froalaEditor.initialized', function (e, editor) {
+                    $('#mission2').parents('form').on('submit', function () {
+                      console.log($('#mission2').val());
+                      return false;
+                    })
+                  })
+                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+                  $('#mission6')
+                  .on('froalaEditor.initialized', function (e, editor) {
+                    $('#mission2').parents('form').on('submit', function () {
+                      console.log($('#mission2').val());
+                      return false;
+                    })
+                  })
+                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+              });
+              $('#mission1').froalaEditor({
+                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+              });
+              $('#mission2').froalaEditor({
+                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+              });
+              $('#mission3').froalaEditor({
+                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+              });
+              $('#mission4').froalaEditor({
+                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+              });
+              $('#mission6').froalaEditor({
+                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+              });
+          </script>
