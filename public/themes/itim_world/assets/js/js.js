@@ -168,12 +168,12 @@ function simpleSelect() {
 $(document).ready(function(){
     $('#typeahead').typeahead({
       source: function(query,process){
-        const data = {school_name:query}
+        const data = {school_id:query}
         $.ajax({
           url: 'http://itim.freezer.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
-          dataType: 'JSON', 
+          dataType: 'JSON',
           async: true,
           success: function(data){
             process(data);

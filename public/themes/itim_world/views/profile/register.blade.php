@@ -1,6 +1,6 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
- 
+
 <div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
@@ -177,7 +177,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <h3><span style="color:#ff0000;"> * </span>ชื่อโรงเรียน</h3>
-                    <input type="text" name="school_name" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                    <input type="text" name="school_id" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                   </div>
                 </div>
                 <div class="row">
