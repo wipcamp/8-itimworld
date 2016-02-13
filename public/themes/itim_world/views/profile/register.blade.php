@@ -183,11 +183,21 @@
                 <div class="row">
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>ระดับชั้น</h3>
-                    <input type="text" name="level" value="{{array_get($data,'level')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                    <select class="selectbox" name="level" class="required">
+                      <option>ระบุ</option>
+                      <option value="ม.4" {!! (array_get($data,'level')=='ม.4'?' selected':'') !!}>ม.4</option>
+                      <option value="ม.5" {!! (array_get($data,'level')=='ม.5'?' selected':'') !!}>ม.5</option>
+                      <option value="ม.6" {!! (array_get($data,'level')=='ม.6'?' selected':'') !!}>ม.6</option>
+                    </select>
                   </div>
                   <div class="col-sm-5">
                     <h3><span style="color:#ff0000;"> * </span>แผนการเรียน</h3>
-                    <input type="text" name="program" value="{{array_get($data,'program')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                    <select class="selectbox" name="program" class="required">
+                      <option>ระบุ</option>
+                      <option value="วิทย์-คณิต" {!! (array_get($data,'level')=='วิทย์-คณิต'?' selected':'') !!}>วิทย์-คณิต</option>
+                      <option value="ศิลป็-คำนวน" {!! (array_get($data,'level')=='ม.5'?' selected':'') !!}>ศิลป็-คำนวน</option>
+                      <option value="วิทย์-คอม" {!! (array_get($data,'level')=='ม.6'?' selected':'') !!}>วิทย์-คอม</option>
+                    </select>
                   </div>
                   <div class="col-sm-2">
                     <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
@@ -268,19 +278,19 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;">ทักษะทางคอมพิวเตอร์</h3>
-                    <input type="text" name="computer_skill" value="{{array_get($data,'computer_skill')}}" class="form-control" style="font-size:1em;" placeholder="ทักษะทางคอมพิวเตอร์" class="required">
+                    <textarea class="form-control" name="computer_skill" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'computer_skill')}}</textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>รู้จักค่ายนี้จากไหน</h3>
-                    <input type="text" name="referal" value="{{array_get($data,'referal')}}" class="form-control" style="font-size:1em;" placeholder="รู้จักค่ายนี้จากไหน" class="required">
+                    <textarea class="form-control" name="referal" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'referal')}}</textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
                     <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>กิจกรรมที่เคยทำ</h3>
-                    <input type="text" name="activitys" value="{{array_get($data,'activitys')}}" class="form-control" style="font-size:1em;" placeholder="กิจกรรมที่เคยทำ" class="required">
+                    <textarea class="form-control" name="activitys" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'activitys')}}</textarea>
                   </div>
                 </div>
                 <div class="row">
