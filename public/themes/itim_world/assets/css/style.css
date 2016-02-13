@@ -1772,7 +1772,7 @@ input[type=password],
 input[type=date],
 input[type=file],
 input[type=number],
-textarea.form-control {
+/*textarea.form-control {
   display: inline-block;
   border: none;
   background: #34495e;
@@ -1784,15 +1784,15 @@ textarea.form-control {
   padding: 8px;
   color: #ecf0f1;
   width: 100%;
-}
+}*/
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
 input[type=date]:focus,
 input[type=file]:focus,
-textarea {
+/*textarea {
   outline: none;
-}
+}*/
 input[type=text]::-webkit-input-placeholder,
 input[type=email]::-webkit-input-placeholder,
 input[type=password]::-webkit-input-placeholder,
@@ -1821,7 +1821,7 @@ input[type=date]:-ms-input-placeholder,
 input[type=file]:-ms-input-placeholder {
   color: #999;
 }
-
+/*
 textarea {
   width: 100%;
   max-width: 100%;
@@ -1853,7 +1853,7 @@ textarea::-moz-placeholder {
 }
 textarea:-ms-input-placeholder {
   color: #999;
-}
+}*/
 
 select.selectbox {
   display: none;

@@ -18,6 +18,9 @@
       margin: auto;
       text-align: left;
     }
+    textarea{
+      display: block;
+    }
   </style>
 <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
