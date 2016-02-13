@@ -123,7 +123,7 @@
                     <h2>กาลครั้งหนึ่งมีเมืองวิปแคม์อันทันสมัยและสวยสดงดงาม มีวายร้ายออกมาอาละวาด แล้วก็มีซุปเปอร์ฮีโร่ปรากฎตัวขึ้นเพื่อจัดการกับเจ้าวายร้าย ถ้าน้องเป็นซุปเปอร์ฮีโร่ที่มีพลังพิเศษ น้องอยากจะมีพลังพิเศษอะไร เพราะอะไร</h2>
                     <div id="editor">
                       <form method="get" action="google">
-                        <textarea id='mission1' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        <textarea id='mission1' style="margin-top: 30px;" placeholder="Type some text" name="ggg" class="form-control">
                           <h1>Textarea</h1>
                           <p>The editor can also be initialized on a textarea.</p>
                         </textarea>
@@ -147,7 +147,7 @@
                     <h2>ถ้าระหว่างทำกิจกรรมภายในค่ายถ้าเราเห็นเพื่อนนั่งอยู่เงียบๆคนเดียวไม่ร่วมกิจกรรมใดๆ น้องจะเข้าหาเพื่อนหรือไม่เข้ายังไง เพราะอะไร</h2>
                     <div id="editor">
                       <form class="ques-form" id="qs-2" action="#">
-                        <textarea id='mission2' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        <textarea id='mission2' style="margin-top: 30px;" placeholder="Type some text" name="ggg" class="form-control">
                         </textarea>
                     </div>
                     <div class="row">
@@ -167,7 +167,7 @@
                     <h2>ในค่ายวิปแคมป์คร้ังท่ี 8 หากน้องติดอยู่ในห้องคอมพิวเตอร์พร้อมกับ เพื่อนในค่ายอีก 1 คน และมีสายแลนอีก 1 เส้น น้องจะทำอย่างไร</h2>
                     <div id="editor">
                       <form class="ques-form" id="qs-3" action="#">
-                        <textarea id='mission3' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        <textarea id='mission3' style="margin-top: 30px;" placeholder="Type some text" name="ggg" class="form-control">
                         </textarea>
                     </div>
                     <div class="row">
@@ -188,7 +188,7 @@
                     </h2>
                     <div id="editor">
                       <form class="ques-form" id="qs-4" action="#">
-                        <textarea id='mission4' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        <textarea id='mission4' style="margin-top: 30px;" placeholder="Type some text" name="ggg" class="form-control">
                         </textarea>
                     </div>
                     <div class="row">
@@ -234,7 +234,7 @@
                     </center>
                     <div id="editor">
                       <form class="ques-form" id="qs-6" action="#">
-                        <textarea id='mission6' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                        <textarea id='mission6' style="margin-top: 30px;" placeholder="Type some text" name="ggg" class="form-control">
                         </textarea>
                     </div>
                     <div class="row">
