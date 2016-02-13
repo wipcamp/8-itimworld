@@ -23,7 +23,7 @@ class ProfileController extends ITIMController{
     }
 
     public function getIndex(){
-        return $this->theme->scope('profile.profile')->layout('blank')->render();
+        return $this->theme->scope('profile.index')->layout('profile')->render();
     }
 
     public function getRegister(){

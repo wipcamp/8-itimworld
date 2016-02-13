@@ -21,5 +21,10 @@ class ITIMController extends Controller
         $ProfileRepository = \App::make('App\Repositories\ProfileRepositoryInterface');
         $this->profile = $ProfileRepository->findByWIPID($this->user['wip_id']);
 
+        $this->theme->partialComposer('header', function ($view) {
+            $view->with('profile', $this->profile);
+            $view->with('User', $this->user);
+        });
+
     }
 }
