@@ -1,7 +1,7 @@
 <?php
 Route::controller('itim', 'RegisterController');
 
-
+Route::controller('question','QuestionController');
 
 //Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
 Route::group(['middleware' => ['web']], function () {
@@ -10,10 +10,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::controller('profile','ProfileController');
 
-
-
-
-    Route::controller('question','QuestionController');
 
 
 
