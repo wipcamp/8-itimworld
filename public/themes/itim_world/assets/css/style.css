@@ -368,7 +368,7 @@ input {
   display: none;
 }
 
-
+/*
 .style1 label {
   width: 26px;
   height: 15px;
@@ -801,7 +801,7 @@ dl.selectbox1 dd ul li {
   padding: 8px;
 }
 
-/*2*/
+/*
 select.selectbox2 {
   display: none;
 }
@@ -899,7 +899,7 @@ input[type=submit] {
 input[type=submit]:active, input[type=submit]:focus {
   outline: none;
 }
-
+*/
 
 .center{
   margin: 0 auto;
