@@ -109,36 +109,36 @@ function simpleSelect() {
   //   $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
   // });
 // select-sex
-  selectClass = $('#select-sex').attr('class');
-  selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
-  selectHolder += '<dt>' + $('option', '#select-sex').first().text() + '</dt><dd><ul>';
-  $('option', '#select-sex').each(function() {
-    selectHolder += '<li data="' + $('#select-sex').val() + '">' + $('#select-sex').text() + '</li>';
-  });
-  selectHolder += '</ul></dd></dl>';
-  $('#select-sex').after(selectHolder);
-  $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
+  // selectClass = $('#select-sex').attr('class');
+  // selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
+  // selectHolder += '<dt>' + $('option', '#select-sex').first().text() + '</dt><dd><ul>';
+  // $('option', '#select-sex').each(function() {
+  //   selectHolder += '<li data="' + $('#select-sex').val() + '">' + $('#select-sex').text() + '</li>';
+  // });
+  // selectHolder += '</ul></dd></dl>';
+  // $('#select-sex').after(selectHolder);
+  // $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
 
 // select-level
-  selectClass = $('#select-level').attr('class');
-  selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
-  selectHolder += '<dt>' + $('option', '#select-level').first().text() + '</dt><dd><ul>';
-  $('option', '#select-level').each(function() {
-    selectHolder += '<li data="' + $('#select-level').val() + '">' + $('#select-level').text() + '</li>';
-  });
-  selectHolder += '</ul></dd></dl>';
-  $('#select-level').after(selectHolder);
-  $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
-
-  selectClass = $('#select-program').attr('class');
-  selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
-  selectHolder += '<dt>' + $('option', '#select-program').first().text() + '</dt><dd><ul>';
-  $('option', '#select-program').each(function() {
-    selectHolder += '<li data="' + $('#select-program').val() + '">' + $('#select-program').text() + '</li>';
-  });
-  selectHolder += '</ul></dd></dl>';
-  $('#select-program').after(selectHolder);
-  $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
+  // selectClass = $('#select-level').attr('class');
+  // selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
+  // selectHolder += '<dt>' + $('option', '#select-level').first().text() + '</dt><dd><ul>';
+  // $('option', '#select-level').each(function() {
+  //   selectHolder += '<li data="' + $('#select-level').val() + '">' + $('#select-level').text() + '</li>';
+  // });
+  // selectHolder += '</ul></dd></dl>';
+  // $('#select-level').after(selectHolder);
+  // $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
+  //
+  // selectClass = $('#select-program').attr('class');
+  // selectHolder = '<dl class="simpleSelect ' + selectClass + '">';
+  // selectHolder += '<dt>' + $('option', '#select-program').first().text() + '</dt><dd><ul>';
+  // $('option', '#select-program').each(function() {
+  //   selectHolder += '<li data="' + $('#select-program').val() + '">' + $('#select-program').text() + '</li>';
+  // });
+  // selectHolder += '</ul></dd></dl>';
+  // $('#select-program').after(selectHolder);
+  // $('.' + selectClass).wrapAll('<div class="selectContainer"></div>');
 
 
 
