@@ -286,18 +286,23 @@
                   .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
               });
               $('#mission1').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+                theme: dark;
               });
               $('#mission2').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+                theme: dark;
               });
               $('#mission3').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+                theme: dark;
               });
               $('#mission4').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+                theme: dark;
               });
               $('#mission6').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL']
+                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+                theme: dark;
               });
           </script>
