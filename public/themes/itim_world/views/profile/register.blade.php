@@ -1,6 +1,6 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
-
+ 
 <div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
