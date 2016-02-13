@@ -227,6 +227,26 @@ $(document).ready(function () {
     });
 });
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#typeahead').typeahead({
+      source: function(query,process){
+        const data = {school_name:query}
+        $.ajax({
+          url: 'http://itim.freezer.wip.camp/profile/typeahead',
+          type: 'GET',
+          data: data,
+          dataType: 'JSON',
+          async: true,
+          success: function(data){
+            process(data);
+          }
+        });
+      }
+    });
+  });
+</script>
+
 $(document).ready(function() {
     $('#dateRangePicker')
         .datepicker({
