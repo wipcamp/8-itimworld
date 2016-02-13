@@ -21,6 +21,90 @@
     }
   </style>
 <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+<script type="text/javascript" src="../js/froala_editor.min.js"></script>
+<script type="text/javascript" src="../js/plugins/align.min.js"></script>
+<script type="text/javascript" src="../js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="../js/plugins/code_view.min.js"></script>
+<script type="text/javascript" src="../js/plugins/image.min.js"></script>
+<script type="text/javascript" src="../js/plugins/image_manager.min.js"></script>
+<script type="text/javascript" src="../js/plugins/link.min.js"></script>
+<script type="text/javascript" src="../js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="../js/plugins/paragraph_format.min.js"></script>
+<script type="text/javascript" src="../js/plugins/paragraph_style.min.js"></script>
+<script type="text/javascript" src="../js/plugins/font_family.min.js"></script>
+<script type="text/javascript" src="../js/plugins/table.min.js"></script>
+<script type="text/javascript" src="../js/plugins/video.min.js"></script>
+<script type="text/javascript" src="../js/plugins/url.min.js"></script>
+<script type="text/javascript" src="../js/plugins/entities.min.js"></script>
+<script type="text/javascript" src="../js/plugins/colors.min.js"></script>
+<script>
+    $(function(){
+      $('#mission1')
+        .on('froalaEditor.initialized', function (e, editor) {
+          $('#mission1').parents('form').on('submit', function () {
+            console.log($('#mission1').val());
+            return false;
+          })
+        })
+        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+
+        $('#mission2')
+        .on('froalaEditor.initialized', function (e, editor) {
+          $('#mission2').parents('form').on('submit', function () {
+            console.log($('#mission2').val());
+            return false;
+          })
+        })
+        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+        $('#mission3')
+        .on('froalaEditor.initialized', function (e, editor) {
+          $('#mission2').parents('form').on('submit', function () {
+            console.log($('#mission2').val());
+            return false;
+          })
+        })
+        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+        $('#mission4')
+        .on('froalaEditor.initialized', function (e, editor) {
+          $('#mission2').parents('form').on('submit', function () {
+            console.log($('#mission2').val());
+            return false;
+          })
+        })
+        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+        $('#mission6')
+        .on('froalaEditor.initialized', function (e, editor) {
+          $('#mission2').parents('form').on('submit', function () {
+            console.log($('#mission2').val());
+            return false;
+          })
+        })
+        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+    });
+    $('#mission1').froalaEditor({
+      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+      theme: dark;
+    });
+    $('#mission2').froalaEditor({
+      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+      theme: dark;
+    });
+    $('#mission3').froalaEditor({
+      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+      theme: dark;
+    });
+    $('#mission4').froalaEditor({
+      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+      theme: dark;
+    });
+    $('#mission6').froalaEditor({
+      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
+      theme: dark;
+    });
+</script>
 
       <div class="container-fluid">
         <!-- Scene -->
@@ -83,7 +167,6 @@
                         </textarea>
                       </form>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control" style="font-size:1.4em;" ></textarea>
                     <div class="row">
                       <div class="button-container container">
                         <button type="submit" class="next">next</button>
@@ -222,87 +305,3 @@
           </div>
         </div>
         <!-- Javascript -->
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
-          <script type="text/javascript" src="../js/froala_editor.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/align.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/code_beautifier.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/code_view.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/image.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/image_manager.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/link.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/lists.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/paragraph_format.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/paragraph_style.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/font_family.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/table.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/video.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/url.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/entities.min.js"></script>
-          <script type="text/javascript" src="../js/plugins/colors.min.js"></script>
-          <script>
-              $(function(){
-                $('#mission1')
-                  .on('froalaEditor.initialized', function (e, editor) {
-                    $('#mission1').parents('form').on('submit', function () {
-                      console.log($('#mission1').val());
-                      return false;
-                    })
-                  })
-                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-
-                  $('#mission2')
-                  .on('froalaEditor.initialized', function (e, editor) {
-                    $('#mission2').parents('form').on('submit', function () {
-                      console.log($('#mission2').val());
-                      return false;
-                    })
-                  })
-                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-                  $('#mission3')
-                  .on('froalaEditor.initialized', function (e, editor) {
-                    $('#mission2').parents('form').on('submit', function () {
-                      console.log($('#mission2').val());
-                      return false;
-                    })
-                  })
-                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-                  $('#mission4')
-                  .on('froalaEditor.initialized', function (e, editor) {
-                    $('#mission2').parents('form').on('submit', function () {
-                      console.log($('#mission2').val());
-                      return false;
-                    })
-                  })
-                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-                  $('#mission6')
-                  .on('froalaEditor.initialized', function (e, editor) {
-                    $('#mission2').parents('form').on('submit', function () {
-                      console.log($('#mission2').val());
-                      return false;
-                    })
-                  })
-                  .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-              });
-              $('#mission1').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-                theme: dark;
-              });
-              $('#mission2').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-                theme: dark;
-              });
-              $('#mission3').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-                theme: dark;
-              });
-              $('#mission4').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-                theme: dark;
-              });
-              $('#mission6').froalaEditor({
-                imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-                theme: dark;
-              });
-          </script>
