@@ -54,7 +54,7 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
-        if(array_get($data, 'provider' == 'email')){
+        if(array_get($data, 'provider') == 'email'){
             $val = Validator::make($data, [
                 'name_th' => 'required|max:255',
                 'lastname_th' => 'required|max:255',
