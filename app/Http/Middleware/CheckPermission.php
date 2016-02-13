@@ -8,20 +8,17 @@ class CheckPermission
 {
     public function handle($request, Closure $next, $permission = null)
     {
-        $uid = Auth::id();
-        //echo $uid;
-        
-         $ctrl = $request->segment(1);
-         $action = $request->segment(2);
-        //echo $ctrl;
-        //echo $action;
-        //echo "CHECK";
-        //die();
-        
-        if (isset($uid)) {
-            return $uid? $next($request) : redirect('access/denie');
+        $user = Auth::user();
+        $status = array_get($user, 'status', 1);
+        if($status == 1){
+            $redirect = "/account/register/".array_get($user, 'wip_id');
+            return $request->ajax ? response('Unauthorized.', 401) : redirect($redirect);
+        }
+
+        if (isset($user)) {
+            return $user? $next($request) : redirect('access/denie');
         }
         return $request->ajax ? response('Unauthorized.', 401) : redirect('/auth/login');
     }
-    
+
 }
