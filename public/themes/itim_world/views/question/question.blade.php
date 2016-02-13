@@ -84,24 +84,19 @@
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
     });
     $('#mission1').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission2').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission3').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission4').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission6').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
 </script>
 
