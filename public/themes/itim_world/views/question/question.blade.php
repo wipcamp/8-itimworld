@@ -245,7 +245,9 @@
                     <audio src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.m4a"></audio>
                     <input type="text" class="form-control" style="font-size:1.4em;"  name="">
                     <h2>รูปภาพที่ปรากฎนั้นคือรูปอะไร</h2>
-                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" />
+                    <center>
+                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" width="600" />
+                    </center>
                     <input type="text" class="form-control" style="font-size:1.4em;"  name="">
                     <div class="row">
                       <div class="button-container container">
@@ -261,7 +263,9 @@
                    <!-- form start -->
                     <h1>MISSION VI</h1>
                     <h2>จาก source code ในรูปเป็นโปรแกรมอะไร เอาไว้ใช้ทำอะไร</h2>
-                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.png" alt="" />
+                    <center>
+                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.png" alt="" width="600"/>
+                    </center>
                     <div id="editor">
                       <form class="ques-form" id="qs-6" action="#">
                         <textarea id='mission6' style="margin-top: 30px;" placeholder="Type some text" name="ggg">

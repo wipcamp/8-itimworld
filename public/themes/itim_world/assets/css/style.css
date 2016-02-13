@@ -1575,7 +1575,7 @@ p { margin: 0; }
 margin: 10px 0 5px !important;
 }
 
-/*input {
+input {
   display: none;
 }
 
@@ -1818,9 +1818,9 @@ input[type=password]:-ms-input-placeholder,
 input[type=date]:-ms-input-placeholder,
 input[type=file]:-ms-input-placeholder {
   color: #999;
-}*/
+}
 
-/*textarea {
+textarea {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
@@ -1851,8 +1851,8 @@ textarea::-moz-placeholder {
 }
 textarea:-ms-input-placeholder {
   color: #999;
-}*/
-/*
+}
+
 select.selectbox {
   display: none;
 }
@@ -2011,8 +2011,9 @@ dl.selectbox1 dd ul li {
   color: #ecf0f1;
   padding: 8px;
 }
+
 /*2*/
-/*select.selectbox2 {
+select.selectbox2 {
   display: none;
 }
 
@@ -2108,7 +2109,7 @@ input[type=submit] {
 }
 input[type=submit]:active, input[type=submit]:focus {
   outline: none;
-}*/
+}
 
 
 .center{
