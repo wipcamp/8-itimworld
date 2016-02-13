@@ -155,9 +155,14 @@
                     <h1>MISSION I</h1>
                     <h2>กาลครั้งหนึ่งมีเมืองวิปแคม์อันทันสมัยและสวยสดงดงาม มีวายร้ายออกมาอาละวาด แล้วก็มีซุปเปอร์ฮีโร่ปรากฎตัวขึ้นเพื่อจัดการกับเจ้าวายร้าย ถ้าน้องเป็นซุปเปอร์ฮีโร่ที่มีพลังพิเศษ น้องอยากจะมีพลังพิเศษอะไร เพราะอะไร</h2>
                     <div id="editor">
-                      <form class="ques-form" id="qs-1" action="#">
+                      <form method="get" action="google">
                         <textarea id='mission1' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                          <h1>Textarea</h1>
+                          <p>The editor can also be initialized on a textarea.</p>
                         </textarea>
+
+                        <input type="submit">
+                      </form>
                     </div>
                     <div class="row">
                       <div class="button-container container">
