@@ -5,21 +5,30 @@ use Theme;
 use App\Models\Wip8_profile;
 use Input;
 use App\Repositories\AccountRepositoryInterface;
+use App\Repositories\ProfileRepositoryInterface;
 //use Illuminate\Support\Facades\Auth;
 use Session;
 use Auth;
 
 class AccountController extends ITIMController{
   protected $AccountRepository;
+  protected $ProfileRepository;
 
-  public function __construct(AccountRepositoryInterface $AccountRepository){
+  public function __construct(AccountRepositoryInterface $AccountRepository, ProfileRepositoryInterface $ProfileRepository){
     parent::__construct();
     $this->AccountRepository = $AccountRepository;
+    $this->ProfileRepository = $ProfileRepository;
   }
 
-  public function getRegister(){
+  public function getRegister($wip_id = null){
+
+      $user = array();
+      if($wip_id){
+          $user = $this->AccountRepository->findByWIPID($wip_id);
+      }
       $view = array(
-          'provider' => 'email'
+          'provider' => array_get($user, 'provider','email'),
+          'user'    => $user
       );
 
       return $this->theme->scope('account.regisSimple', $view)->layout('blank')->render();

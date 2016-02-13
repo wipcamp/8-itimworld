@@ -17,7 +17,7 @@ class AccountRepository implements AccountRepositoryInterface
 	public function __construct(){
 		$this->account = new User();
 		$this->allwipid = new Wip8_allwipid();
-		$profile = new Wip8_profile();
+		$this->profile = new Wip8_profile();
 	}
 
 	public function wipId(){
@@ -33,7 +33,7 @@ class AccountRepository implements AccountRepositoryInterface
 
 	public function find($param){
     $result = $this->account->where('wip_id',$param)
-														->orWhere('email',$param)
+				->orWhere('email',$param)
 														->get();
     return $result;
 	}
@@ -133,7 +133,6 @@ class AccountRepository implements AccountRepositoryInterface
 	}
 
 
-
 	public function createAccount($data){
 		$wip_id_gen = $this->wipId();
 		$verify_code = md5(Hash::make($wip_id_gen));
@@ -144,7 +143,10 @@ class AccountRepository implements AccountRepositoryInterface
 		$User->verify = $verify_code;
 		$User->password = bcrypt(array_get($data,'password'));
 		$User->active = 0;
+		$User->status = array_get($data,'status');
 		$User->provider = array_get($data,'provider');
+		$User->avatar = array_get($data,'avatar');
+		$User->provider_id = array_get($data,'provider_id');
 		$User->save();
 
 		$Profile = new Wip8_profile();
@@ -158,6 +160,27 @@ class AccountRepository implements AccountRepositoryInterface
 		return $User;
 	}
 
+	public function updateSocialAccount($data){
+		$wip_id = array_get($data, 'wip_id');
+
+		$user = $this->account->where('wip_id', $wip_id)
+				->update(array('status' => 2));
+
+		$profile_data = array(
+			'citizen_id' => array_get($data,'citizen_id'),
+			'name_th'	=> array_get($data,'name_th'),
+			'surname_th' => array_get($data,'lastname_th')
+		);
+		$profile = $this->profile->where('wip_id', $wip_id)->update($profile_data);
+		// $profile->citizen_id = array_get($data,'citizen_id');
+		// $profile->name_th = array_get($data,'name_th');
+		// $profile->surname_th = array_get($data,'lastname_th');
+		// $profile->save();
+
+		return $this->account->where('wip_id', $wip_id)->first();
+
+	}
+
 	public function findSocialUser($data, $provider){
 
 		$result = $this->account->where('email',array_get($data,'email',''))
@@ -165,6 +188,12 @@ class AccountRepository implements AccountRepositoryInterface
 					->first();
 
 		return json_decode($result, true);
+	}
 
+	public function findByWIPID($wip_id){
+		$result = $this->account->where('wip_id', $wip_id)
+					->first();
+
+		return json_decode($result, true);
 	}
 }

@@ -23,7 +23,7 @@
               <div class="row center" id="form-signup">
                 <center>
                   <h1>สมัครเข้าค่าย</h1></center>
-
+                  {{ HTML::ul($errors->all()) }}
                 <?php echo Form::open(array('url' => 'auth/register')); ?>
                  @if ($provider != "facebook")
                   <center>
@@ -58,14 +58,14 @@
                        <img class="img-circle img-responsive" src="{{ array_get($user, 'avatar') }}">
                        <h1>{{ array_get($user, 'name') }}</h1>
                   </center>
-
+                        <input type="hidden" name="email" value="{{ array_get($user, 'email') }}" />
                   @endif
 
 
 
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">ชื่อ (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="name_th">
+                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="name_th" value="{{ (isset($user)? array_get($user, 'user.first_name') : '' ) }}">
                     @if ($errors->has('name_th'))
                         <span class="help-block">
                             <strong>{{ $errors->first('name_th') }}</strong>
@@ -74,7 +74,7 @@
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">นามสกุล (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="lastname_th">
+                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="lastname_th" value="{{ (isset($user)? array_get($user, 'user.first_name') : '' ) }}">
                     @if ($errors->has('lastname_th'))
                         <span class="help-block">
                             <strong>{{ $errors->first('lastname_th') }}</strong>
@@ -91,6 +91,7 @@
                     @endif
                   </div>
                   <input type="hidden" name="provider" value="{{ $provider }}" />
+                  <input type="hidden" name="wip_id" value="{{ array_get($user, 'wip_id') }}" />
                   <input type="submit" value="send">
                 <?php echo Form::close(); ?>
 
