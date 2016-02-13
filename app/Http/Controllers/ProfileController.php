@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Theme;
 use App\Models\Wip8_profile;
+use App\Models\Wip8_school;
 use Input;
 use Session;
 use App\Repositories\ProfileRepositoryInterface;
@@ -29,7 +30,10 @@ class ProfileController extends ITIMController{
         $value = Session::get('user');
         $result = $this->ProfileRepository->find(22222);
         $data = json_decode($result,true);
-        return $this->theme->scope('profile.register',array_get($data,'0'))->layout('blank')->render();
+        $view = array(
+          'data' => $data
+        );
+        return $this->theme->scope('profile.register',$view)->layout('blank')->render();
     }
 
     public function postFormfirst(){
@@ -71,5 +75,22 @@ class ProfileController extends ITIMController{
       $data = Input::all();
       $this->ProfileRepository->create($data);
       return $data;
+    }
+
+
+
+    public function getTypeahead(){
+    	$term = Input::get('school_name');
+
+    	$results = array();
+
+      $this->school = new Wip8_school();
+      $queries = $this->school->where('school_name','LIKE','%'.$term.'%')
+                              ->take(10)->get();
+    	foreach ($queries as $query)
+    	{
+    	    $results[] = $query->school_name ;
+    	}
+    return json_encode($results);
     }
 }

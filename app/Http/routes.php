@@ -1,6 +1,6 @@
 <?php
 Route::controller('itim', 'RegisterController');
-
+Route::controller('profile','ProfileController');
 
 
 //Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');

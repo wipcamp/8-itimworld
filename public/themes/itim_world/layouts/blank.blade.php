@@ -2,6 +2,7 @@
 <head>
     <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
     <link rel="icon" type="image/png" href="http://itim.wip.loc/themes/itim_world/assets/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
     {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
     {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
     {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
