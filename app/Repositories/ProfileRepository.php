@@ -93,7 +93,7 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     return $result;
   }
-  
+
   public function sixDivRegis($data){
     $this->profile->where('wip_id',array_get($data,'wip_id'))
                   ->update(array('allergy' => array_get($data,'allergy'),
@@ -108,5 +108,11 @@ class ProfileRepository implements ProfileRepositoryInterface{
                             ->orWhere('name_en',$param)
                             ->get();
     return $result;
+  }
+
+
+  public function findByWIPID($wip_id){
+      $result = $this->profile->where('wip_id',$wip_id)->first();
+      return $result;
   }
 }

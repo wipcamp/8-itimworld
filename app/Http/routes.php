@@ -8,6 +8,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
     Route::controller('account','AccountController');
 
+    Route::controller('profile','ProfileController');
 
 
 
