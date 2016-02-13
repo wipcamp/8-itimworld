@@ -262,8 +262,8 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
     </div>
 
             <div style="Margin-left: 20px;Margin-right: 20px;">
-      <h1 class="size-30" style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">&#3618;&#3636;&#3609;&#3604;&#3637;&#3605;&#3657;&#3629;&#3609;&#3619;&#3633;&#3610;&#3609;&#3657;&#3629;&#3591;&#3629;&#3629;&#3615;</h1><h1 class="size-30" style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">WIP {{$wip_id}}</h1>
-      <p class="size-18" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 18px;line-height: 26px;text-align: center;"> คลิกปุ่มด้านล่างเพื่อยืนยันการสมัครค่าย </p>
+      <h1 class="size-30" style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">ขอบคุณที่สมัครค่ายของเราน้าา ~ น้อง {{$name}}</h1><h1 class="size-30" style="Margin-top: 20px;Margin-bottom: 0;font-style: normal;font-weight: normal;font-size: 30px;line-height: 38px;color: #80bfc4;text-align: center;">WIP {{$wip_id}}</h1>
+      <p class="size-19" style="Margin-top: 20px;Margin-bottom: 20px;font-size: 18px;line-height: 26px;text-align: center;"> พี่ขอเพียงเวลาสักครู่นึง เพื่อให้แน่ใจว่าน้องใช้อีเมลล์นี้นะครับ </p>
     </div>
 
             <div style="Margin-left: 20px;Margin-right: 20px;">
@@ -273,9 +273,9 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
             <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
       <div class="btn btn--flat" style="text-align:center;">
         <![if !mso]>
-        <a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" data-width="89">&#3618;&#3639;&#3609;&#3618;&#3633;&#3609;&#3585;&#3634;&#3619;&#3626;&#3617;&#3633;&#3588;&#3619;</a>
+        <a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" data-width="89">ยืนยันอีเมลล์ของน้อง</a>
         <![endif]>
-      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" style="width:159px" arcsize="9%" fillcolor="#80BFC4" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#171E24;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">&#3618;&#3639;&#3609;&#3618;&#3633;&#3609;&#3585;&#3634;&#3619;&#3626;&#3617;&#3633;&#3588;&#3619;</center></v:textbox></v:roundrect><![endif]--></div>
+      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" style="width:159px" arcsize="9%" fillcolor="#80BFC4" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#171E24;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">ยืนยันอีเมลล์ของน้อง</center></v:textbox></v:roundrect><![endif]--></div>
     </div>
 
           </td>

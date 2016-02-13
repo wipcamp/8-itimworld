@@ -42,6 +42,7 @@
                 <input type="submit" value="Login" style="font-size:1.7em;">
               <?php echo Form::close(); ?>
               <center><a href="" style="color:#fff;">Forget Password</a></center>
+              <br>
               <hr>
               <br>
               <center>
@@ -50,13 +51,11 @@
               <br>
             </div>
             <div class="col-xs-6">
-              <div class="col-xs-6">
-                <div class="center">
+                <div class="container">
                   <center>
-                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="600"></a>
+                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="450"></a>
                   </center>
                 </div>
-              </div>
             </div>
           </div>
         </div>
