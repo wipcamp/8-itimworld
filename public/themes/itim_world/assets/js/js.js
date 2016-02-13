@@ -227,7 +227,6 @@ $(document).ready(function () {
     });
 });
 
-<script type="text/javascript">
   $(document).ready(function(){
     $('#typeahead').typeahead({
       source: function(query,process){
@@ -245,7 +244,7 @@ $(document).ready(function () {
       }
     });
   });
-</script>
+
 
 $(document).ready(function() {
     $('#dateRangePicker')
