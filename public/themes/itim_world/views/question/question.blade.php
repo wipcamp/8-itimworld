@@ -160,7 +160,6 @@
                           <h1>Textarea</h1>
                           <p>The editor can also be initialized on a textarea.</p>
                         </textarea>
-
                         <input type="submit">
                       </form>
                     </div>
