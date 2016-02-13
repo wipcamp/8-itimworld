@@ -46,7 +46,7 @@
               <hr>
               <br>
               <center>
-                <a href= "<?php echo url("accounts/login/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></a>
+                <a href= "<?php echo url("auth/connect/facebook"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/facebook.png" alt="" width="400"></a>
               </center>
               <br>
             </div>

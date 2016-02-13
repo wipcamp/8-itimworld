@@ -187,7 +187,8 @@ class AccountRepository implements AccountRepositoryInterface
 					->where('provider',$provider)
 					->first();
 
-		return json_decode($result, true);
+		// return json_decode($result, true);
+		return $result;
 	}
 
 	public function findByWIPID($wip_id){

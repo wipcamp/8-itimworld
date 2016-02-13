@@ -263,9 +263,12 @@ class AuthController extends Controller
         }else{
             $status = array_get($user, 'status', 0);
             if($status == 1){
-                return redirect("/account/register/".array_get($user, 'wip_id', 0));
+                return redirect("/account/register/".$user->wip_id);
             }else if($status == 2){
-                die('Login Process');
+                \Auth::login($user);
+                //dd(\Auth::user());
+                //die('Login Process');
+                return redirect("/");
             }
         }
 
