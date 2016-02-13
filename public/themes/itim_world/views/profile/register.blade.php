@@ -6,7 +6,7 @@
       source: function(query,process){
         const data = {school_name:query}
         $.ajax({
-          url: 'http://itim.wip.loc/profile/typeahead',
+          url: 'http://itim.freezer.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
