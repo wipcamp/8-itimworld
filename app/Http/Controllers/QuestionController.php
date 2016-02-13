@@ -17,7 +17,17 @@ class QuestionController extends ITIMController{
   }
 
   public function getIndex(){
-    $this->QuestionRepository->insertQuestion(22222);
-    return $this->theme->scope('question.question')->layout('blank')->render();
+    // $this->QuestionRepository->insertQuestion(22222);
+    // return $this->theme->scope('question.question')->layout('blank')->render();
+
+     $script = $this->theme->scope('question.script')->content();
+     $this->theme->asset()->writeContent('inline-script', $script, array());
+
+     $style = $this->theme->scope('question.style')->content();
+     $this->theme->asset()->writeContent('inline-style', $style, array());
+
+
+
+    return $this->theme->scope('question.index')->layout('profile')->render();
   }
 }
