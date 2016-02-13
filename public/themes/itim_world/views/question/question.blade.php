@@ -49,39 +49,6 @@
           })
         })
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-
-        $('#mission2')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission2').parents('form').on('submit', function () {
-            console.log($('#mission2').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission3')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission3').parents('form').on('submit', function () {
-            console.log($('#mission3').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission4')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission4').parents('form').on('submit', function () {
-            console.log($('#mission4').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission6')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission6').parents('form').on('submit', function () {
-            console.log($('#mission6').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
     });
     $('#mission1').froalaEditor({
       imageInsertButtons: ['imageBack', '|', 'imageByURL']
