@@ -2,12 +2,15 @@
 namespace App\Repositories;
 
 use App\Models\Wip8_profile;
+use App\Models\Wip8_school;
 
 class ProfileRepository implements ProfileRepositoryInterface{
   protected $profile;
+  protected $school;
 
   public function __construct(){
     $this->profile = new Wip8_profile();
+    $this->school = new Wip8_school();
   }
 
   public function create($data){
@@ -67,12 +70,23 @@ class ProfileRepository implements ProfileRepositoryInterface{
   }
 
   public function thirdDivRegis($data){
+    $i = $this->school->where('school_name',array_get($data,'school_id'))->get();
     $this->profile->where('wip_id',array_get($data,'wip_id'))
                   ->update(array('school_id' => array_get($data,'school_id'),
                           'level' => array_get($data,'level'),
                           'gpax' => array_get($data,'gpax'),
                           'program' => array_get($data,'program')));
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
+    if($i == null||$i==''){
+      $this->school->school_name = array_get($data,'school_id');
+      $this->school->save();
+      $in = $this->school->where('school_name',array_get($data,'school_id'))->get();
+      $ij = json_decode($i,true);
+      $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($in,'school_id')]);
+    }else{
+      $ij = json_decode($i,true);
+      $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($ij,'school_id')]);
+    }
     return $result;
   }
 

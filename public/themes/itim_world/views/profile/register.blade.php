@@ -1,24 +1,6 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#typeahead').typeahead({
-      source: function(query,process){
-        const data = {school_name:query}
-        $.ajax({
-          url: 'http://itim.freezer.wip.camp/profile/typeahead',
-          type: 'GET',
-          data: data,
-          dataType: 'JSON',
-          async: true,
-          success: function(data){
-            process(data);
-          }
-        });
-      }
-    });
-  });
-</script>
+
 <div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
