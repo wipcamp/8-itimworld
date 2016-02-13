@@ -173,7 +173,7 @@ $(document).ready(function(){
           url: 'http://itim.freezer.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
-          dataType: 'JSON',
+          dataType: 'JSON', 
           async: true,
           success: function(data){
             process(data);
