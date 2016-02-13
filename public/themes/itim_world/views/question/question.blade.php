@@ -49,59 +49,21 @@
           })
         })
         .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-
-        $('#mission2')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission2').parents('form').on('submit', function () {
-            console.log($('#mission2').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission3')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission3').parents('form').on('submit', function () {
-            console.log($('#mission3').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission4')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission4').parents('form').on('submit', function () {
-            console.log($('#mission4').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
-        $('#mission6')
-        .on('froalaEditor.initialized', function (e, editor) {
-          $('#mission6').parents('form').on('submit', function () {
-            console.log($('#mission6').val());
-            return false;
-          })
-        })
-        .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
     });
     $('#mission1').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission2').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission3').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission4').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
     $('#mission6').froalaEditor({
-      imageInsertButtons: ['imageBack', '|', 'imageByURL'];
-      theme: dark;
+      imageInsertButtons: ['imageBack', '|', 'imageByURL']
     });
 </script>
 
@@ -160,9 +122,13 @@
                     <h1>MISSION I</h1>
                     <h2>กาลครั้งหนึ่งมีเมืองวิปแคม์อันทันสมัยและสวยสดงดงาม มีวายร้ายออกมาอาละวาด แล้วก็มีซุปเปอร์ฮีโร่ปรากฎตัวขึ้นเพื่อจัดการกับเจ้าวายร้าย ถ้าน้องเป็นซุปเปอร์ฮีโร่ที่มีพลังพิเศษ น้องอยากจะมีพลังพิเศษอะไร เพราะอะไร</h2>
                     <div id="editor">
-                      <form class="ques-form" id="qs-1" action="#">
+                      <form method="get" action="google">
                         <textarea id='mission1' style="margin-top: 30px;" placeholder="Type some text" name="ggg">
+                          <h1>Textarea</h1>
+                          <p>The editor can also be initialized on a textarea.</p>
                         </textarea>
+                        <input type="submit">
+                      </form>
                     </div>
                     <div class="row">
                       <div class="button-container container">
@@ -245,7 +211,9 @@
                     <audio src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.m4a"></audio>
                     <input type="text" class="form-control" style="font-size:1.4em;"  name="">
                     <h2>รูปภาพที่ปรากฎนั้นคือรูปอะไร</h2>
-                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" />
+                    <center>
+                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" width="600" />
+                    </center>
                     <input type="text" class="form-control" style="font-size:1.4em;"  name="">
                     <div class="row">
                       <div class="button-container container">
@@ -261,7 +229,9 @@
                    <!-- form start -->
                     <h1>MISSION VI</h1>
                     <h2>จาก source code ในรูปเป็นโปรแกรมอะไร เอาไว้ใช้ทำอะไร</h2>
-                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.png" alt="" />
+                    <center>
+                    <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/c55c5bfca70fa38768473fa7cc2a4007.png" alt="" width="600"/>
+                    </center>
                     <div id="editor">
                       <form class="ques-form" id="qs-6" action="#">
                         <textarea id='mission6' style="margin-top: 30px;" placeholder="Type some text" name="ggg">

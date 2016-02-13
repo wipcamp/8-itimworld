@@ -165,6 +165,25 @@ function simpleSelect() {
 
 // Ajax form
 
+$(document).ready(function(){
+    $('#typeahead').typeahead({
+      source: function(query,process){
+        const data = {school_id:query}
+        $.ajax({
+          url: 'http://itim.freezer.wip.camp/profile/typeahead',
+          type: 'GET',
+          data: data,
+          dataType: 'JSON',
+          async: true,
+          success: function(data){
+            process(data);
+          }
+        });
+      }
+    });
+  });
+
+
 $(document).ready(function () {
     $('.reg-form').on('submit', function(e) {
         var id = $(this).attr('id');
@@ -226,25 +245,6 @@ $(document).ready(function () {
         });
     });
 });
-
-  $(document).ready(function(){
-    $('#typeahead').typeahead({
-      source: function(query,process){
-        const data = {school_name:query}
-        $.ajax({
-          url: 'http://itim.freezer.wip.camp/profile/typeahead',
-          type: 'GET',
-          data: data,
-          dataType: 'JSON',
-          async: true,
-          success: function(data){
-            process(data);
-          }
-        });
-      }
-    });
-  });
-
 
 $(document).ready(function() {
     $('#dateRangePicker')

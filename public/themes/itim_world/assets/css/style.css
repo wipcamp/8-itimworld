@@ -1771,8 +1771,7 @@ input[type=email],
 input[type=password],
 input[type=date],
 input[type=file],
-input[type=number],
-textarea.form-control {
+input[type=number] {
   display: inline-block;
   border: none;
   background: #34495e;
@@ -1789,8 +1788,7 @@ input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
 input[type=date]:focus,
-input[type=file]:focus,
-textarea {
+input[type=file]:focus{
   outline: none;
 }
 input[type=text]::-webkit-input-placeholder,
@@ -2013,6 +2011,7 @@ dl.selectbox1 dd ul li {
   color: #ecf0f1;
   padding: 8px;
 }
+
 /*2*/
 select.selectbox2 {
   display: none;
