@@ -34,7 +34,9 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::get('/',function(){
-     dd(\Auth::user());
+     //dd(\Auth::user());
+     echo App::environment();
+     echo Config::get('app.url');
     });
     Route::get('/home',function(){
      dd(\Auth::user());
