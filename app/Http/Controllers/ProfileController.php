@@ -27,11 +27,12 @@ class ProfileController extends ITIMController{
     }
 
     public function getRegister(){
-        $value = Session::get('user');
-        $result = $this->ProfileRepository->find(22222);
+        $wip_id = $this->user->wip_id;
+        $result = $this->ProfileRepository->find($wip_id);
         $data = json_decode($result,true);
         $view = array(
-          'data' => $data
+          'data' => $data,
+          'wip_id' => $wip_id
         );
         return $this->theme->scope('profile.register',$view)->layout('profile')->render();
     }
@@ -39,36 +40,36 @@ class ProfileController extends ITIMController{
     public function postFormfirst(){
       $data = Input::all();
       $result = $this->ProfileRepository->firstDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
     public function postFormsecond(){
       $data = Input::all();
       $result = $this->ProfileRepository->secondDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
 
     public function postFormthird(){
       $data = Input::all();
       $result = $this->ProfileRepository->thirdDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
 
     public function postFormfour(){
       $data = Input::all();
       $result = $this->ProfileRepository->sixDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
 
     public function postFormfive(){
       $data = Input::all();
       $result = $this->ProfileRepository->fourDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
 
     public function postFormsix(){
       $data = Input::all();
       $result = $this->ProfileRepository->fiveDivRegis($data);
-      return $result;
+      return redirect('profile/register');
     }
 
     public function postRegister(){
