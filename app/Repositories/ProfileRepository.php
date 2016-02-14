@@ -55,7 +55,9 @@ class ProfileRepository implements ProfileRepositoryInterface{
                           'religion' => array_get($data,'religion'),
                           'dob' => array_get($data,'dob'),
                           'tel' => array_get($data,'tel'),
-                          'sex' => array_get($data,'sex')));
+                          'sex' => array_get($data,'sex'),
+                          'facebook' => array_get($data,'facebook'),
+                          'twitter' => array_get($data,'twitter')));
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     return $result;
   }

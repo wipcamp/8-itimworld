@@ -80,7 +80,7 @@ class ProfileController extends ITIMController{
 
 
     public function getTypeahead(){
-    	$term = Input::get('school_name');
+    	$term = Input::get('school_id');
 
     	$results = array();
 

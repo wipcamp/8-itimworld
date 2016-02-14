@@ -10,7 +10,7 @@
 |
 */
 $envMapping = [
-    'itim.wip.loc'  => 'kati',
+    'itim.wip.loc'  => 'local',
     'itim.freezer.wip.camp'  => 'vanila',
     'itim.wip.camp' => 'kati'
 ];

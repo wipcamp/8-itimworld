@@ -16,6 +16,12 @@ class CheckPermission
                 return $request->ajax ? response('Unauthorized.', 401) : redirect($redirect);
             }
 
+            $active = array_get($user, 'active', 1);
+            if($active == 0){
+                $redirect = "/account/not-verify/";
+                return $request->ajax ? response('Unauthorized.', 401) : redirect($redirect);
+            }
+
             if (isset($user)) {
                 return $user? $next($request) : redirect('access/denie');
             }

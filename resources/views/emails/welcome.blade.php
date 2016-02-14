@@ -273,7 +273,7 @@ a,.btn--depth a{background-color:#80bfc4}.btn--ghost a{border:1px solid #80bfc4}
             <div style="Margin-left: 20px;Margin-right: 20px;Margin-bottom: 24px;">
       <div class="btn btn--flat" style="text-align:center;">
         <![if !mso]>
-        <a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" data-width="89">ยืนยันอีเมลล์ของน้อง</a>
+        <a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #171e24;background-color: #80bfc4;font-family: Ubuntu, sans-serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" href="{{ $verify_link }}" data-width="89">ยืนยันอีเมลล์ของน้อง</a>
         <![endif]>
       <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="http://itim.wip.camp/mail/{{$wip_id}}/{{$verify}}" style="width:159px" arcsize="9%" fillcolor="#80BFC4" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#171E24;font-family:sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">ยืนยันอีเมลล์ของน้อง</center></v:textbox></v:roundrect><![endif]--></div>
     </div>

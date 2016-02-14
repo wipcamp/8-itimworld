@@ -35,7 +35,7 @@ class AccountController extends ITIMController{
   }
 
   public function getMail(){
-      $user = $this->AccountRepository->findByWIPID(86476);
+      $user = $this->AccountRepository->findByWIPID(87538);
       $this->AccountRepository->sendMailVerifyAccount($user);
   }
 
@@ -63,8 +63,16 @@ class AccountController extends ITIMController{
   }
 
 
-    public function getVerify(){
-      return $this->AccountRepository->checkVerify(87009);
+    public function getVerify($wip_id, $verify_code){
+
+        $user = $this->AccountRepository->verifyAccount($wip_id, $verify_code);
+        if($user){
+            return $this->theme->scope('account.verify_success')->layout('blank')->render();
+        }
+    }
+
+    public function getNotVerify(){
+        return $this->theme->scope('account.not_verify')->layout('blank')->render();
     }
 
     public function VerifySecond($wip_id,$verify){
@@ -97,4 +105,5 @@ class AccountController extends ITIMController{
         Session::flush();
         return redirect('/');
     }
+
 }

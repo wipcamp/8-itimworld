@@ -199,20 +199,20 @@ class AccountRepository implements AccountRepositoryInterface
 		$dataMail = array(
 	    	'title' 	=> 'WIP Camp #8 Register',
 	    	'content' 	=> 'WIP Camp #8',
+			'name'		=>  $user->profile->name_th.' '.$user->profile->surname_th,
 			'verify' 	=> array_get($user, 'verify'),
 			'wip_id' 	=> array_get($user, 'wip_id'),
+			'verify_link'	=> config('app.url').'/account/verify/'.array_get($user, 'wip_id').'/'.array_get($user, 'verify')
 	  	);
 
-		var_dump($dataMail);
+		dd($dataMail);
 
-		// Mail::send('emails.welcome', $dataMail, function($message) use ($data) {
-		//
-		// 	$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8')
-		// 	->to(array_get($user, 'email', $name = null)
-		// 	->subject('ยืนยันการสมัครค่าย WIPCamp #8')
-		// 	->priority(1)
-		// 	//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
-		// });
+		Mail::send('emails.welcome', $dataMail, function($message) use ($user){
+			$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8');
+			$message->to(array_get($user, 'email'), $name = null);
+			$message->subject('ยืนยันการสมัครค่าย WIPCamp #8');
+			$message->priority(1);
+		});
 	}
 
 	public function setAvatar($param,$avatar){
@@ -229,5 +229,17 @@ class AccountRepository implements AccountRepositoryInterface
 			$answer->question_id = $i;
 			$answer->save();
 		}
+	}
+
+	public function verifyAccount($wip_id, $verify_code){
+		 $data = $this->account->where('wip_id',$wip_id)
+		 		->where('verify',$verify_code)->first();
+	     if(!$data){
+			 return false;
+		 }
+		 $data->active = 1;
+		 $data->save();
+		 
+		 return $data;
 	}
 }

@@ -25,4 +25,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function profile(){
+        return $this->hasOne('App\Models\Wip8_profile', 'wip_id', 'wip_id');
+    }
 }
