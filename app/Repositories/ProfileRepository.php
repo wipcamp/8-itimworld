@@ -80,14 +80,15 @@ class ProfileRepository implements ProfileRepositoryInterface{
                           'gpax' => array_get($data,'gpax'),
                           'program' => array_get($data,'program')));
     $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
-    if($i == null||$i==''){
+    if(array_get($i,'0') == null||array_get($i,'0')==''){
+      $this->school->school_id = $this->school->count();
       $this->school->school_name = array_get($data,'school_id');
       $this->school->save();
     }
     $ij = json_decode($i,true);
     $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($ij,'0.school_id')]);
     $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
-    return $result;
+    return array_get($i,'0');
   }
 
   public function fourDivRegis($data){
