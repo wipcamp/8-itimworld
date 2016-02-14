@@ -256,11 +256,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-6">
-                                <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
+                                <h3>โรคประจำตัว</h3>
                                 <input type="text" name="disease" id="disease" value="{{array_get($data,'disease')}}" class="form-control" style="font-size:1.4em;" placeholder="โรคประจำตัว" class="required">
                               </div>
                               <div class="col-sm-6">
-                                <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
+                                <h3>แพ้ยาอะไร/อาหาร</h3>
                                 <input type="text" name="allergy" id="allergy" value="{{array_get($data,'allergy')}}" class="form-control" style="font-size:1.4em;" placeholder="แพ้ยาอะไร" class="required">
                               </div>
                             </div>
