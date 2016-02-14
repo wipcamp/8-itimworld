@@ -6,11 +6,9 @@
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
         {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
-        {!!HTML::script('themes/itim_world/assets/js/jquery-1.12.0.js')!!}
+
         {!! Theme::asset()->styles() !!}
-        {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
-        {!!HTML::script('themes/itim_world/assets/js/bootstrap.min.js')!!}
-        {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +38,10 @@
             </div>
             {!! Theme::content() !!}
         </div>
-
+        {!!HTML::script('themes/itim_world/assets/js/jquery-1.12.0.js')!!}
+        {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
+        {!!HTML::script('themes/itim_world/assets/js/bootstrap.min.js')!!}
+        {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery.bootstrap.wizard.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/js.js')!!}
 
