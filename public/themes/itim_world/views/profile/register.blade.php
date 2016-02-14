@@ -217,7 +217,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit" >
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
                               </div>
                               <br>
                               <div class="row">
-                                <input type="submit" name="name" value="Submit">
+                                <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -306,7 +306,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -334,7 +334,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>
