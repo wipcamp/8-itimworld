@@ -43,34 +43,34 @@
                <div class="row" style="margin-top:30px;">
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/1.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/1.jpg" alt="" style="width:80%;">
                        </a>
                    </div>
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/2.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/2.jpg" alt="" style="width:80%;">
                        </a>
                    </div>
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/3.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/3.jpg" alt="" style="width:80%;">
                        </a>
                    </div>
                </div>
                <div class="row" style="margin-top:30px;">
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/4.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/4.jgp" alt="" style="width:80%;">
                        </a>
                    </div>
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/5.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/5.jgp" alt="" style="width:80%;">
                        </a>
                    </div>
                    <div class="col-sm-4">
                        <a href="q1.html">
-                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/6.png" alt="">
+                           <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/6.jgp" alt="" style="width:80%;">
                        </a>
                    </div>
                </div>
