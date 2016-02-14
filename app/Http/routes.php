@@ -65,6 +65,7 @@ Route::group(['middleware' => ['web']], function () {
 
 });
 Route::controller('document','DocumentController');
+Route::controller('avatar','AvatarController');
 
 Route::group(['middleware' => 'web'], function () {
     //Route::auth();
