@@ -40,6 +40,7 @@
         <div class="content">
           <div class="content">
            <div class="container">
+             <center><h2>Mission ค่ายของเรา</h2></center>
                <div class="row" style="margin-top:30px;">
                    <div class="col-sm-4">
                        <a href="q1.html">

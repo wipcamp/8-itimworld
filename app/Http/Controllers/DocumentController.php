@@ -16,7 +16,7 @@ class DocumentController extends ITIMController
 
     public function getIndex(){
         $data = $this->DocumentRepository->get(80001);                    //get wip id
-        return $this->theme->scope('upload.upload',$data)->render();
+        return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
     }
     public function getCreate($wip_id){
         $data = array('wip_id' => $wip_id );;
@@ -27,14 +27,14 @@ class DocumentController extends ITIMController
         $data =  $this->DocumentRepository->get(80001);                     //get wip id
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
-            $exten = explode(".", $file->getClientOriginalName());  
-            $ext = $exten[1];                      
+            $exten = explode(".", $file->getClientOriginalName());
+            $ext = $exten[1];
             $name = 'schooldoc.'.$ext;
-            $wip_id = array_get($data,'wip_id');      
+            $wip_id = array_get($data,'wip_id');
             if (strcmp($ext,"pdf")==0 || strcmp($ext,"jpg")!==0  or strcmp($ext,"jpeg")!==0  or strcmp($ext,"png")==0 )
-            {                                                  
+            {
                 $Path = 'upload/'.$wip_id;
-                
+
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('schooldoc'=>2,'schooldoc_type'=>$ext,'schooldoc_case'=>'รอการตรวจสอบเอกสาร'));
             }
@@ -45,16 +45,16 @@ class DocumentController extends ITIMController
         }
         if (Input::hasFile('parentdoc')) {
             $file = Input::file('parentdoc');
-            $exten = explode(".", $file->getClientOriginalName());  
-            $ext = $exten[1];                      
+            $exten = explode(".", $file->getClientOriginalName());
+            $ext = $exten[1];
             $name = 'schooldoc.'.$ext;
-            $wip_id = array_get($data,'wip_id');      
+            $wip_id = array_get($data,'wip_id');
             if (strcmp($ext,"pdf")==0 || strcmp($ext,"jpg")==0 || strcmp($ext,"jpeg")==0 || strcmp($ext,"png")==0 )
-            {                                           
-                $wip_id = array_get($data,'wip_id');                                             
+            {
+                $wip_id = array_get($data,'wip_id');
                 $Path = 'upload/'.$wip_id;
-                $exten = explode(".", $file->getClientOriginalName());  
-                $ext = $exten[1];                      
+                $exten = explode(".", $file->getClientOriginalName());
+                $ext = $exten[1];
                 $name = 'parentdoc.'.$ext;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('parentdoc'=>2,'parentdoc_type'=>$ext,'parentdoc_case'=>'รอการตรวจสอบเอกสาร'));
@@ -65,7 +65,7 @@ class DocumentController extends ITIMController
             }
         }
          return $this->theme->scope('upload.upload',$data)->render();
-        
+
     }
 
 

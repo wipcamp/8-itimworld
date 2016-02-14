@@ -33,7 +33,7 @@ class ProfileController extends ITIMController{
         $view = array(
           'data' => $data
         );
-        return $this->theme->scope('profile.register',$view)->layout('blank')->render();
+        return $this->theme->scope('profile.register',$view)->layout('profile')->render();
     }
 
     public function postFormfirst(){

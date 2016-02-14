@@ -17,23 +17,6 @@
                </div>
             </div>
          </div>
-         <!-- Header -->
-         <div class="header">
-            <div class="container">
-               <div class="col-xs-2 avatar">
-                  <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/img/pro3.png">
-               </div>
-               <div class="col-xs-6">
-                  <h1>สวัสดีครับ น้องออฟ</h1>
-                  <h3>WIP ID 12309</h3>
-               </div>
-               <div class="col-xs-4 logout">
-                  <div class="logout-btn">
-                     <button class="logout">ออกจากระบบ</button>
-                  </div>
-               </div>
-            </div>
-         </div>
          <!--Content-->
           {{ Form::open(array('url' => 'document', 'files'=> true,'name' => 'upload','id' => 'upload')) }}
          <div class="content">
@@ -41,7 +24,7 @@
               <div class="col-xs-12">
                   <center><h1>อัพโหลดเอกสาร</h1></center>
                </div>
-                  
+
                <div class="col-xs-12 row main-button">
                      <a href="#">
                      @if(isset($parentdoc) && ($parentdoc=="0" ||$parentdoc=="2" ))
@@ -99,7 +82,7 @@
       document.getElementById("schooldoc").onchange = function() {
          if (document.getElementById("schooldoc").value != null) {
             document.getElementById("upload").submit();
-         }  
+         }
       };
 
       document.getElementById("parentdoc").onchange = function() {
