@@ -113,23 +113,6 @@ $(document).ready(function() {
           </div>
         </div>
       </div>
-      <!-- Header -->
-      <div class="header">
-        <div class="container">
-          <div class="col-xs-2 avatar">
-            <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/img/pro3.png">
-          </div>
-          <div class="col-xs-6">
-            <h1>สวัสดีครับ น้องออฟ</h1>
-            <h3>WIP ID 12309</h3>
-          </div>
-          <div class="col-xs-4 logout">
-            <div class="logout-btn">
-              <button type="button" class="logout">ออกจากระบบ</button>
-            </div>
-          </div>
-        </div>
-      </div>
       <!--Content-->
 
       <div class="content">
@@ -234,7 +217,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit" >
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -276,7 +259,7 @@ $(document).ready(function() {
                               </div>
                               <br>
                               <div class="row">
-                                <input type="submit" name="name" value="Submit">
+                                <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -297,7 +280,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -323,7 +306,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -351,7 +334,7 @@ $(document).ready(function() {
                             </div>
                             <br>
                             <div class="row">
-                              <input type="submit" name="name" value="Submit">
+                              <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>

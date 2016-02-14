@@ -1,6 +1,7 @@
 
 <div class="content">
-    <div class="row">
+    <center><h1>คำถามค่ายของเราา</h1></center>
+    <div class="row" margin-top:30px;>
         <div class="col-sm-3 question-box">
             <a href="{{ url('question/mission/1') }}">
                 <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/1.jpg"
