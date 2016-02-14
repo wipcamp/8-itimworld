@@ -191,11 +191,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             </div>
                             <div class="row">
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Facebook</h3>
+                                <h3 style="margin: 0;">Facebook</h3>
                                 <input type="text" class="form-control" name="facebook" value="{{array_get($data,'facebook')}}" id="facebook" style="font-size:1em;" placeholder="Facebook" class="required">
                               </div>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Twitter</h3>
+                                <h3 style="margin: 0;">Twitter</h3>
                                 <input type="text" class="form-control" name="twitter" value="{{array_get($data,'twitter')}}" id="twitter" style="font-size:1em;" placeholder="Twitter" class="required">
                               </div>
                             </div>
