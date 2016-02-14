@@ -70,7 +70,7 @@
                                <h2>กดปุ่ม Back เพื่อย้อนกลับไปหน้าที่แล้วจ้า ~ </h2>
                               <br>
                               <div class="col-sm-4 col-sm-offset-4">
-                                <a href="javascript:history.back();" class="btn btn-primary" style="font-size: 30px">ย้อนกลับไป ตั้งหลักใหม่</a>
+                                <a href="javascript:history.back();" class="btn btn-primary" style="font-size: 30px">ย้อนกลับไป ตั้งหลักใหม่น้า</a>
                               </div>
                            </center>
                         </div>

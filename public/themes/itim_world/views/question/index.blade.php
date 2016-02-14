@@ -50,6 +50,6 @@
                 alt="" style="width:80%;"  class="{{ isset($answer[8])? '' :'question-not-success' }}">
             </a>
         </div>
-        <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px; z-index:10;">ย้อนกลับไป</button></a>
-    </div>
+        <a href="{{ url('profile') }}" class="btn btn-primary" style="font-size: 30px; ">กลับสู่หน้าหลัก</a>
+      </div>
 </div>

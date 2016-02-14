@@ -101,7 +101,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 
       <div class="content">
         <div class="container" style="margin-top:30; color:#666;">
-          <h1 style="color:#fff;">กรอกข้อมูลส่วนตัว</h1>
+          <center><h1 style="color:#fff;">กรอกข้อมูลส่วนตัว</h1></center>
           <div class="row">
               <div class="col-xs-10 col-xs-offset-1 bhoechie-tab-container">
                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
