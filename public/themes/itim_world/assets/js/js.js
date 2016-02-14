@@ -288,12 +288,6 @@ $(document).ready(function() {
           address: {
             required: true
           },
-          facebook: {
-            required: true
-          },
-          twitter: {
-            required: true
-          },
       },
       messages:{
         name_th: {
@@ -324,8 +318,6 @@ $(document).ready(function() {
         religion:"กรอกข้อมูลให้ครบ",
         dob:"กรอกข้อมูลให้ครบ",
         address:"กรอกข้อมูลให้ครบ",
-        facebook:"กรอกข้อมูลให้ครบ",
-        twitter:"กรอกข้อมูลให้ครบ",
       }
       });
       $( "#reg-2" ).validate({
