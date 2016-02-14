@@ -106,4 +106,8 @@ class AccountController extends ITIMController{
         return redirect('/');
     }
 
+   public function getCondition(){
+   		return $this->theme->scope('account.condition')->layout('profile')->render();
+   }
+
 }
