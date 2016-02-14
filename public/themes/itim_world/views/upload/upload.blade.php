@@ -81,6 +81,7 @@
             </div >
          </div>
       </div>
+      <center><a href="{{ url('profile') }}" class="btn btn-primary" style="font-size: 30px; ">กลับสู่หน้าหลัก</a></center>
    </div>
 </div>
 <!--End Content-->
