@@ -413,8 +413,8 @@ $(document).ready(function(){
   });
 
 $(document).ready(function(){
-  $("#tel").mask("999-999-9999");
-  $("#parent_tel").mask("999-999-9999");
+  //$("#tel").mask("999-999-9999");
+  //$("#parent_tel").mask("999-999-9999");
   $("#gpax").mask("9.99");
 });
 
