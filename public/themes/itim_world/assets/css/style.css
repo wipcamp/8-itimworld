@@ -279,10 +279,10 @@ p { margin: 0; }
 .h1, .h2, .h3, h1, h2, h3 {
 margin: 10px 0 5px !important;
 }
-
+/*
 input {
   display: none;
-}
+}*/
 
 /*
 .style1 label {

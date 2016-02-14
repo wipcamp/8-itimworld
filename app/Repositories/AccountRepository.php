@@ -200,8 +200,8 @@ class AccountRepository implements AccountRepositoryInterface
 			'wip_id' 	=> array_get($user, 'wip_id'),
 	  	);
 
-		// var_dump($dataMail);
-		//
+		var_dump($dataMail);
+
 		// Mail::send('emails.welcome', $dataMail, function($message) use ($data) {
 		//
 		// 	$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8')
