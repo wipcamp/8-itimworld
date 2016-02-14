@@ -15,7 +15,7 @@ class AvatarController extends ITIMController{
   }
 
   public function getIndex(){
-  	 $wip_id = "82037";												//wip_id
+  	 $wip_id = $this->user->wip_id;												//wip_id
   	 $account = $this->AccountRepository->findByWIPID($wip_id);
   	 $avatar = array_get($account,'avatar');
   	 $data = array('wip_id' =>$wip_id ,'avatar' => $avatar );
@@ -33,7 +33,7 @@ class AvatarController extends ITIMController{
   }
 
   public function postIndex(){
-  	 $wip_id = "82037";												//wip_id
+  	 $wip_id = $this->User->wip_id;												//wip_id
   	 $account = $this->AccountRepository->findByWIPID($wip_id);
   	 $avatar = array_get($account,'avatar');
   	 $data = array('wip_id' =>$wip_id ,'avatar' => $avatar );

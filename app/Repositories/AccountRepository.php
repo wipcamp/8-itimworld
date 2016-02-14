@@ -4,6 +4,7 @@ namespace App\Repositories;
 use App\Models\Wip8_account;
 use App\Models\Wip8_allwipid;
 use App\Models\Wip8_profile;
+use App\Models\Wip8_document;
 use Mail;
 use Hash;
 use App\User;
@@ -15,12 +16,15 @@ class AccountRepository implements AccountRepositoryInterface
 	protected $allwipid;
 	protected $profile;
 	protected $answer;
+	protected $document;
+
 
 	public function __construct(){
 		$this->account = new User();
 		$this->allwipid = new Wip8_allwipid();
 		$this->profile = new Wip8_profile();
 		$this->answer = new Wip8_answer();
+		$this->document = new wip8_document();
 	}
 
 	public function wipId(){
@@ -230,6 +234,8 @@ class AccountRepository implements AccountRepositoryInterface
 			$answer->question_id = $i;
 			$answer->save();
 		}
+		$this->document->wip_id = array_get($data,'wip_id');
+    	$this->document->save();
 	}
 
 	public function verifyAccount($wip_id, $verify_code){

@@ -34,7 +34,9 @@
                   <br>
                   <br>
                   <div class="col-sm-4 col-sm-offset-4">
-                    <a href="<?php echo url(""); ?>/auth/login"><input type="submit" value="เข้าสู่ระบบ"></a>
+                    <a href="<?php echo url(""); ?>/auth/login">
+                      <button type="submit" class="next">Login</button>
+                    </a>
                   </div>
                </center>
             </div>

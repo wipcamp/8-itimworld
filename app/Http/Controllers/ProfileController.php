@@ -30,9 +30,13 @@ class ProfileController extends ITIMController{
         $wip_id = $this->user->wip_id;
         $result = $this->ProfileRepository->find($wip_id);
         $data = json_decode($result,true);
+        $school = array_get($data,'0.school_id');
+        $school_db = new Wip8_school();
+        $i = $school_db->where('school_id',$school)->get();
         $view = array(
           'data' => array_get($data, '0'),
-          'wip_id' => $wip_id
+          'wip_id' => $wip_id,
+          'wip_school' => $i
         );
         return $this->theme->scope('profile.register',$view)->layout('profile')->render();
     }

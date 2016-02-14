@@ -15,7 +15,8 @@ class DocumentController extends ITIMController
     }
 
     public function getIndex(){
-        $data = $this->DocumentRepository->get(80001);                    //get wip id
+        $wip_id = $this->User->wip_id;
+        $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
     }
     public function getCreate($wip_id){
@@ -24,7 +25,8 @@ class DocumentController extends ITIMController
     }
 
     public function postIndex(){
-        $data =  $this->DocumentRepository->get(80001);                     //get wip id
+         $wip_id = $this->User->wip_id;
+        $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
             $exten = explode(".", $file->getClientOriginalName());
