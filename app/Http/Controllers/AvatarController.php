@@ -15,6 +15,16 @@ class AvatarController extends ITIMController{
   }
 
   public function getIndex(){
-    return $this->theme->scope('upload.avatar')->render();
+
+     $script = $this->theme->scope('upload.script')->content();
+     $this->theme->asset()->writeContent('inline-script', $script, array());
+
+     $style = $this->theme->scope('upload.style')->content();
+     $this->theme->asset()->writeContent('inline-style', $style, array());
+
+
+
+    return $this->theme->scope('upload.avatar')->layout('profile')->render();
+
   }
 }

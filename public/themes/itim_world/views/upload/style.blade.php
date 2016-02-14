@@ -1,2 +1,2 @@
 
-{!!HTML::style('themes/itim_world/assets/css/plugins/froala/plugins/video.min.css')!!}
+{!!HTML::style('themes/itim_world/assets/css/upload/fileinput.css')!!}
