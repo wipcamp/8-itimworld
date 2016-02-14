@@ -73,7 +73,7 @@
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">นามสกุล (ภาษาไทย)</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="lastname_th" value="{{ (isset($user)? array_get($user, 'user.first_name') : '' ) }}">
+                    <input type="text" class="form-control" id="" placeholder="กรอกนามสกุลภาษาไทย" name="lastname_th" value="{{ (isset($user)? array_get($user, 'user.first_name') : '' ) }}">
                     @if ($errors->has('lastname_th'))
                         <span class="help-block">
                             <strong>{{ $errors->first('lastname_th') }}</strong>
@@ -82,7 +82,7 @@
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">เลขบัตรประจำตัวประชาชน</label>
-                    <input type="text" class="form-control" id="" placeholder="กรอกชื่อภาษาไทย" name="citizen_id">
+                    <input type="text" class="form-control" id="" placeholder="เลขบัตรประจำตัวประชาชน" name="citizen_id">
                     @if ($errors->has('citizen_id'))
                         <span class="help-block">
                             <strong>{{ $errors->first('citizen_id') }}</strong>
