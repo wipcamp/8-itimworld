@@ -43,7 +43,6 @@
                 <button type="submit" class="next">Login</button>
               </center>
               <?php echo Form::close(); ?>
-              <center><a href="" style="color:#fff;">Forget Password</a></center>
               <br>
               <hr>
               <br>
