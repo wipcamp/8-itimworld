@@ -50,6 +50,6 @@
                 alt="" style="width:80%;"  class="{{ isset($answer[8])? '' :'question-not-success' }}">
             </a>
         </div>
-        <a href="{{ url('profile') }}" class="btn btn-primary" style="font-size: 30px; ">กลับสู่หน้าหลัก</a>
+        <center><a href="{{ url('profile') }}" class="btn btn-primary" style="font-size: 30px; ">กลับสู่หน้าหลัก</a></center>
       </div>
 </div>
