@@ -40,15 +40,13 @@
         </div>
         {!!HTML::script('themes/itim_world/assets/js/jquery-1.12.0.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
-
-
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.min.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/jquery.bootstrap.wizard.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-        {!!HTML::script('themes/itim_world/assets/js/js.js')!!} 
+        {!!HTML::script('themes/itim_world/assets/js/js.js')!!}
         {!! Theme::asset()->scripts() !!}
     </body>
 </html>
