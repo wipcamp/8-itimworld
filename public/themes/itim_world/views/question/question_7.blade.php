@@ -8,7 +8,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <center>
-                          <img src="<?php echo url(""); ?>themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" style="margin-top: 20%;" width="500">
+                          <img src="<?php echo url(""); ?>/themes/itim_world/assets/question/asd4adZasd212rGaDVB.png" alt="" style="margin-top: 20%;" width="500">
                         </center>
                       </div>
                     <div class="col-sm-6">
