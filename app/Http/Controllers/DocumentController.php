@@ -15,7 +15,7 @@ class DocumentController extends ITIMController
     }
 
     public function getIndex(){
-        $wip_id = $this->User->wip_id;
+        $wip_id = $this->user->wip_id;
         $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
     }
@@ -25,7 +25,7 @@ class DocumentController extends ITIMController
     }
 
     public function postIndex(){
-         $wip_id = $this->User->wip_id;
+        $wip_id = $this->user->wip_id;
         $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
@@ -66,7 +66,8 @@ class DocumentController extends ITIMController
                 $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
             }
         }
-         return $this->theme->scope('upload.upload',$data)->render();
+        $data = $this->DocumentRepository->get($wip_id); 
+         return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
 
     }
 

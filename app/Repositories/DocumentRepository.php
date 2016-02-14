@@ -1,6 +1,6 @@
 <?php
 namespace App\Repositories;
-
+use App\Models\Wip8_profile;
 use App\Models\Wip8_document;
 use Input;
 class DocumentRepository implements DocumentRepositoryInterface{

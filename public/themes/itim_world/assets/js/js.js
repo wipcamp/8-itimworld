@@ -261,7 +261,7 @@ $(document).ready(function() {
           },
           tel: {
             required: true,
-
+            regex: "^[0-9]+$"
           },
           sex: {
             required: true
@@ -300,7 +300,10 @@ $(document).ready(function() {
           regex: "กรอกภาษาให้ถูกต้อง"
         },
         nickname:"กรอกข้อมูลให้ครบ",
-        tel:"กรอกข้อมูลให้ครบ",
+        tel:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกตัวเลข"
+        },
         sex:"กรอกข้อมูลให้ครบ",
         religion:"กรอกข้อมูลให้ครบ",
         dob:"กรอกข้อมูลให้ครบ",
@@ -366,9 +369,6 @@ $(document).ready(function() {
       });
       $( "#reg-5" ).validate({
         rules: {
-          computer_skill: {
-            required: true
-          },
           referal: {
             required: true
           },
@@ -377,7 +377,6 @@ $(document).ready(function() {
           },
       },
       messages:{
-        computer_skill: "กรอกข้อมูลให้ครบ",
         referal:"กรอกข้อมูลให้ครบ",
         activitys:"กรอกข้อมูลให้ครบ",
       }

@@ -1,4 +1,33 @@
-
+<div class="container-fluid">
+ <!-- Scene -->
+ <div id="scene">
+  <div class="layer layout">
+   <div class="town">
+    <div class="town-front"></div>
+  </div>
+</div>
+<div class="layer layout">
+ <div class="town">
+  <div class="town-mid"></div>
+</div>
+</div>
+<div class="layer layout" style="z-index:-1;">
+ <div class="town">
+  <div class="town-back"></div>
+</div>
+</div>
+</div>
+<!--Content-->
+{{ Form::open(array('url' => 'document', 'files'=> true,'name' => 'upload','id' => 'upload')) }}
+<div class="content">
+  <div class="container">
+   <div class="col-xs-12">
+     <center><h1>แก้ไขรูปประจำตัว</h1></center>
+   </div>
+   <div class="col-xs-12 row main-button">
+     <center>
+      <div class="text row">
+       
         <?php
 
         if(isset($avatar)){
@@ -17,11 +46,19 @@
         ?>
           {{ Form::open(array('url' => 'avatar', 'files'=> true,'name' => 'upload','id' => 'upload')) }}
             {{ Form::file('avatar',array('id'=>'avatar','data-show-upload'=>'false')) }}
-            {{ Form::Submit('บันทึก')}}
+            {{ Form::Submit('บันทึก',array('class'=>'btn btn-success'))}}
           {{ Form::close()}}
+          
 
-          {{$wip_id}}
-          @if(isset($avatar))
+      </div>
+      </center>
+ </div>
 
-          {{$avatar}}
-          @endif
+</div>
+<!--End Content-->
+<div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
+
+</div>
+</div>
+
+{{ Form::close() }}
