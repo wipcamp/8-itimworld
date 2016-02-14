@@ -92,7 +92,9 @@
                   </div>
                   <input type="hidden" name="provider" value="{{ $provider }}" />
                   <input type="hidden" name="wip_id" value="{{ array_get($user, 'wip_id') }}" />
-                  <input type="submit" value="send">
+                  <center>
+                    <button type="submit" class="next">สมัครเลย</button>
+                  </center>
                 <?php echo Form::close(); ?>
 
               </div>
