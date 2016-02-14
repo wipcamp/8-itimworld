@@ -234,6 +234,7 @@ class AccountRepository implements AccountRepositoryInterface
 			$answer->question_id = $i;
 			$answer->save();
 		}
+		$document = new Wip8_document();
 		$document->wip_id = array_get($user,'wip_id');
     	$document->save();
 	}
