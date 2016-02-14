@@ -130,11 +130,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <div class="row">
                               <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{ array_get($data,'name_th') }}" style="font-size:1em;" placeholder="ชื่อ" id="name_th" name="name_th" class="required">
                               </div>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{array_get($data,'surname_th')}}" name="surname_th" style="font-size:1em;" id="surname_th" placeholder="นามสกุล" class="required">
                               </div>
                             </div>
@@ -150,7 +150,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             </div>
                             <div class="row">
                               <div class="col-xs-4">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{array_get($data,'nickname')}}" name='nickname' style="font-size:1em;" id="nickname" placeholder="ชื่อเล่น" class="required">
                               </div>
                               <div class="col-xs-4">

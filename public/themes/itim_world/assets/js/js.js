@@ -311,7 +311,10 @@ $(document).ready(function() {
           required: "กรอกข้อมูลให้ครบ",
           regex: "กรอกภาษาให้ถูกต้อง"
         },
-        nickname:"กรอกข้อมูลให้ครบ",
+        nickname:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
         tel:{
           required: "กรอกข้อมูลให้ครบ",
           regex: "กรอกตัวเลข"
