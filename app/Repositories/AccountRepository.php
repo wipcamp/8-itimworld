@@ -197,4 +197,10 @@ class AccountRepository implements AccountRepositoryInterface
 
 		return json_decode($result, true);
 	}
+	public function setAvatar($param,$avatar){
+		$dataJson = $this->account->where('wip_id',array_get($param,'wip_id'))->get();
+		$data = json_decode($dataJson,true);
+		$this->account->where('wip_id',array_get($param,'wip_id'))
+										->update(['avatar' => $avatar]);
+	}
 }
