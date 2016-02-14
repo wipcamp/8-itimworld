@@ -34,6 +34,11 @@ class AccountController extends ITIMController{
       return $this->theme->scope('account.regisSimple', $view)->layout('blank')->render();
   }
 
+  public function getMail(){
+      $user = $this->AccountRepository->findByWIPID(86476);
+      $this->AccountRepository->sendMailVerifyAccount($user);
+  }
+
   public function postRegister(){
     $data = Input::all();
     $dataMail = $this->AccountRepository->createSimpleRegister($data);

@@ -172,11 +172,6 @@ class AccountRepository implements AccountRepositoryInterface
 			'surname_th' => array_get($data,'lastname_th')
 		);
 		$profile = $this->profile->where('wip_id', $wip_id)->update($profile_data);
-		// $profile->citizen_id = array_get($data,'citizen_id');
-		// $profile->name_th = array_get($data,'name_th');
-		// $profile->surname_th = array_get($data,'lastname_th');
-		// $profile->save();
-
 		return $this->account->where('wip_id', $wip_id)->first();
 
 	}
@@ -186,8 +181,6 @@ class AccountRepository implements AccountRepositoryInterface
 		$result = $this->account->where('email',array_get($data,'email',''))
 					->where('provider',$provider)
 					->first();
-
-		// return json_decode($result, true);
 		return $result;
 	}
 
@@ -195,6 +188,27 @@ class AccountRepository implements AccountRepositoryInterface
 		$result = $this->account->where('wip_id', $wip_id)
 					->first();
 
-		return json_decode($result, true);
+		//return json_decode($result, true);
+		return $result;
+	}
+
+	public function sendMailVerifyAccount($user){
+		$dataMail = array(
+	    	'title' 	=> 'WIP Camp #8 Register',
+	    	'content' 	=> 'WIP Camp #8',
+			'verify' 	=> array_get($user, 'verify'),
+			'wip_id' 	=> array_get($user, 'wip_id'),
+	  	);
+
+		var_dump($dataMail);
+
+		Mail::send('emails.welcome', $dataMail, function($message) use ($data) {
+
+			$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8')
+			->to(array_get($user, 'email', $name = null)
+			->subject('ยืนยันการสมัครค่าย WIPCamp #8')
+			->priority(1)
+			//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
+		});
 	}
 }
