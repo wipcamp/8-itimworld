@@ -215,7 +215,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                               <div class="row">
                                 <div class="col-sm-12">
                                   <h3><span style="color:#ff0000;"> * </span>ชื่อโรงเรียน</h3>
-                                  <input type="text" name="school_id" value="{{array_get($wip_school,'school_name')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="school_id" value="{{array_get($wip_school,'school_name')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="กรอกชื่อโรงเรียน" class="required">
                                 </div>
                               </div>
                               <div class="row">
