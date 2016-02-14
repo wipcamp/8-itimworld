@@ -22,6 +22,9 @@
             <div class="col-md-12" style="margin-top:10%">
               <div class="col-sm-6" style="margin-top:20%">
                 <div class="col-xs-12 conditiontext">
+                  <center>
+                       <h1>เงื่อนไขในการสมัครค่าย WIP Camp #8</h1>
+                  </center>
                     <h3>
                     <ol><li>น้องๆจะต้องกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 3 หรือ 4 หรือ 5 ในปีการศึกษา 2558</li>
                     <li>หลังจากกรอกข้อมูลเรียบร้อยแล้ว น้องๆจะต้องอัปโหลดเอกสาร ดังต่อไปนี้เข้าระบบ</li>
