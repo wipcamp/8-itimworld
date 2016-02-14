@@ -49,6 +49,10 @@ class QuestionController extends ITIMController{
             $mission_view = 'question.question_5';
         }else if($mission == 6){
             $mission_view = 'question.question_6';
+        }else if($mission == 7){
+            $mission_view = 'question.question_7';
+        }else if($mission == 8){
+            $mission_view = 'question.question_8';
         }else{
             $mission_view = 'question.question_not_found';
         }
