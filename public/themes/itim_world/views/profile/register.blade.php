@@ -1,5 +1,6 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css">
 
 <div class="container-fluid">
       <!-- Scene -->
@@ -47,6 +48,25 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-xs-3"> <!-- required for floating -->
+    <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left">
+              <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+              <li><a href="#profile" data-toggle="tab">Profile</a></li>
+              <li><a href="#messages" data-toggle="tab">Messages</a></li>
+              <li><a href="#settings" data-toggle="tab">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-9">
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">Home Tab.</div>
+              <div class="tab-pane" id="profile">Profile Tab.</div>
+              <div class="tab-pane" id="messages">Messages Tab.</div>
+              <div class="tab-pane" id="settings">Settings Tab.</div>
+            </div>
         </div>
         <div class="row">
           <ul class="slide-container container">
@@ -319,6 +339,7 @@
             </li>
           </ul>
         </div>
+
       </div>
       <!--End Content-->
       <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
