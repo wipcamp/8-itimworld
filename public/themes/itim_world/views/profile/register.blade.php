@@ -1,5 +1,4 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
-{!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css" media="screen" title="no title" charset="utf-8">
 <style>
 html{
