@@ -410,7 +410,7 @@ $(document).ready(function(){
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.freezer.wip.camp/profile/typeahead',
+          url: 'http://itim.wip.camp/profile/typeahead',  
           type: 'GET',
           data: data,
           dataType: 'JSON',
