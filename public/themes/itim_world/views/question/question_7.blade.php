@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div style="min-height: 500px">
-                <div style="min-height: 300px">
+                <div>
                     <h1>MISSION VII</h1>
                     <h2>รูปภาพที่ปรากฎนั้นคือรูปอะไร</h2>
                     <div class="row">

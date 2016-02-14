@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div style="min-height: 500px">
-                <div style="min-height: 200px">
+                <div>
                     <h1>MISSION IV</h1>
                     <h2>ถ้าหากน้องได้รับการคัดเลือกให้เข้าร่วมในค่าย WIP Camp #8 น้องคาดหวังว่าจะได้อะไรจากการเข้าร่วมค่ายในครั้งนี้</h2>
                 </div>

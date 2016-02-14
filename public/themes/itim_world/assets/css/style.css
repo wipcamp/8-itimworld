@@ -15,13 +15,13 @@ html{
 }
 
 h1{
-    font-size: 4em;
+    font-size: 3em;
 }
 
 body{
     background-color: #0c141e !important;
     color:#fff !important;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
     font-family: 'thai_sans_literegular' !important;
 }
 
@@ -67,21 +67,21 @@ body{
 }
 #scene .layout .town .town-front {
     background-image: url(../img/layout/t1_1.png);
-    bottom: -.2em;
+    bottom: -10.3em;
     max-height: 34em;
     height: 100%;
     z-index: -1;
 }
 #scene .layout .town .town-mid {
     background-image: url(../img/layout/t2.png);
-    bottom: -1.6em;
+    bottom: -8.6em;
     max-height: 34em;
     height: 100%;
     z-index:-2;
 }
 #scene .layout .town .town-back {
     background-image: url(../img/layout/t.png);
-    bottom: -1.6em;
+    bottom: -8.6em;
     max-height: 34em;
     height: 100%;
     z-index: -3;
@@ -291,6 +291,10 @@ button.next{
 
 
 /* by first */
+
+h3{
+  font-size: 17px !important;
+}
 
 .h1, .h2, .h3, h1, h2, h3 {
 margin: 10px 0 5px !important;

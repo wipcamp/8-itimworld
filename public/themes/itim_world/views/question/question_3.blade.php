@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div style="min-height: 500px">
-                <div style="min-height: 200px">
+                <div>
                     <h1>MISSION III</h1>
                     <h2>ในค่ายวิปแคมป์คร้ังท่ี 8 หากน้องติดอยู่ในห้องคอมพิวเตอร์พร้อมกับ เพื่อนในค่ายอีก 1 คน และมีสายแลนอีก 1 เส้น น้องจะทำอย่างไร</h2>
                 </div>

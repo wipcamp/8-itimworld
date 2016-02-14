@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div style="min-height: 500px">
-                <div style="min-height: 200px">
+                <div>
                     <h1>MISSION VIII</h1>
                     <h2>จาก source code ในรูปเป็นโปรแกรมอะไร เอาไว้ใช้ทำอะไร</h2>
                     <div class="row">
