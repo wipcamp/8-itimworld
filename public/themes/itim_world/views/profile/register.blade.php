@@ -202,7 +202,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
-                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
+                              <a href="{{ url('profile') }}"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไปหน้าแรก</button></a>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -245,7 +245,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                               <br>
                               <div class="row">
                                 <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
-                                <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
+                                <a href="{{ url('profile') }}"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไปหน้าแรก</button></a>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -267,7 +267,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
-                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
+                              <a href="{{ url('profile') }}"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไปหน้าแรก</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -294,7 +294,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
-                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
+                              <a href="{{ url('profile') }}"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไปหน้าแรก</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -323,7 +323,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
-                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
+                              <a href="{{ url('profile') }}"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไปหน้าแรก</button></a>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>

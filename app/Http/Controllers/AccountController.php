@@ -36,7 +36,7 @@ class AccountController extends ITIMController{
   }
 
   public function getMail(){
-      $user = $this->AccountRepository->findByWIPID(87538);
+      $user = $this->AccountRepository->findByWIPID(83226);
       $this->AccountRepository->sendMailVerifyAccount($user);
   }
 
