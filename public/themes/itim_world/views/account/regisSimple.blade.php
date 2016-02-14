@@ -34,7 +34,7 @@
                   <hr>
 
                   <div class="form-group">
-                    <span style="color:#ff0000;"> * </span><label for="">อีเมลล์</label>
+                    <span style="color:#ff0000;"> * </span><label for="">อีเมล</label>
                     <input type="email" class="form-control" id="" placeholder="กรอกอีเมลล์" name="email">
                     @if ($errors->has('email'))
                         <span class="help-block">
