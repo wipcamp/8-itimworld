@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 use Theme;
 use App\Models\Wip8_account;
 use Input;
-use App\Repositories\AvatarRepositoryInterface;
+use App\Repositories\AccountRepositoryInterface;
 
 class AvatarController extends ITIMController{
-  protected $AvatarRepository;
+  protected $AccountRepository;
 
-  public function __construct(AvatarRepositoryInterface $AvatarRepository){
+  public function __construct(AccountRepositoryInterface $AccountRepository){
     parent::__construct();
-    $this->AvatarRepository = $AvatarRepository;
+    $this->AccountRepository = $AccountRepository;
   }
 
   public function getIndex(){

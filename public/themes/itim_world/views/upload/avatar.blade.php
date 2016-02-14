@@ -36,5 +36,5 @@
          </div>
          <!--Content-->
           {{ Form::open(array('url' => 'avatar', 'files'=> true,'name' => 'upload','id' => 'upload')) }}
-            Form::file('image');
+            
           {{ Form::clode()}}
