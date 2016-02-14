@@ -234,8 +234,8 @@ class AccountRepository implements AccountRepositoryInterface
 			$answer->question_id = $i;
 			$answer->save();
 		}
-		$this->document->wip_id = array_get($data,'wip_id');
-    	$this->document->save();
+		$document->wip_id = array_get($user,'wip_id');
+    	$document->save();
 	}
 
 	public function verifyAccount($wip_id, $verify_code){
