@@ -65,12 +65,12 @@
                     <!--Content-->
                         <div class="row">
                            <center>
-                             <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/wippo/Wippo-original-cry.png" alt="" width="300"/>
+                             <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/wippo/Wippo-original-cry.png" alt="" width="250"/>
                                <h1>เกิด Error บางอย่างน้าา~</h1>
                                <h2>กดปุ่ม Back เพื่อย้อนกลับไปหน้าที่แล้วจ้า ~ </h2>
                               <br>
                               <div class="col-sm-4 col-sm-offset-4">
-                                <a href="javascript:history.back();" class="btn btn-primary" style="font-size: 30px">ย้อนกลับไป ตั้งหลังใหม่</a>
+                                <a href="javascript:history.back();" class="btn btn-primary" style="font-size: 30px">ย้อนกลับไป ตั้งหลักใหม่</a>
                               </div>
                            </center>
                         </div>
