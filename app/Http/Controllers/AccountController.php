@@ -108,7 +108,7 @@ class AccountController extends ITIMController{
     }
 
    public function getCondition(){
-     $style = $this->theme->scope('account.style')->content();
+     $style = $this->theme->scope('upload.style')->content();
       $this->theme->asset()->writeContent('inline-style', $style, array());
    		return $this->theme->scope('account.condition')->layout('sample')->render();
    }
