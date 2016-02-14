@@ -58,7 +58,7 @@ class AuthController extends Controller
             $val = Validator::make($data, [
                 'name_th' => 'required|max:255',
                 'lastname_th' => 'required|max:255',
-                'citizen_id' => 'required|max:13|unique:wip8_profiles',
+                'citizen_id' => 'required|max:13',
                 'email' => 'required_if:provider,email|email|max:255|unique:users',
                 'password' => 'required|min:6',
                 'provider' => 'required'
@@ -67,7 +67,7 @@ class AuthController extends Controller
             $val = Validator::make($data, [
                 'name_th' => 'required|max:255',
                 'lastname_th' => 'required|max:255',
-                'citizen_id' => 'required|max:13|unique:wip8_profiles',
+                'citizen_id' => 'required|max:13',
                 'provider' => 'required'
             ]);
         }
