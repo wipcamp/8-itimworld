@@ -2,10 +2,15 @@
 {!!HTML::script('themes/itim_world/assets/js/upload/fileinput.js')!!}
 {!!HTML::script('themes/itim_world/assets/js/upload/fileinput_locale_th.js')!!}
 <script>
-	 $('#avatar').fileinput({
+	$(document).on('ready', function() {
+	$('#avatar').fileinput({
         language: 'th',
-        uploadUrl: '{{Config.getCapp.url}}',
-        allowedFileExtensions : ['jpg', 'png','jpeg']
+        allowedFileExtensions : ['jpg', 'png','jpeg'],
+        showUpload: false,
+		showCaption: false,
+        showRemove: false,
+        showPreview: false,
     });
+});
 
 </script>

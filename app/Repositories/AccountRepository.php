@@ -211,4 +211,10 @@ class AccountRepository implements AccountRepositoryInterface
 		// 	//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
 		// });
 	}
+	public function setAvatar($param,$avatar){
+		$dataJson = $this->account->where('wip_id',array_get($param,'wip_id'))->get();
+		$data = json_decode($dataJson,true);
+		$this->account->where('wip_id',array_get($param,'wip_id'))
+										->update(['avatar' => $avatar]);
+	}
 }
