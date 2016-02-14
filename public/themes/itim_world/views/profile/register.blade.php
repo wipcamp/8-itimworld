@@ -1,7 +1,4 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
-{!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css" media="screen" title="no title" charset="utf-8">
 <style>
 html{
@@ -81,18 +78,6 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 </style>
 
-<script>
-$(document).ready(function() {
-    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-    });
-});
-</script>
 <div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
@@ -217,6 +202,7 @@ $(document).ready(function() {
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -259,6 +245,7 @@ $(document).ready(function() {
                               <br>
                               <div class="row">
                                 <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                                <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -280,6 +267,7 @@ $(document).ready(function() {
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -306,6 +294,7 @@ $(document).ready(function() {
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -334,6 +323,7 @@ $(document).ready(function() {
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>
