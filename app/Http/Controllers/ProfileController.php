@@ -31,7 +31,7 @@ class ProfileController extends ITIMController{
         $result = $this->ProfileRepository->find($wip_id);
         $data = json_decode($result,true);
         $view = array(
-          'data' => $data,
+          'data' => array_get($data, '0'),
           'wip_id' => $wip_id
         );
         return $this->theme->scope('profile.register',$view)->layout('profile')->render();
