@@ -36,7 +36,7 @@ class ProfileController extends ITIMController{
         $view = array(
           'data' => array_get($data, '0'),
           'wip_id' => $wip_id,
-          'wip_school' => $i
+          'wip_school' => array_get($i,'0')
         );
         return $this->theme->scope('profile.register',$view)->layout('profile')->render();
     }

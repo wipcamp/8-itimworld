@@ -79,17 +79,14 @@ class ProfileRepository implements ProfileRepositoryInterface{
                           'level' => array_get($data,'level'),
                           'gpax' => array_get($data,'gpax'),
                           'program' => array_get($data,'program')));
-    $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
+    $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     if($i == null||$i==''){
       $this->school->school_name = array_get($data,'school_id');
       $this->school->save();
-      $in = $this->school->where('school_name',array_get($data,'school_id'))->get();
-      $ij = json_decode($i,true);
-      $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($in,'school_id')]);
-    }else{
-      $ij = json_decode($i,true);
-      $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($ij,'school_id')]);
     }
+    $ij = json_decode($i,true);
+    $this->profile->where('wip_id',array_get($data,'wip_id'))->update(['school_id'=> array_get($ij,'0.school_id')]);
+    $result = $this->profile->where('wip_id',array_get($data,'wip_id'))->get();
     return $result;
   }
 

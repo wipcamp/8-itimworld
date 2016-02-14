@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class Wip8_school extends Model
 {
 
-  public $timestamps = true;
+  public $timestamps = false;
 }
