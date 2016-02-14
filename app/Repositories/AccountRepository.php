@@ -7,17 +7,20 @@ use App\Models\Wip8_profile;
 use Mail;
 use Hash;
 use App\User;
+use App\Models\Wip8_answer;
 
 class AccountRepository implements AccountRepositoryInterface
 {
 	protected $account;
 	protected $allwipid;
 	protected $profile;
+	protected $answer;
 
 	public function __construct(){
 		$this->account = new User();
 		$this->allwipid = new Wip8_allwipid();
 		$this->profile = new Wip8_profile();
+		$this->answer = new Wip8_answer();
 	}
 
 	public function wipId(){
@@ -211,10 +214,20 @@ class AccountRepository implements AccountRepositoryInterface
 		// 	//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
 		// });
 	}
+
 	public function setAvatar($param,$avatar){
 		$dataJson = $this->account->where('wip_id',array_get($param,'wip_id'))->get();
 		$data = json_decode($dataJson,true);
 		$this->account->where('wip_id',array_get($param,'wip_id'))
 										->update(['avatar' => $avatar]);
+	}
+
+	public function initialProfile($user){
+		for ($i=1; $i <= 8; $i++) {
+			$answer = new Wip8_answer();
+			$answer->wip_id = array_get($user, 'wip_id');
+			$answer->question_id = $i;
+			$answer->save();
+		}
 	}
 }

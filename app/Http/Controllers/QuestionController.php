@@ -28,7 +28,23 @@ class QuestionController extends ITIMController{
     //
     //
     //
-     return $this->theme->scope('question.index')->layout('profile')->render();
+     $missions = $this->QuestionRepository->getAllQuestion($this->user->wip_id);
+
+     $answer = array();
+     foreach ($missions as $mission) {
+         $question_id = array_get($mission, 'question_id', 0);
+         $answer_text = array_get($mission, 'answer', '');
+
+         if(trim($answer_text) != ""){
+             $answer[$question_id] = $answer_text;
+         }
+
+     }
+
+     $view = array(
+         'answer' => $answer
+     );
+     return $this->theme->scope('question.index', $view)->layout('profile')->render();
   }
 
 
@@ -85,7 +101,7 @@ class QuestionController extends ITIMController{
 
       $this->QuestionRepository->updateQuestion($param);
 
-      return redirect('question/mission/'.array_get($data, 'mission_id'));
+      return redirect('question');
 
   }
 

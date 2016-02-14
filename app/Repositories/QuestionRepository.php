@@ -1,7 +1,7 @@
 <?php
 namespace App\Repositories;
 
-  use App\Models\Wip8_answer;
+use App\Models\Wip8_answer;
 
 class QuestionRepository implements QuestionRepositoryInterface{
 
@@ -17,6 +17,10 @@ class QuestionRepository implements QuestionRepositoryInterface{
     return $data;
   }
 
+  public function getAllQuestion($wip_id){
+      $mission = $this->answer->where('wip_id', $wip_id)->get();
+      return json_decode($mission, true);
+  }
   public function getQuestion($mission_id, $wip_id){
 
     $mission = $this->answer->where('wip_id', $wip_id)
@@ -27,8 +31,8 @@ class QuestionRepository implements QuestionRepositoryInterface{
 
   public function updateQuestion($data){
     $this->answer->where('wip_id',array_get($data,'wip_id'))
-                 ->update(array('question_id' => array_get($data,'question_id'),
-                          'answer' => array_get($data,'answer')));
+                ->where('question_id',array_get($data,'question_id'))
+                 ->update(array('answer' => array_get($data,'answer')));
 
   }
 

@@ -97,19 +97,14 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
         if($data['provider'] == 'email'){
-            $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
             $user = $AccountRepository->createAccount($data);
-
             $AccountRepository->sendMailVerifyAccount($user);
-
         }else{
-            $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
             $user = $AccountRepository->updateSocialAccount($data);
         }
-
-
-
+        $AccountRepository->initialProfile($user);
         return $user;
     }
 
