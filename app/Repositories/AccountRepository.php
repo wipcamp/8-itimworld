@@ -139,24 +139,25 @@ class AccountRepository implements AccountRepositoryInterface
 	public function createAccount($data){
 		$wip_id_gen = $this->wipId();
 		$verify_code = md5(Hash::make($wip_id_gen));
+		$active = array_get($data,'provider') == 'facebook'? 1 : 0;
 
 		$User = new User();
 		$User->wip_id = $wip_id_gen;
 		$User->email = array_get($data,'email');
 		$User->verify = $verify_code;
 		$User->password = bcrypt(array_get($data,'password'));
-		$User->active = 0;
-		$User->status = array_get($data,'status');
-		$User->provider = array_get($data,'provider');
-		$User->avatar = array_get($data,'avatar');
-		$User->provider_id = array_get($data,'provider_id');
+		$User->active = $active;
+		$User->status = array_get($data,'status', 1);
+		$User->provider = array_get($data,'provider', '');
+		$User->avatar = array_get($data,'avatar', '');
+		$User->provider_id = array_get($data,'provider_id', '');
 		$User->save();
 
 		$Profile = new Wip8_profile();
 		$Profile->wip_id = $wip_id_gen;
-		$Profile->citizen_id = array_get($data,'citizen_id');
-		$Profile->name_th = array_get($data,'name_th');
-		$Profile->surname_th = array_get($data,'lastname_th');
+		$Profile->citizen_id = array_get($data,'citizen_id' , '');
+		$Profile->name_th = array_get($data,'name_th', '');
+		$Profile->surname_th = array_get($data,'lastname_th', '');
 		$Profile->email = array_get($data,'email');
 		$Profile->save();
 
@@ -191,8 +192,8 @@ class AccountRepository implements AccountRepositoryInterface
 		$result = $this->account->where('wip_id', $wip_id)
 					->first();
 
-		//return json_decode($result, true);
-		return $result;
+		return json_decode($result, true);
+		//return $result;
 	}
 
 	public function sendMailVerifyAccount($user){
@@ -202,10 +203,10 @@ class AccountRepository implements AccountRepositoryInterface
 			'name'		=>  $user->profile->name_th.' '.$user->profile->surname_th,
 			'verify' 	=> array_get($user, 'verify'),
 			'wip_id' 	=> array_get($user, 'wip_id'),
-			'verify_link'	=> config('app.url').'/account/verify/'.array_get($user, 'wip_id').'/'.array_get($user, 'verify')
+			'verify_link'	=> config('app.url').'/verify/'.array_get($user, 'wip_id').'/'.array_get($user, 'verify')
 	  	);
 
-		dd($dataMail);
+		//dd($dataMail);
 
 		Mail::send('emails.welcome', $dataMail, function($message) use ($user){
 			$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8');
@@ -239,7 +240,7 @@ class AccountRepository implements AccountRepositoryInterface
 		 }
 		 $data->active = 1;
 		 $data->save();
-		 
+
 		 return $data;
 	}
 }

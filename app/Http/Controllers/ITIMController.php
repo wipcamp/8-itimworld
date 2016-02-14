@@ -23,7 +23,7 @@ class ITIMController extends Controller
 
         $this->theme->partialComposer('header', function ($view) {
             $view->with('profile', $this->profile);
-            $view->with('User', $this->user);
+            $view->with('user', $this->user);
         });
 
     }

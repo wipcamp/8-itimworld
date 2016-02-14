@@ -4,13 +4,15 @@
             <div style="min-height: 500px">
                 <div style="min-height: 200px">
                     <h1>MISSION VI</h1>
-                    <h2>เสียงคลิกเมาส์ข้างซ้ายหรือขวา</h2>
+                    <h2>จากเสียงนี้เป็นเสียงคลิกเมาส์ของพี่วิปโป้เองแหละ พี่วิปโป้อยากถามว่าพี่วิปโป้คลิกซ้ายหรือคลิกขวา</h2>
+                    <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/246987388%3Fsecret_token%3Ds-NCMdX&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                 </div>
                 <div id="editor">
                     {{ Form::open(array('url' => 'question/mission')) }}
                         <textarea id='mission_answer' placeholder="Type some text" name="mission_answer" class="form-control answer-box">{{ array_get($mission, 'answer') }}</textarea>
 
-                        <button type="submit" class="next" style="float:right; margin:30px">ส่งคำตอบ</button>\
+                        <button type="submit" class="next" style="float:right; margin:30px">ส่งคำตอบ</button>
+                        <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                         <input type="hidden" name="mission_id" value="6" />
                     {{ Form::close() }}
                 </div>

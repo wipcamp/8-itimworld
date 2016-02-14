@@ -2,10 +2,11 @@
 Route::controller('itim', 'RegisterController');
 
 
+
 //Route::get('mail/{wip_id}/{verify}','AccountController@VerifySecond');
 Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
-    Route::get('account/{wip_id}/{verify_code}','AccountController@getVerify');
+    Route::get('verify/{wip_id}/{verify_code}','AccountController@getVerify');
     Route::controller('account','AccountController');
 
 
@@ -16,7 +17,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::controller('profile','ProfileController');
         Route::controller('question','QuestionController');
         Route::controller('document','DocumentController');
-Route::controller('avatar','AvatarController');
+        Route::controller('avatar','AvatarController');
     });
 
 

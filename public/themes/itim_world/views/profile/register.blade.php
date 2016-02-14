@@ -1,6 +1,4 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
-{!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css" media="screen" title="no title" charset="utf-8">
 <style>
 html{
@@ -19,8 +17,6 @@ div.bhoechie-tab-container{
   border-radius: 4px;
   -moz-border-radius: 4px;
   border:1px solid #ddd;
-  margin-top: 20px;
-  margin-left: 50px;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
   -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -82,18 +78,6 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 </style>
 
-<script>
-$(document).ready(function() {
-    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-    });
-});
-</script>
 <div class="container-fluid">
       <!-- Scene -->
       <div id="scene">
@@ -144,52 +128,52 @@ $(document).ready(function() {
                       <div class="bhoechie-tab-content active">
                         <?php echo Form::open(array('url'=>'profile/formfirst','id'=>'reg-1')); ?>
                             <div class="row">
-                              <input type="hidden" value="22222" name="wip_id"/>
+                              <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ</h3>
                                 <input type="text" class="form-control" value="{{ array_get($data,'name_th') }}" style="font-size:1em;" placeholder="ชื่อ" id="name_th" name="name_th" class="required">
                               </div>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'surname_th')}}" name="surname_th" style="font-size:1em;" placeholder="นามสกุล" class="required">
+                                <input type="text" class="form-control" value="{{array_get($data,'surname_th')}}" name="surname_th" style="font-size:1em;" id="surname_th" placeholder="นามสกุล" class="required">
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษอังกฤษ)</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'name_en')}}" name='name_en' style="font-size:1em;" placeholder="ชื่อ (ภาษอังกฤษ)" class="required">
+                                <input type="text" class="form-control" value="{{array_get($data,'name_en')}}" name='name_en' style="font-size:1em;" id="name_en" placeholder="ชื่อ (ภาษอังกฤษ)" class="required">
                               </div>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษอังกฤษ)</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'surname_en')}}" name='surname_en' style="font-size:1em;" placeholder="นามสกุล (ภาษอังกฤษ)" class="required">
+                                <input type="text" class="form-control" value="{{array_get($data,'surname_en')}}" name='surname_en' style="font-size:1em;" id="surname_en" placeholder="นามสกุล (ภาษอังกฤษ)" class="required">
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-xs-4">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'nickname')}}" name='nickname' style="font-size:1em;" placeholder="ชื่อเล่น" class="required">
+                                <input type="text" class="form-control" value="{{array_get($data,'nickname')}}" name='nickname' style="font-size:1em;" id="nickname" placeholder="ชื่อเล่น" class="required">
                               </div>
                               <div class="col-xs-4">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ศาสนา</h3>
-                                <select class="form-control" name="sex" class="required">
-                                  <option selected="">ระบุ</option>
-                                  <option value="bud">พุทธ</option>
-                                  <option value="cris">คริสต์</option>
-                                  <option value="is">อิสลาม</option>
-                                  <option value="phm">พราหมณ์-ฮินดู</option>
-                                  <option value="other">อื่นๆ</option>
+                                <select class="form-control" id="religion" name="religion" class="required">
+                                  <option value="" {!! (array_get($data,'religion')==''?' selected':'') !!}>ระบุ</option>
+                                  <option value="bud" {!! (array_get($data,'religion')=='bud'?' selected':'') !!}>พุทธ</option>
+                                  <option value="cris" {!! (array_get($data,'religion')=='cris'?' selected':'') !!}>คริสต์</option>
+                                  <option value="is" {!! (array_get($data,'religion')=='is'?' selected':'') !!}>อิสลาม</option>
+                                  <option value="phm" {!! (array_get($data,'religion')=='phm'?' selected':'') !!}>พราหมณ์-ฮินดู</option>
+                                  <option value="other" {!! (array_get($data,'religion')=='other'?' selected':'') !!}>อื่นๆ</option>
                                 </select>
                               </div>
                               <div class="col-xs-4">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>วันเกิด</h3>
-                                <input type="date" class="form-control" value="{{array_get($data,'dob')}}" name='dob' style="font-size:1em;" placeholder="วันเกิด" class="required" >
+                                <input type="date" class="form-control" value="{{array_get($data,'dob')}}" id="dob" name='dob' style="font-size:1em;" placeholder="วันเกิด" class="required" >
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>เพศ</h3>
-                                <select class="form-control" name="sex" class="required">
-                                  <option>ระบุ</option>
+                                <select class="form-control" id="sex" name="sex" class="required">
+                                  <option value="">ระบุ</option>
                                   <option value="M" {!! (array_get($data,'sex')=='M'?' selected':'') !!}>ชาย</option>
                                   <option value="F" {!! (array_get($data,'sex')=='F'?' selected':'') !!}>หญิง</option>
                                 </select>
@@ -202,22 +186,23 @@ $(document).ready(function() {
                             <div class="row">
                               <div class="col-xs-12">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ที่อยู่</h3>
-                                <textarea class="form-control" name="address" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'address')}}</textarea>
+                                <textarea class="form-control" name="address" style="font-size:1em;" id='address' row tops="3" class="required">{{array_get($data,'address')}}</textarea>
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:30px">
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Facebook</h3>
-                                <input type="text" class="form-control" name="facebook" value="{{array_get($data,'facebook')}}" style="font-size:1em;" placeholder="Facebook" class="required">
+                                <input type="text" class="form-control" name="facebook" value="{{array_get($data,'facebook')}}" id="facebook" style="font-size:1em;" placeholder="Facebook" class="required">
                               </div>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>Twitter</h3>
-                                <input type="text" class="form-control" name="twitter" value="{{array_get($data,'twitter')}}" style="font-size:1em;" placeholder="Twitter" class="required">
+                                <input type="text" class="form-control" name="twitter" value="{{array_get($data,'twitter')}}" id="twitter" style="font-size:1em;" placeholder="Twitter" class="required">
                               </div>
                             </div>
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -226,18 +211,18 @@ $(document).ready(function() {
                       <div class="bhoechie-tab-content">
 
                         <?php echo Form::open(array('url'=>'profile/formthird','id'=>'reg-2')) ?>
-                              <input type="hidden" value="22222" name="wip_id"/>
+                              <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                               <div class="row">
                                 <div class="col-sm-12">
                                   <h3><span style="color:#ff0000;"> * </span>ชื่อโรงเรียน</h3>
-                                  <input type="text" name="school_id" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control " style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="school_id" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                                 </div>
                               </div>
                               <div class="row">
                                 <div class="col-sm-5">
                                   <h3><span style="color:#ff0000;"> * </span>ระดับชั้น</h3>
-                                  <select class="form-control" name="level" class="required">
-                                    <option>ระบุ</option>
+                                  <select class="form-control" id="level" name="level" class="required">
+                                    <option value="" {!! (array_get($data,'level')==''?' selected':'') !!}>ระบุ</option>
                                     <option value="ม.4" {!! (array_get($data,'level')=='ม.4'?' selected':'') !!}>ม.4</option>
                                     <option value="ม.5" {!! (array_get($data,'level')=='ม.5'?' selected':'') !!}>ม.5</option>
                                     <option value="ม.6" {!! (array_get($data,'level')=='ม.6'?' selected':'') !!}>ม.6</option>
@@ -245,11 +230,11 @@ $(document).ready(function() {
                                 </div>
                                 <div class="col-sm-5">
                                   <h3><span style="color:#ff0000;"> * </span>แผนการเรียน</h3>
-                                  <select class="form-control" name="program" class="required">
-                                    <option>ระบุ</option>
-                                    <option value="วิทย์-คณิต" {!! (array_get($data,'level')=='วิทย์-คณิต'?' selected':'') !!}>วิทย์-คณิต</option>
-                                    <option value="ศิลป็-คำนวน" {!! (array_get($data,'level')=='ม.5'?' selected':'') !!}>ศิลป็-คำนวน</option>
-                                    <option value="วิทย์-คอม" {!! (array_get($data,'level')=='ม.6'?' selected':'') !!}>วิทย์-คอม</option>
+                                  <select class="form-control" id="program" name="program" class="required">
+                                    <option value="" {!! (array_get($data,'program')==''?' selected':'') !!}>ระบุ</option>
+                                    <option value="วิทย์-คณิต" {!! (array_get($data,'program')=='วิทย์-คณิต'?' selected':'') !!}>วิทย์-คณิต</option>
+                                    <option value="ศิลป็-คำนวน" {!! (array_get($data,'program')=='ศิลป็-คำนวน'?' selected':'') !!}>ศิลป็-คำนวน</option>
+                                    <option value="วิทย์-คอม" {!! (array_get($data,'program')=='วิทย์-คอม'?' selected':'') !!}>วิทย์-คอม</option>
                                   </select>
                                 </div>
                                 <div class="col-sm-2">
@@ -260,6 +245,7 @@ $(document).ready(function() {
                               <br>
                               <div class="row">
                                 <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                                <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -267,37 +253,38 @@ $(document).ready(function() {
                       <!-- ข้อมูลด้านสุขภาพ -->
                       <div class="bhoechie-tab-content">
                         <?php echo Form::open(array('url'=>'profile/formfour','id'=>'reg-3')) ?>
-                            <input type="hidden" value="22222" name="wip_id"/>
+                            <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-6">
                                 <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
-                                <input type="text" name="disease" value="{{array_get($data,'disease')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                <input type="text" name="disease" id="disease" value="{{array_get($data,'disease')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                               </div>
                               <div class="col-sm-6">
                                 <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
-                                <input type="text" name="allergy" value="{{array_get($data,'allergy')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                <input type="text" name="allergy" id="allergy" value="{{array_get($data,'allergy')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                               </div>
                             </div>
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
                       <!-- ข้อมูลผู้ปกครอง -->
                       <div class="bhoechie-tab-content">
                         <?php echo Form::open(array('url'=>'profile/formfive','id'=>'reg-4')) ?>
-                            <input type="hidden" value="22222" name="wip_id"/>
+                            <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-12">
                                 <h3><span style="color:#ff0000;"> * </span>ชื่อ</h3>
-                                <input type="text" name="parent_name" value="{{array_get($data,'parent_name')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                <input type="text" name="parent_name" id="parent_name" value="{{array_get($data,'parent_name')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-sm-5">
                                 <h3><span style="color:#ff0000;"> * </span>ความสัมพันธ์</h3>
-                                <input type="text" name="parent_relation" value="{{array_get($data,'parent_relation')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                <input type="text" name="parent_relation" id="parent_relation" value="{{array_get($data,'parent_relation')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                               </div>
                               <div class="col-sm-7">
                                 <h3><span style="color:#ff0000;"> * </span>เบอร์โทรศัพท์</h3>
@@ -307,34 +294,36 @@ $(document).ready(function() {
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
                       <!--ข้อมูลอื่นๆ-->
                       <div class="bhoechie-tab-content">
                           <?php echo Form::open(array('url'=>'profile/formsix','id'=>'reg-5')) ?>
-                            <input type="hidden" value="22222" name="wip_id"/>
+                            <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                             <div class="row">
                               <div class="col-xs-12">
                                 <h3 style="margin: 0;">ทักษะทางคอมพิวเตอร์</h3>
-                                <textarea class="form-control" name="computer_skill" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'computer_skill')}}</textarea>
+                                <textarea class="form-control" id="computer_skill" name="computer_skill" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'computer_skill')}}</textarea>
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-xs-12">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>รู้จักค่ายนี้จากไหน</h3>
-                                <textarea class="form-control" name="referal" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'referal')}}</textarea>
+                                <textarea class="form-control" id="referal" name="referal" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'referal')}}</textarea>
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-xs-12">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>กิจกรรมที่เคยทำ</h3>
-                                <textarea class="form-control" name="activitys" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'activitys')}}</textarea>
+                                <textarea class="form-control" id="activitys" name="activitys" style="font-size:1em;" row tops="3" class="required">{{array_get($data,'activitys')}}</textarea>
                               </div>
                             </div>
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:30px">ส่งข้อมูล</button>
+                              <a href="javascript:history.back()"><button type="submit" class="next" style="float:right; margin:30px">ย้อนกลับไป</button></a>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>

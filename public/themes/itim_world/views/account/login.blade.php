@@ -39,9 +39,10 @@
                 <label for="">Password</label>
                 <input type="password" class="form-control" id="" placeholder="Password" name="password">
               </div>
-                <input type="submit" value="Login" style="font-size:1.7em;">
+              <center>
+                <button type="submit" class="next">Login</button>
+              </center>
               <?php echo Form::close(); ?>
-              <center><a href="" style="color:#fff;">Forget Password</a></center>
               <br>
               <hr>
               <br>
@@ -51,7 +52,7 @@
               <br>
             </div>
             <div class="col-xs-6">
-                <div class="container">
+                <div>
                   <center>
                     <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="450"></a>
                   </center>

@@ -227,12 +227,179 @@ function simpleSelect() {
 //     });
 // });
 
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+
+      $( "#reg-1" ).validate({
+        rules: {
+          name_th: {
+            required: true,
+            regex: "^[ก-๙]+$"
+          },
+          surname_th: {
+            required: true,
+            regex: "^[ก-๙]+$"
+          },
+          name_en: {
+            required: true,
+            regex: "^[A-z]+$"
+          },
+          surname_en: {
+            required: true,
+            regex: "^[A-z]+$"
+          },
+          nickname: {
+            required: true
+          },
+          tel: {
+            required: true,
+
+          },
+          sex: {
+            required: true
+          },
+          religion: {
+            required: true
+          },
+          dob: {
+            required: true
+          },
+          address: {
+            required: true
+          },
+          facebook: {
+            required: true
+          },
+          twitter: {
+            required: true
+          },
+      },
+      messages:{
+        name_th: {
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
+        surname_th:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
+        name_en:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
+        surname_en:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
+        nickname:"กรอกข้อมูลให้ครบ",
+        tel:"กรอกข้อมูลให้ครบ",
+        sex:"กรอกข้อมูลให้ครบ",
+        religion:"กรอกข้อมูลให้ครบ",
+        dob:"กรอกข้อมูลให้ครบ",
+        address:"กรอกข้อมูลให้ครบ",
+        facebook:"กรอกข้อมูลให้ครบ",
+        twitter:"กรอกข้อมูลให้ครบ",
+      }
+      });
+      $( "#reg-2" ).validate({
+        rules: {
+          typeahead: {
+            required: true
+          },
+          level: {
+            required: true
+          },
+          program: {
+            required: true
+          },
+          gpax: {
+            required: true
+          },
+      },
+      messages:{
+        typeahead: "กรอกข้อมูลให้ครบ",
+        level:"กรอกข้อมูลให้ครบ",
+        program:"กรอกข้อมูลให้ครบ",
+        gpax:"กรอกข้อมูลให้ครบ",
+      }
+      });
+      $( "#reg-3" ).validate({
+        rules: {
+          disease: {
+            required: true
+          },
+          allergy: {
+            required: true
+          },
+        },
+        messages:{
+          disease: "กรอกข้อมูลให้ครบ",
+          allergy:"กรอกข้อมูลให้ครบ",
+        }
+      });
+      $( "#reg-4" ).validate({
+        rules: {
+          parent_name: {
+            required: true
+          },
+          parent_relation: {
+            required: true
+          },
+          parent_tel: {
+            required: true,
+          },
+      },
+      messages:{
+        parent_name: "กรอกข้อมูลให้ครบ",
+        parent_relation:"กรอกข้อมูลให้ครบ",
+        parent_tel:"กรอกข้อมูลให้ครบ",
+      }
+
+      });
+      $( "#reg-5" ).validate({
+        rules: {
+          computer_skill: {
+            required: true
+          },
+          referal: {
+            required: true
+          },
+          activitys: {
+            required: true
+          },
+      },
+      messages:{
+        computer_skill: "กรอกข้อมูลให้ครบ",
+        referal:"กรอกข้อมูลให้ครบ",
+        activitys:"กรอกข้อมูลให้ครบ",
+      }
+
+
+      });
+
+      $.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "กรอกภาษาให้ถูกต้อง"
+      );
+
 $(document).ready(function(){
     $('#typeahead').typeahead({
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.wip.loc/profile/typeahead',
+          url: 'http://itim.freezer.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
@@ -246,8 +413,8 @@ $(document).ready(function(){
   });
 
 $(document).ready(function(){
-  $("#tel").mask("(999)-999-9999");
-  $("#parent_tel").mask("(999)-999-9999");
+  $("#tel").mask("999-999-9999");
+  $("#parent_tel").mask("999-999-9999");
   $("#gpax").mask("9.99");
 });
 

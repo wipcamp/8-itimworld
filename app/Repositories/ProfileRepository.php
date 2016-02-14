@@ -53,6 +53,7 @@ class ProfileRepository implements ProfileRepositoryInterface{
                           'surname_en' => array_get($data,'surname_en'),
                           'nickname' => array_get($data,'nickname'),
                           'religion' => array_get($data,'religion'),
+                          'address' => array_get($data,'address'),
                           'dob' => array_get($data,'dob'),
                           'tel' => array_get($data,'tel'),
                           'sex' => array_get($data,'sex'),
