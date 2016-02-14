@@ -130,11 +130,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <div class="row">
                               <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{ array_get($data,'name_th') }}" style="font-size:1em;" placeholder="ชื่อ" id="name_th" name="name_th" class="required">
                               </div>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{array_get($data,'surname_th')}}" name="surname_th" style="font-size:1em;" id="surname_th" placeholder="นามสกุล" class="required">
                               </div>
                             </div>
@@ -150,7 +150,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             </div>
                             <div class="row">
                               <div class="col-xs-4">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น</h3>
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อเล่น (ภาษาไทย)</h3>
                                 <input type="text" class="form-control" value="{{array_get($data,'nickname')}}" name='nickname' style="font-size:1em;" id="nickname" placeholder="ชื่อเล่น" class="required">
                               </div>
                               <div class="col-xs-4">
@@ -202,7 +202,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:4px">ส่งข้อมูล</button>
-                              <a href="{{ url('profile') }}"><button class="next" style="float:right; margin:4px">ย้อนกลับไปหน้าแรก</button></a>
+                              <a href="{{ url('profile') }}" >ย้อนกลับไปหน้าแรก</a>
                             </div>
                           <?php echo Form::close(); ?>
 
@@ -239,13 +239,13 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                                 </div>
                                 <div class="col-sm-2">
                                   <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
-                                  <input type="text" name="gpax" id="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="gpax" id="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" class="required">
                                 </div>
                               </div>
                               <br>
                               <div class="row">
                                 <button type="submit" class="next" style="float:right; margin:4px">ส่งข้อมูล</button>
-                                <a href="{{ url('profile') }}"><button class="next" style="float:right; margin:4px">ย้อนกลับไปหน้าแรก</button></a>
+                                <a href="{{ url('profile') }}">ย้อนกลับไปหน้าแรก</a>
                               </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -256,18 +256,18 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <input type="hidden" value="{{$wip_id}}" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-6">
-                                <h3><span style="color:#ff0000;"> * </span>โรคประจำตัว</h3>
+                                <h3>โรคประจำตัว</h3>
                                 <input type="text" name="disease" id="disease" value="{{array_get($data,'disease')}}" class="form-control" style="font-size:1.4em;" placeholder="โรคประจำตัว" class="required">
                               </div>
                               <div class="col-sm-6">
-                                <h3><span style="color:#ff0000;"> * </span>แพ้ยาอะไร/อาหาร</h3>
+                                <h3>แพ้ยาอะไร/อาหาร</h3>
                                 <input type="text" name="allergy" id="allergy" value="{{array_get($data,'allergy')}}" class="form-control" style="font-size:1.4em;" placeholder="แพ้ยาอะไร" class="required">
                               </div>
                             </div>
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:4px">ส่งข้อมูล</button>
-                              <a href="{{ url('profile') }}"><button class="next" style="float:right; margin:4px">ย้อนกลับไปหน้าแรก</button></a>
+                              <a href="{{ url('profile') }}" >ย้อนกลับไปหน้าแรก</a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -294,7 +294,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:4px">ส่งข้อมูล</button>
-                              <a href="{{ url('profile') }}"><button class="next" style="float:right; margin:4px">ย้อนกลับไปหน้าแรก</button></a>
+                              <a href="{{ url('profile') }}">ย้อนกลับไปหน้าแรก</a>
                             </div>
                             <?php echo Form::close(); ?>
                       </div>
@@ -323,7 +323,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             <br>
                             <div class="row">
                               <button type="submit" class="next" style="float:right; margin:4px">ส่งข้อมูล</button>
-                              <a href="{{ url('profile') }}"><button  class="next" style="float:right; margin:4px">ย้อนกลับไปหน้าแรก</button></a>
+                              <a href="{{ url('profile') }}">ย้อนกลับไปหน้าแรก</a>
                             </div>
                           <?php echo Form::close(); ?>
                       </div>

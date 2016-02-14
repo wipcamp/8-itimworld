@@ -1,5 +1,9 @@
-
-        <div class="container-fluid">
+<style>
+  html body{
+    overflow-x: hidden;
+  }
+</style>
+    <div class="container-fluid">
       <div id="scene">
         <div class="layer layout">
           <div class="town">

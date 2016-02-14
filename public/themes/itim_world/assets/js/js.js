@@ -269,7 +269,8 @@ $(document).ready(function() {
             regex: "^[A-z]+$"
           },
           nickname: {
-            required: true
+            required: true,
+            regex: "^[ก-๙]+$"
           },
           tel: {
             required: true,
@@ -311,7 +312,10 @@ $(document).ready(function() {
           required: "กรอกข้อมูลให้ครบ",
           regex: "กรอกภาษาให้ถูกต้อง"
         },
-        nickname:"กรอกข้อมูลให้ครบ",
+        nickname:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกภาษาให้ถูกต้อง"
+        },
         tel:{
           required: "กรอกข้อมูลให้ครบ",
           regex: "กรอกตัวเลข"
@@ -345,20 +349,6 @@ $(document).ready(function() {
         program:"กรอกข้อมูลให้ครบ",
         gpax:"กรอกข้อมูลให้ครบ",
       }
-      });
-      $( "#reg-3" ).validate({
-        rules: {
-          disease: {
-            required: true
-          },
-          allergy: {
-            required: true
-          },
-        },
-        messages:{
-          disease: "กรอกข้อมูลให้ครบ",
-          allergy:"กรอกข้อมูลให้ครบ",
-        }
       });
       $( "#reg-4" ).validate({
         rules: {
@@ -410,7 +400,7 @@ $(document).ready(function(){
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.freezer.wip.camp/profile/typeahead',
+          url: 'http://itim.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
