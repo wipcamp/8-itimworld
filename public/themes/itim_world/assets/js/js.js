@@ -228,13 +228,25 @@ function simpleSelect() {
 // });
 
 $(document).ready(function() {
+  var activeItem = $("#left-menu").find('.active')
+  var lastActive = localStorage.getItem("lastActive")
+  if (activeItem.length <1) {
+    if (lastActive){
+      $('#'+lastActive).addClass("active")
+      $('#'+lastActive+'_content').addClass("active")
+    }else{
+    $("#profile").addClass("active")
+    $("#profile_content").addClass("active")
+  }
+  }
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+      localStorage.setItem("lastActive", e.target.id)
+      e.preventDefault();
+      $(this).siblings('a.active').removeClass("active");
+      $(this).addClass("active");
+      var index = $(this).index();
+      $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+      $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
 });
 
@@ -398,7 +410,7 @@ $(document).ready(function(){
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.wip.loc/profile/typeahead',
+          url: 'http://itim.freezer.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
@@ -417,44 +429,6 @@ $(document).ready(function(){
   $("#gpax").mask("9.99");
 });
 
-$(document).ready(function() {
-    $('#dateRangePicker')
-        .datepicker({
-            format: 'mm/dd/yyyy',
-            startDate: '01/01/2010',
-            endDate: '12/30/2020'
-        })
-        .on('changeDate', function(e) {
-            // Revalidate the date field
-            $('#dateRangeForm').formValidation('revalidateField', 'date');
-        });
-
-    $('#dateRangeForm').formValidation({ //form id
-        framework: 'bootstrap',
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            date: {
-                validators: {
-                    notEmpty: {
-                        message: 'The date is required'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY',
-                        min: '01/01/1995',
-                        max: '12/30/2001',
-                        message: 'The date is not a valid'
-                    }
-                }
-            }
-        }
-    });
-});
-
-//
 // photo
 
 $(function () {
