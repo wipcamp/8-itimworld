@@ -239,7 +239,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                                 </div>
                                 <div class="col-sm-2">
                                   <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
-                                  <input type="text" name="gpax" id="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="gpax" id="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" class="required">
                                 </div>
                               </div>
                               <br>

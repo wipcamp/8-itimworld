@@ -346,20 +346,6 @@ $(document).ready(function() {
         gpax:"กรอกข้อมูลให้ครบ",
       }
       });
-      $( "#reg-3" ).validate({
-        rules: {
-          disease: {
-            required: true
-          },
-          allergy: {
-            required: true
-          },
-        },
-        messages:{
-          disease: "กรอกข้อมูลให้ครบ",
-          allergy:"กรอกข้อมูลให้ครบ",
-        }
-      });
       $( "#reg-4" ).validate({
         rules: {
           parent_name: {
@@ -410,7 +396,7 @@ $(document).ready(function(){
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.wip.camp/profile/typeahead',  
+          url: 'http://itim.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
