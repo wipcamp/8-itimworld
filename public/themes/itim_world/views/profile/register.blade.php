@@ -1,5 +1,6 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css" media="screen" title="no title" charset="utf-8">
 <style>
 html{
@@ -158,12 +159,12 @@ $(document).ready(function() {
                   <div class="col-xs-9 bhoechie-tab">
                       <!-- ข้อมูลส่วนตัว section -->
                       <div class="bhoechie-tab-content active">
-                        <form class="" action="index.html" method="post">
+                        <?php echo Form::open(array('url'=>'profile/formfirst','id'=>'reg-1')); ?>
                             <div class="row">
                               <input type="hidden" value="22222" name="wip_id"/>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ</h3>
-                                <input type="text" class="form-control" value="{{ array_get($data,'name_th') }}" style="font-size:1em;" placeholder="ชื่อ" id="namefield" name="name_th" class="required">
+                                <input type="text" class="form-control" value="{{ array_get($data,'name_th') }}" style="font-size:1em;" placeholder="ชื่อ" id="name_th" name="name_th" class="required">
                               </div>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล</h3>
@@ -212,7 +213,7 @@ $(document).ready(function() {
                               </div>
                               <div class="col-xs-6">
                                 <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>เบอร์โทรศัพท์</h3>
-                                <input type="text" name='tel' value="{{array_get($data,'tel')}}" class="form-control" style="font-size:1em;" placeholder="เบอร์โทรศัพท์" class="required">
+                                <input type="text" name='tel' value="{{array_get($data,'tel')}}" class="form-control" style="font-size:1em;" id='tel' placeholder="เบอร์โทรศัพท์" class="required">
                               </div>
                             </div>
                             <div class="row">
@@ -235,17 +236,18 @@ $(document).ready(function() {
                             <div class="row">
                               <input type="submit" name="name" value="Submit" >
                             </div>
-                          </form>
+                          <?php echo Form::close(); ?>
 
                       </div>
                       <!-- ข้อมูลการศึกษา section -->
                       <div class="bhoechie-tab-content">
-                        <form class="" action="index.html" method="post">
+
+                        <?php echo Form::open(array('url'=>'profile/formthird','id'=>'reg-2')) ?>
                               <input type="hidden" value="22222" name="wip_id"/>
                               <div class="row">
                                 <div class="col-sm-12">
                                   <h3><span style="color:#ff0000;"> * </span>ชื่อโรงเรียน</h3>
-                                  <input type="text" name="school_id" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="school_id" value="{{array_get($data,'school_id')}}" id="typeahead" data-provide="typeahead" class="form-control " style="font-size:1.4em;" placeholder="Text input" class="required">
                                 </div>
                               </div>
                               <div class="row">
@@ -269,19 +271,19 @@ $(document).ready(function() {
                                 </div>
                                 <div class="col-sm-2">
                                   <h3><span style="color:#ff0000;"> * </span>เกรดเฉลี่ย</h3>
-                                  <input type="text" name="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                  <input type="text" name="gpax" id="gpax" value="{{array_get($data,'gpax')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                                 </div>
                               </div>
                               <br>
                               <div class="row">
                                 <input type="submit" name="name" value="Submit">
                               </div>
-                            </form>
+                            <?php echo Form::close(); ?>
                       </div>
 
                       <!-- ข้อมูลด้านสุขภาพ -->
                       <div class="bhoechie-tab-content">
-                        <form class="" action="index.html" method="post">
+                        <?php echo Form::open(array('url'=>'profile/formfour','id'=>'reg-3')) ?>
                             <input type="hidden" value="22222" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-6">
@@ -297,11 +299,11 @@ $(document).ready(function() {
                             <div class="row">
                               <input type="submit" name="name" value="Submit">
                             </div>
-                            </form>
+                            <?php echo Form::close(); ?>
                       </div>
                       <!-- ข้อมูลผู้ปกครอง -->
                       <div class="bhoechie-tab-content">
-                        <form class="" action="index.html" method="post">
+                        <?php echo Form::open(array('url'=>'profile/formfive','id'=>'reg-4')) ?>
                             <input type="hidden" value="22222" name="wip_id"/>
                             <div class="row">
                               <div class="col-sm-12">
@@ -316,18 +318,18 @@ $(document).ready(function() {
                               </div>
                               <div class="col-sm-7">
                                 <h3><span style="color:#ff0000;"> * </span>เบอร์โทรศัพท์</h3>
-                                <input type="text" name="parent_tel" value="{{array_get($data,'parent_tel')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
+                                <input type="text" name="parent_tel" id="parent_tel" value="{{array_get($data,'parent_tel')}}" class="form-control" style="font-size:1.4em;" placeholder="Text input" class="required">
                               </div>
                             </div>
                             <br>
                             <div class="row">
                               <input type="submit" name="name" value="Submit">
                             </div>
-                            </form>
+                            <?php echo Form::close(); ?>
                       </div>
                       <!--ข้อมูลอื่นๆ-->
                       <div class="bhoechie-tab-content">
-                          <form class="" action="index.html" method="post">
+                          <?php echo Form::open(array('url'=>'profile/formsix','id'=>'reg-5')) ?>
                             <input type="hidden" value="22222" name="wip_id"/>
                             <div class="row">
                               <div class="col-xs-12">
@@ -351,7 +353,7 @@ $(document).ready(function() {
                             <div class="row">
                               <input type="submit" name="name" value="Submit">
                             </div>
-                          </form>
+                          <?php echo Form::close(); ?>
                       </div>
                   </div>
               </div>

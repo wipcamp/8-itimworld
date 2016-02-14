@@ -165,12 +165,74 @@ function simpleSelect() {
 
 // Ajax form
 
+// $(document).ready(function () {
+//     $('.reg-form').on('submit', function(e) {
+//         var id = $(this).attr('id');
+//         var urlForm;
+//         if(id==='reg-1'){
+//           urlForm = "http://itim.freezer.wip.camp/profile/formfirst";
+//         }else if (id==='reg-2') {
+//           urlForm = "http://itim.freezer.wip.camp/profile/formsecond";
+//         }else if (id==='reg-3') {
+//           urlForm = "http://itim.freezer.wip.camp/profile/formthird";
+//         }else if (id==='reg-4') {
+//           urlForm = "http://itim.freezer.wip.camp/profile/formfour";
+//         }else if (id==='reg-5') {
+//           urlForm = "http://itim.freezer.wip.camp/profile/formfive";
+//         }else if (id==='reg-6') {
+//           urlForm = "http://itim.freezer.wip.camp/profile/formsix";
+//         }
+//         // var
+//         e.preventDefault();
+//         console.log(id);
+//         $.ajax({
+//             url : urlForm,
+//             type: "POST",
+//             data: $('#'+id).serializeArray(),
+//             dataType: 'json',
+//             success: function (data) {
+//                 console.log("submit " + data);
+//             }
+//         });
+//     });
+
+//     $('.ques-form').on('submit', function(e) {
+//         var id = $(this).attr('id');
+//         var urlForm;
+//         if(id==='reg-1'){
+//           urlForm = "#";
+//         }else if (id==='reg-2') {
+//           urlForm = "#";
+//         }else if (id==='reg-3') {
+//           urlForm = "#";
+//         }else if (id==='reg-4') {
+//           urlForm = "#";
+//         }else if (id==='reg-5') {
+//           urlForm = "#";
+//         }else if (id==='reg-6') {
+//           urlForm = "#";
+//         }
+//         // var
+//         e.preventDefault();
+//         console.log(id);
+//         $.ajax({
+//             url : urlForm,
+//             type: "POST",
+//             data: $('#'+id).serializeArray(),
+//             dataType: 'json',
+//             success: function (data) {
+//                 console.log("submit " + data);
+//             }
+//         });
+//     });
+// });
+
 $(document).ready(function(){
     $('#typeahead').typeahead({
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'http://itim.freezer.wip.camp/profile/typeahead',
+          url: 'http://itim.wip.loc/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
@@ -183,67 +245,10 @@ $(document).ready(function(){
     });
   });
 
-
-$(document).ready(function () {
-    $('.reg-form').on('submit', function(e) {
-        var id = $(this).attr('id');
-        var urlForm;
-        if(id==='reg-1'){
-          urlForm = "http://itim.freezer.wip.camp/profile/formfirst";
-        }else if (id==='reg-2') {
-          urlForm = "http://itim.freezer.wip.camp/profile/formsecond";
-        }else if (id==='reg-3') {
-          urlForm = "http://itim.freezer.wip.camp/profile/formthird";
-        }else if (id==='reg-4') {
-          urlForm = "http://itim.freezer.wip.camp/profile/formfour";
-        }else if (id==='reg-5') {
-          urlForm = "http://itim.freezer.wip.camp/profile/formfive";
-        }else if (id==='reg-6') {
-          urlForm = "http://itim.freezer.wip.camp/profile/formsix";
-        }
-        // var
-        e.preventDefault();
-        console.log(id);
-        $.ajax({
-            url : urlForm,
-            type: "POST",
-            data: $('#'+id).serializeArray(),
-            dataType: 'json',
-            success: function (data) {
-                console.log("submit " + data);
-            }
-        });
-    });
-
-    $('.ques-form').on('submit', function(e) {
-        var id = $(this).attr('id');
-        var urlForm;
-        if(id==='reg-1'){
-          urlForm = "#";
-        }else if (id==='reg-2') {
-          urlForm = "#";
-        }else if (id==='reg-3') {
-          urlForm = "#";
-        }else if (id==='reg-4') {
-          urlForm = "#";
-        }else if (id==='reg-5') {
-          urlForm = "#";
-        }else if (id==='reg-6') {
-          urlForm = "#";
-        }
-        // var
-        e.preventDefault();
-        console.log(id);
-        $.ajax({
-            url : urlForm,
-            type: "POST",
-            data: $('#'+id).serializeArray(),
-            dataType: 'json',
-            success: function (data) {
-                console.log("submit " + data);
-            }
-        });
-    });
+$(document).ready(function(){
+  $("#tel").mask("(999)-999-9999");
+  $("#parent_tel").mask("(999)-999-9999");
+  $("#gpax").mask("9.99");
 });
 
 $(document).ready(function() {
