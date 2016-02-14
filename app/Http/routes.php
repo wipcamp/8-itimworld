@@ -13,7 +13,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::group(['middleware' => ['web','acl']], function () {
-        Route::controller('profile','ProfileController');
+    Route::controller('profile','ProfileController');
     });
 
 
@@ -46,7 +46,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
 
-    // Route::controller('profile','ProfileController');
+    Route::controller('profile','ProfileController');
     // Route::controller('question','QuestionController');
     // Route::any('accounts/login/{provider?}','Auth\AuthController@handle_login');
     // Route::controller('account','AccountController');
