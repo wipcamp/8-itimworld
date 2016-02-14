@@ -1,6 +1,6 @@
 
 <div class="content">
-    <center><h1>คำถามค่ายของเราา</h1></center>
+    <center><h1>คำถามค่ายของเรา</h1></center>
     <div class="row" margin-top:30px;>
         <div class="col-sm-3 question-box">
             <a href="{{ url('question/mission/1') }}">
