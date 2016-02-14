@@ -192,8 +192,8 @@ class AccountRepository implements AccountRepositoryInterface
 		$result = $this->account->where('wip_id', $wip_id)
 					->first();
 
-		//return json_decode($result, true);
-		return $result;
+		return json_decode($result, true);
+		//return $result;
 	}
 
 	public function sendMailVerifyAccount($user){
@@ -203,7 +203,7 @@ class AccountRepository implements AccountRepositoryInterface
 			'name'		=>  $user->profile->name_th.' '.$user->profile->surname_th,
 			'verify' 	=> array_get($user, 'verify'),
 			'wip_id' 	=> array_get($user, 'wip_id'),
-			'verify_link'	=> config('app.url').'/account/verify/'.array_get($user, 'wip_id').'/'.array_get($user, 'verify')
+			'verify_link'	=> config('app.url').'/verify/'.array_get($user, 'wip_id').'/'.array_get($user, 'verify')
 	  	);
 
 		//dd($dataMail);

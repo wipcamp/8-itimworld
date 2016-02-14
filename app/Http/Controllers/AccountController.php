@@ -26,6 +26,7 @@ class AccountController extends ITIMController{
       if($wip_id){
           $user = $this->AccountRepository->findByWIPID($wip_id);
       }
+
       $view = array(
           'provider' => array_get($user, 'provider','email'),
           'user'    => $user

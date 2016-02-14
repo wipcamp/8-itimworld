@@ -23,7 +23,6 @@
               <div class="row center" id="form-signup">
                 <center>
                   <h1>สมัครเข้าค่าย</h1></center>
-                  {{ HTML::ul($errors->all()) }}
                 <?php echo Form::open(array('url' => 'auth/register')); ?>
                  @if ($provider != "facebook")
                   <center>
