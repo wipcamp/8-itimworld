@@ -40,13 +40,13 @@
         </div>
         <div class="col-sm-3 question-box">
             <a href="{{ url('question/mission/7') }}">
-                <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/6.jpg"
+                <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/7.jpg"
                 alt="" style="width:80%;"  class="{{ isset($answer[7])? '' :'question-not-success' }}">
             </a>
         </div>
         <div class="col-sm-3 question-box">
             <a href="{{ url('question/mission/8') }}">
-                <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/6.jpg"
+                <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/mission/8.jpg"
                 alt="" style="width:80%;"  class="{{ isset($answer[8])? '' :'question-not-success' }}">
             </a>
         </div>
