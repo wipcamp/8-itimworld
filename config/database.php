@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'vanilla.wip.camp',
-            'database'  => 'wipcamp',
-            'username'  => 'wipcamp',
-            'password'  => 'teamdev',
+            'host'      => env('DB_HOST', 'local'),
+            'database'  => env('DB_DATABASE', 'local'),
+            'username'  => env('DB_USERNAME', 'local'),
+            'password'  => env('DB_PASSWORD', 'local'),
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => '',

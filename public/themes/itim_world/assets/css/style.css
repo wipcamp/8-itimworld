@@ -21,7 +21,7 @@ h1{
 body{
     background-color: #0c141e !important;
     color:#fff !important;
-    overflow: hidden !important;
+    /*overflow: hidden !important;*/
     font-family: 'thai_sans_literegular' !important;
 }
 
@@ -86,91 +86,7 @@ body{
     height: 100%;
     z-index: -3;
 }
-.pre-redirect {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background: #fff;
-    left: 0;
-    visibility: hidden;
-    cursor: pointer
-}
-.pre-redirect h1 {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    margin-top: -60px
-}
-.right .content,
-.section .right .description {
-    text-align: right
-}
-.pre-redirect img.exit {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    height: 40px;
-    margin: 0
-}
-.deadstar-front-scene {
-    top: 90%
-}
-.deadstar-back-scene {
-    top: 80%
-}
-.explosion {
-    height: 17em;
-    width: 17em;
-    border-radius: 50%;
-    background: -webkit-radial-gradient(circle, #FFf, #FFCD4F);
-    background: radial-gradient(circle, #FFf, #FFCD4F);
-    position: absolute;
-    box-shadow: 0 0 5em #FFCD4F;
-    z-index: 9
-}
-.explosion.active {
-    animation: explosion 2.5s;
-    -webkit-animation: explosion 2.5s
-}
-.deadstar {
-    z-index: 200;
-    top: -30%;
-    height: 4.444em;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    position: absolute
-}
-.star-back,
-.star-front {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    bottom: 0;
-    left: -6em;
-    width: 120%;
-    height: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    position: absolute
-}
-.back-scene {
-    z-index: 7
-}
-.star {
-    position: absolute
-}
-.star-front {
-    background-image: url(../img/cloud-front.png)
-}
-.star-mid {
-    opacity: 0;
-    filter: alpha(opacity=0)
-}
-.star-back {
-    background-image: url(../img/cloud-back.png)
-}
+
 
 /*bar*/
 
@@ -311,7 +227,7 @@ padding: -75px;
 }
 
 /*CHAT*/
-fieldset {
+/*fieldset {
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -336,7 +252,7 @@ img {
     border: 0;
     display: block;
     height: auto;
-    /*max-width: 100%;*/
+    /*max-width: 100%;
 }
 
 input {
@@ -350,12 +266,12 @@ input {
 
 p { margin: 0; }
 
-.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix { *zoom: 1; }
 .clearfix:before, .clearfix:after {
     content: "";
     display: table;
 }
-.clearfix:after { clear: both; }
+.clearfix:after { clear: both; }*/
 
 
 /* by first */
@@ -929,4 +845,10 @@ input[type=submit]:active, input[type=submit]:focus {
 .img:hover{
   width: 120%;
   height: 120%;
+}
+
+
+
+.question-box{
+    padding: 30px;
 }

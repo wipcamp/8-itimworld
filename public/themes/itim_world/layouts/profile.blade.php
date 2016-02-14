@@ -5,7 +5,7 @@
         <link rel="icon" type="image/png" href="<?php echo url(""); ?>/themes/itim_world/assets/img/favicon.ico">
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
         {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap-themes.css')!!}
-        <!-- {!!HTML::style('themes/itim_world/assets/css/style.css')!!} -->
+        {!!HTML::style('themes/itim_world/assets/css/style.css')!!}
 
         {!! Theme::asset()->styles() !!}
 

@@ -17,6 +17,14 @@ class QuestionRepository implements QuestionRepositoryInterface{
     return $data;
   }
 
+  public function getQuestion($mission_id, $wip_id){
+
+    $mission = $this->answer->where('wip_id', $wip_id)
+                   ->where('question_id', $mission_id)->first();
+    return json_decode($mission, true);
+
+  }
+
   public function updateQuestion($data){
     $this->answer->where('wip_id',array_get($data,'wip_id'))
                  ->update(array('question_id' => array_get($data,'question_id'),
