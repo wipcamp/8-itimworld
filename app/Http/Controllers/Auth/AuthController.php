@@ -99,6 +99,7 @@ class AuthController extends Controller
     {
         $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
         if($data['provider'] == 'email'){
+            $data['status'] = 2;
             $user = $AccountRepository->createAccount($data);
             $AccountRepository->sendMailVerifyAccount($user);
         }else{
@@ -143,7 +144,8 @@ class AuthController extends Controller
                 'provider_id'   => array_get($user_data, 'id'),
                 'avatar'   => array_get($user_data, 'avatar'),
                 'provider_token'   => array_get($user_data, 'token'),
-                'status'    => 1
+                'status'    => 1,
+                'active'    => 1
             );
 
             $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
