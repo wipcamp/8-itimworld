@@ -45,7 +45,7 @@
                   </div>
                   <div class="form-group">
                     <span style="color:#ff0000;"> * </span><label for="">รหัสผ่าน</label>
-                    <input type="password" class="password" id="" placeholder="กรอกรหัสผ่าน" name="password">
+                    <input type="password" class="form-control" id="" placeholder="กรอกรหัสผ่าน" name="password">
                     @if ($errors->has('password'))
                         <span class="help-block">
                             <strong>{{ $errors->first('password') }}</strong>

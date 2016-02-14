@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/video.css">
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/plugins/colors.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+<link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css">
 <style>
     body {
       text-align: center;
@@ -262,6 +263,8 @@
                  </div>
               </li>
             </ul>
+
+
           </div>
         </div>
         <!-- Javascript -->
