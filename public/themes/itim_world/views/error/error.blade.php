@@ -29,11 +29,12 @@
         <!--Content-->
             <div class="row">
                <center>
+                 <img src="<?php echo url(""); ?>/themes/itim_world/assets/img/wippo/Wippo-original-cry.png" alt="" width="300"/>
                    <h1>เกิด Error บางอย่างน้าา~</h1>
                    <h2>กดปุ่ม Back เพื่อย้อนกลับไปหน้าที่แล้วจ้า ~ </h2>
                   <br>
                   <div class="col-sm-4 col-sm-offset-4">
-                    <a href="javascript:history.back();"><input type="submit" value="ย้อนกลับไป"></a>
+                    <a href="javascript:history.back();"><button type="submit" class="next" value="ย้อนกลับไป"></a>
                   </div>
                </center>
             </div>
