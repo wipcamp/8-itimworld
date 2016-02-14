@@ -269,7 +269,8 @@ $(document).ready(function() {
             regex: "^[A-z]+$"
           },
           nickname: {
-            required: true
+            required: true,
+            regex: "^[ก-๙]+$"
           },
           tel: {
             required: true,
