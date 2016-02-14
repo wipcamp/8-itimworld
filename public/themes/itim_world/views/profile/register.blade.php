@@ -1,7 +1,5 @@
 {!!HTML::style('themes/itim_world/assets/css/bootstrap-responsive.css')!!}
 {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <link rel="stylesheet" href="<?php echo url(""); ?>/themes/itim_world/assets/css/vt/bootstrap.vertical-tabs.css" media="screen" title="no title" charset="utf-8">
 <style>
 html{
