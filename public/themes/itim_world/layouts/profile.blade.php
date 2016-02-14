@@ -42,6 +42,7 @@
         {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.min.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
         {!!HTML::script('themes/itim_world/assets/js/jquery.bootstrap.wizard.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
