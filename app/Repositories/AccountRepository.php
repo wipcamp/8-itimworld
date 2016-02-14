@@ -200,15 +200,15 @@ class AccountRepository implements AccountRepositoryInterface
 			'wip_id' 	=> array_get($user, 'wip_id'),
 	  	);
 
-		var_dump($dataMail);
-
-		Mail::send('emails.welcome', $dataMail, function($message) use ($data) {
-
-			$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8')
-			->to(array_get($user, 'email', $name = null)
-			->subject('ยืนยันการสมัครค่าย WIPCamp #8')
-			->priority(1)
-			//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
-		});
+		// var_dump($dataMail);
+		//
+		// Mail::send('emails.welcome', $dataMail, function($message) use ($data) {
+		//
+		// 	$message->from('noreply@wipcamp.com', $name = 'WIPCamp #8')
+		// 	->to(array_get($user, 'email', $name = null)
+		// 	->subject('ยืนยันการสมัครค่าย WIPCamp #8')
+		// 	->priority(1)
+		// 	//$message->to(array_get($data,'email'),array_get($data,'name_th'))->subject('Test Laravel');
+		// });
 	}
 }

@@ -21,7 +21,7 @@ h1{
 body{
     background-color: #0c141e !important;
     color:#fff !important;
-    overflow: hidden !important;
+    /*overflow: hidden !important;*/
     font-family: 'thai_sans_literegular' !important;
 }
 
@@ -929,4 +929,10 @@ input[type=submit]:active, input[type=submit]:focus {
 .img:hover{
   width: 120%;
   height: 120%;
+}
+
+
+
+.question-box{
+    padding: 30px;
 }
