@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
+      <title>WIP Camp #8 : Ways to IT Professionals Camp </title>
     <link rel="icon" type="image/png" href="<?php echo url(""); ?>/themes/itim_world/assets/img/favicon.ico">
     <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
     {!!HTML::style('themes/itim_world/assets/css/bootstrap/bootstrap.min.css')!!}
