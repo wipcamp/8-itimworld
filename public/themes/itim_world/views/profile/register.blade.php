@@ -140,12 +140,12 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                             </div>
                             <div class="row">
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษอังกฤษ)</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'name_en')}}" name='name_en' style="font-size:1em;" id="name_en" placeholder="ชื่อ (ภาษอังกฤษ)" class="required">
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>ชื่อ (ภาษาอังกฤษ)</h3>
+                                <input type="text" class="form-control" value="{{array_get($data,'name_en')}}" name='name_en' style="font-size:1em;" id="name_en" placeholder="ชื่อ (ภาษาอังกฤษ)" class="required">
                               </div>
                               <div class="col-xs-6">
-                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษอังกฤษ)</h3>
-                                <input type="text" class="form-control" value="{{array_get($data,'surname_en')}}" name='surname_en' style="font-size:1em;" id="surname_en" placeholder="นามสกุล (ภาษอังกฤษ)" class="required">
+                                <h3 style="margin: 0;"><span style="color:#ff0000;"> * </span>นามสกุล (ภาษาอังกฤษ)</h3>
+                                <input type="text" class="form-control" value="{{array_get($data,'surname_en')}}" name='surname_en' style="font-size:1em;" id="surname_en" placeholder="นามสกุล (ภาษาอังกฤษ)" class="required">
                               </div>
                             </div>
                             <div class="row">
