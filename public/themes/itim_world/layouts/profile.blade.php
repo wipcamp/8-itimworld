@@ -14,7 +14,7 @@
        <meta property="og:description" content="WIP Camp #8 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที">
        <meta property="fb:page_id" content="250617067968">
        <meta property="fb:app_id" content="119399881422143">
-
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         {!! Theme::asset()->styles() !!}
 
