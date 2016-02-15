@@ -186,7 +186,10 @@ class AccountRepository implements AccountRepositoryInterface
 
 	public function findSocialUser($data, $provider){
 
-		$result = $this->account->where('email',array_get($data,'email',''))
+		// $result = $this->account->where('email',array_get($data,'email',''))
+		// 			->where('provider',$provider)
+		// 			->first();
+		$result = $this->account->where('provider_id',array_get($data,'id',''))
 					->where('provider',$provider)
 					->first();
 		return $result;
