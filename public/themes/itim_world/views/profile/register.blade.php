@@ -233,7 +233,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
                                   <select class="form-control" id="program" name="program" class="required">
                                     <option value="" {!! (array_get($data,'program')==''?' selected':'') !!}>ระบุ</option>
                                     <option value="วิทย์-คณิต" {!! (array_get($data,'program')=='วิทย์-คณิต'?' selected':'') !!}>วิทย์-คณิต</option>
-                                    <option value="ศิลป็-คำนวน" {!! (array_get($data,'program')=='ศิลป็-คำนวน'?' selected':'') !!}>ศิลป็-คำนวน</option>
+                                    <option value="ศิลป์-คำนวน" {!! (array_get($data,'program')=='ศิลป์-คำนวน'?' selected':'') !!}>ศิลป์-คำนวน</option>
                                     <option value="วิทย์-คอม" {!! (array_get($data,'program')=='วิทย์-คอม'?' selected':'') !!}>วิทย์-คอม</option>
                                   </select>
                                 </div>
