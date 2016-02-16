@@ -312,7 +312,7 @@ $(document).ready(function() {
         },
         tel:{
           required: "กรอกข้อมูลให้ครบ",
-          regex: "กรอกตัวเลข"
+          regex: "กรอกเฉพาะตัวเลข"
         },
         sex:"กรอกข้อมูลให้ครบ",
         religion:"กรอกข้อมูลให้ครบ",
@@ -352,12 +352,16 @@ $(document).ready(function() {
           },
           parent_tel: {
             required: true,
+            regex: "^[0-9]+$"
           },
       },
       messages:{
         parent_name: "กรอกข้อมูลให้ครบ",
         parent_relation:"กรอกข้อมูลให้ครบ",
-        parent_tel:"กรอกข้อมูลให้ครบ",
+        parent_tel:{
+          required: "กรอกข้อมูลให้ครบ",
+          regex: "กรอกเฉพาะตัวเลข"
+        },
       }
 
       });
@@ -392,7 +396,7 @@ $(document).ready(function(){
       source: function(query,process){
         const data = {school_id:query}
         $.ajax({
-          url: 'https://itim.wip.camp/profile/typeahead', 
+          url: 'https://itim.wip.camp/profile/typeahead',
           type: 'GET',
           data: data,
           dataType: 'JSON',
