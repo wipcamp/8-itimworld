@@ -56,7 +56,6 @@ class DocumentController extends ITIMController
                 'parentdoc' => 'mimes:jpeg,png,jpeg,pdf',
                 );
             $messages = array();
-
             $validator = Validator::make($file, $rules, $messages);
             if ($validator->fails()) {
                 $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
@@ -70,8 +69,6 @@ class DocumentController extends ITIMController
                 $name = 'parentdoc.'.$ext;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('parentdoc'=>2,'parentdoc_type'=>$ext,'parentdoc_case'=>'รอการตรวจสอบเอกสาร'));
-            }
-                
             }
         }
         $data = $this->DocumentRepository->get($wip_id); 
