@@ -21,7 +21,7 @@ class DocumentController extends ITIMController
         return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
     }
     public function getCreate($wip_id){
-        $data = array('wip_id' => $wip_id );;
+        $data = array('wip_id' => $wip_id );
         $this->DocumentRepository->create($data);
     }
 
@@ -31,7 +31,7 @@ class DocumentController extends ITIMController
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
             $rules = array(
-                'schooldoc' => 'mimes:jpeg,png,jpg,pdf',
+                'schooldoc' => 'mimes:jpeg,png,jpg,pdf'
                 );
             $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
@@ -48,7 +48,7 @@ class DocumentController extends ITIMController
         if (Input::hasFile('parentdoc')) {
             $file = Input::file('parentdoc');
             $rules = array(
-                'parentdoc' => 'mimes:jpeg,png,jpeg'
+                'parentdoc' => 'mimes:jpeg,png,jpeg,pdf'
                 );
             $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
