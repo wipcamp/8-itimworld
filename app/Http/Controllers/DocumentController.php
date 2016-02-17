@@ -4,6 +4,7 @@ use Theme;
 use App\Models\Wip8_document;
 use Input;
 use App\Repositories\DocumentRepositoryInterface;
+use Validator;
 
 class DocumentController extends ITIMController
 {
@@ -29,20 +30,14 @@ class DocumentController extends ITIMController
         $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
-            
             $rules = array(
-                'schooldoc' => 'mimes:jpeg,png,jpeg,pdf',
+                'schooldoc' => 'mimes:jpeg,png,jpg,pdf',
                 );
-            $messages = array();
-
-            $validator = Validator::make($file, $rules, $messages);
+            $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
                 $this->DocumentRepository->update($data,array('schooldoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
-                $data = $this->DocumentRepository->get($wip_id); 
-                return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
             }else{
-                $exten = explode(".", $file->getClientOriginalName());
-                $ext = $exten[1];
+                $ext = $file->getClientOriginalExtension();
                 $name = 'schooldoc.'.$ext;
                 $wip_id = array_get($data,'wip_id');
                 $Path = 'upload/'.$wip_id;
@@ -53,19 +48,15 @@ class DocumentController extends ITIMController
         if (Input::hasFile('parentdoc')) {
             $file = Input::file('parentdoc');
             $rules = array(
-                'parentdoc' => 'mimes:jpeg,png,jpeg,pdf',
+                'parentdoc' => 'mimes:jpeg,png,jpeg'
                 );
-            $messages = array();
-            $validator = Validator::make($file, $rules, $messages);
+            $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
                 $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
-                $data = $this->DocumentRepository->get($wip_id); 
-                return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
             }else{
                 $wip_id = array_get($data,'wip_id');
                 $Path = 'upload/'.$wip_id;
-                $exten = explode(".", $file->getClientOriginalName());
-                $ext = $exten[1];
+                $ext = $file->getClientOriginalExtension();
                 $name = 'parentdoc.'.$ext;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('parentdoc'=>2,'parentdoc_type'=>$ext,'parentdoc_case'=>'รอการตรวจสอบเอกสาร'));
