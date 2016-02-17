@@ -29,30 +29,40 @@ class DocumentController extends ITIMController
         $data = $this->DocumentRepository->get($wip_id);                    //get wip id
         if (Input::hasFile('schooldoc')) {
             $file = Input::file('schooldoc');
-            $exten = explode(".", $file->getClientOriginalName());
-            $ext = $exten[1];
-            $name = 'schooldoc.'.$ext;
-            $wip_id = array_get($data,'wip_id');
-            if (strcmp($ext,"pdf")==0 || strcmp($ext,"jpg")!==0  or strcmp($ext,"jpeg")!==0  or strcmp($ext,"png")==0 )
-            {
-                $Path = 'upload/'.$wip_id;
+            
+            $rules = array(
+                'schooldoc' => 'mimes:jpeg,png,jpeg,pdf',
+                );
+            $messages = array();
 
+            $validator = Validator::make($file, $rules, $messages);
+            if ($validator->fails()) {
+                $this->DocumentRepository->update($data,array('schooldoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
+                $data = $this->DocumentRepository->get($wip_id); 
+                return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
+            }else{
+                $exten = explode(".", $file->getClientOriginalName());
+                $ext = $exten[1];
+                $name = 'schooldoc.'.$ext;
+                $wip_id = array_get($data,'wip_id');
+                $Path = 'upload/'.$wip_id;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('schooldoc'=>2,'schooldoc_type'=>$ext,'schooldoc_case'=>'รอการตรวจสอบเอกสาร'));
-            }
-            else
-            {
-                $this->DocumentRepository->update($data,array('schooldoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
             }
         }
         if (Input::hasFile('parentdoc')) {
             $file = Input::file('parentdoc');
-            $exten = explode(".", $file->getClientOriginalName());
-            $ext = $exten[1];
-            $name = 'schooldoc.'.$ext;
-            $wip_id = array_get($data,'wip_id');
-            if (strcmp($ext,"pdf")==0 || strcmp($ext,"jpg")==0 || strcmp($ext,"jpeg")==0 || strcmp($ext,"png")==0 )
-            {
+            $rules = array(
+                'parentdoc' => 'mimes:jpeg,png,jpeg,pdf',
+                );
+            $messages = array();
+
+            $validator = Validator::make($file, $rules, $messages);
+            if ($validator->fails()) {
+                $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
+                $data = $this->DocumentRepository->get($wip_id); 
+                return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
+            }else{
                 $wip_id = array_get($data,'wip_id');
                 $Path = 'upload/'.$wip_id;
                 $exten = explode(".", $file->getClientOriginalName());
@@ -61,13 +71,11 @@ class DocumentController extends ITIMController
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('parentdoc'=>2,'parentdoc_type'=>$ext,'parentdoc_case'=>'รอการตรวจสอบเอกสาร'));
             }
-            else
-            {
-                $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
+                
             }
         }
         $data = $this->DocumentRepository->get($wip_id); 
-         return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
+        return $this->theme->scope('upload.upload',$data)->layout('profile')->render();
 
     }
 

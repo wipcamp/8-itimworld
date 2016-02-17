@@ -91,7 +91,7 @@
 </div>
 </div>
 <script>
-	@if(isset($schooldoc) && ($schooldoc=="0" || $schooldoc == "2"))
+@if(isset($schooldoc) && ($schooldoc=="0" || $schooldoc == "2"))
             
             
    document.getElementById("schooldoc").onchange = function() {
@@ -100,8 +100,8 @@
       }
    };
 @endif
-@if(isset($parentdoc) && ($parentdoc=="0" ||$parentdoc=="2" ))
-               
+
+@if(isset($parentdoc) && ($parentdoc=="0" ||$parentdoc=="2" ))      
                
    document.getElementById("parentdoc").onchange = function() {
       if (document.getElementById("parentdoc").value != null) {
