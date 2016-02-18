@@ -12,7 +12,8 @@
 $envMapping = [
     'itim.wip.loc'  => 'local',
     'itim.freezer.wip.camp'  => 'vanila',
-    'itim.wip.camp' => 'kati'
+    'itim.wip.camp' => 'kati',
+    'itim8.wip.camp' => 'kati-test',
 ];
 
 $env = $app->detectEnvironment(function() use ($envMapping){
