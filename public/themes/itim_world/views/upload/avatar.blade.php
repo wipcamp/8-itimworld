@@ -15,7 +15,7 @@
          if(isset($avatar)){
             echo"<img src=\"".$avatar."\" class=\"img-circle\" alt=\"".$wip_id."\" title=\"".$wip_id."\" width=\"180\" height=\"182\">";
        }else{
-        echo"<img src=\"/upload/noavatar.jpg\" class=\"img-circle\" alt=\"กรุณาอัพโหลดรูป\" title=\"กรุณาอัพโหลดรูป\" width=\"180\" height=\"182\">";
+        echo"<img src=\"/download/noavatar.jpg\" class=\"img-circle\" alt=\"กรุณาอัพโหลดรูป\" title=\"กรุณาอัพโหลดรูป\" width=\"180\" height=\"182\">";
       }
       ?>
         <br><br>

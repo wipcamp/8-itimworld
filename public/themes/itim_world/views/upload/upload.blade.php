@@ -75,7 +75,7 @@
 
             <div class="text row" >
               <div class="status col-xs-12"  style="background-color: #230D10">
-               <a href="upload/parent.pdf"><h3 style="color: #fff;margin: 35% auto;">
+               <a href="download/parent.pdf"><h3 style="color: #fff;margin: 35% auto;">
                   <i class="fa fa-edit"></i>ดาวโหลดใบขออนุญาตผู้ปกครอง</h3></a>
                </div>
             </div >
