@@ -4,7 +4,7 @@
              @if($user->avatar)
                 <img class="img-circle img-responsive" src="{{ $user->avatar }}">
              @else
-                <img class="img-circle img-responsive" src="download/noavatar.png">
+                <img class="img-circle img-responsive" src="{{ url('download/noavatar.png') }}">
              @endif
 
       </div>
