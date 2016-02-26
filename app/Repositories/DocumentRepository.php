@@ -2,12 +2,15 @@
 namespace App\Repositories;
 use App\Models\Wip8_profile;
 use App\Models\Wip8_document;
+use App\Models\Wip8_document_log;
 use Input;
 class DocumentRepository implements DocumentRepositoryInterface{
   protected $document;
+  protected $log;
 
   public function __construct(){
     $this->document = new wip8_document();
+    $this->log = new wip8_document_log();
   }
 
   public function create($data){
@@ -28,5 +31,12 @@ class DocumentRepository implements DocumentRepositoryInterface{
     $result = $this->document->where('wip_id',$param)->get();
     return $result;
     }
+
+  public function log($wip_id,$type,$status){
+    $this->log->wip_id = $wip_id;
+    $this->log->type = $type;
+    $this->log->transaction = $status;
+    $this->log->save();
+  }
 
 }

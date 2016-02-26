@@ -11,7 +11,7 @@
     <meta property="og:title" content="WIP Camp #8 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที ">
      <meta property="og:type" content="company">
      <meta property="og:url" content="http://wip.camp/">
-     <meta property="og:image" content="assets/img/fb.jpg">
+     <meta property="og:image" content="http://wip.camp/assets/img/fb.jpg">
      <meta property="og:site_name" content="WIP Camp #8 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที">
      <meta property="og:description" content="WIP Camp #8 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที">
      <meta property="fb:page_id" content="250617067968">

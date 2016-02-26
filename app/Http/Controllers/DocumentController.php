@@ -43,6 +43,7 @@ class DocumentController extends ITIMController
                 $Path = 'upload/'.$wip_id;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('schooldoc'=>2,'schooldoc_type'=>$ext,'schooldoc_case'=>'รอการตรวจสอบเอกสาร'));
+                $this->DocumentRepository->log($wip_id,'1','อัพโหลดเอกสารเข้าระบบ');
             }
         }
         if (Input::hasFile('parentdoc')) {
@@ -60,6 +61,7 @@ class DocumentController extends ITIMController
                 $name = 'parentdoc.'.$ext;
                 $file->move($Path, $name);
                 $this->DocumentRepository->update($data,array('parentdoc'=>2,'parentdoc_type'=>$ext,'parentdoc_case'=>'รอการตรวจสอบเอกสาร'));
+                $this->DocumentRepository->log($wip_id,'2','อัพโหลดเอกสารเข้าระบบ');
             }
         }
         $data = $this->DocumentRepository->get($wip_id); 
