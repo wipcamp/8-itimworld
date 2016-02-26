@@ -35,7 +35,7 @@ class DocumentController extends ITIMController
                 );
             $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
-                $this->DocumentRepository->update($data,array('schooldoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
+                $this->DocumentRepository->update($data,array('schooldoc'=>3,'schooldoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
             }else{
                 $ext = $file->getClientOriginalExtension();
                 $name = 'schooldoc.'.$ext;
@@ -53,7 +53,7 @@ class DocumentController extends ITIMController
                 );
             $validator = validator::make(Input::all(), $rules);
             if ($validator->fails()) {
-                $this->DocumentRepository->update($data,array('parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
+                $this->DocumentRepository->update($data,array('parentdoc'=>3,'parentdoc_case'=>'กรุณาอัพโหลดไฟล์ png jpg jpeg หรือ pdf'));
             }else{
                 $wip_id = array_get($data,'wip_id');
                 $Path = 'upload/'.$wip_id;

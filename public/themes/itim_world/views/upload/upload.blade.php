@@ -35,7 +35,7 @@
                </div>
                <div class="status col-xs-3">
                   @if(isset($schooldoc))      
-                     @if($parentdoc=="0")
+                     @if($schooldoc=="0")
                      <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% auto;">{{$schooldoc_case}}</h3>
                      @elseif($schooldoc=="1")
                      <h2><i class="fa fa-check-circle-o" style="color: green;"></i></h2><h3 style="margin: 35% auto;color:green;">เอกสารถูกต้อง</h3>
