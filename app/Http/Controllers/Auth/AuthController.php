@@ -129,36 +129,38 @@ class AuthController extends Controller
         $user = $AccountRepository->findSocialUser($user_data, $provider);
 
         if(!$user){
-            //register new user
-            $view = array(
-                'user' => $user_data,
-                'provider' => $provider
-            );
+            return redirect('auth/login');
+            // //register new user
+            // $view = array(
+            //     'user' => $user_data,
+            //     'provider' => $provider
+            // );
 
 
-            $data = array(
-                'name_th'   => array_get($user_data, 'user.first_name'),
-                'lastname_th'   => array_get($user_data, 'user.last_name'),
-                'email'   => array_get($user_data, 'email'),
-                'provider'   => 'facebook',
-                'provider_id'   => array_get($user_data, 'id'),
-                'avatar'   => array_get($user_data, 'avatar'),
-                'provider_token'   => array_get($user_data, 'token'),
-                'status'    => 1,
-                'active'    => 1
-            );
+            // $data = array(
+            //     'name_th'   => array_get($user_data, 'user.first_name'),
+            //     'lastname_th'   => array_get($user_data, 'user.last_name'),
+            //     'email'   => array_get($user_data, 'email'),
+            //     'provider'   => 'facebook',
+            //     'provider_id'   => array_get($user_data, 'id'),
+            //     'avatar'   => array_get($user_data, 'avatar'),
+            //     'provider_token'   => array_get($user_data, 'token'),
+            //     'status'    => 1,
+            //     'active'    => 1
+            // );
 
-            $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
-            $new_user = $AccountRepository->createAccount($data);
+            // $AccountRepository = \App::make('App\Repositories\AccountRepositoryInterface');
+            // $new_user = $AccountRepository->createAccount($data);
 
-            return redirect("/account/register/".$new_user->wip_id);
+            // return redirect("/account/register/".$new_user->wip_id);
 
             //$theme = \Theme::uses('itim_world')->layout('default');
             //return $theme->scope('account.regisSimple', $view)->layout('blank')->render();
         }else{
             $status = array_get($user, 'status', 0);
             if($status == 1){
-                return redirect("/account/register/".$user->wip_id);
+                return redirect('auth/login');
+                //return redirect("/account/register/".$user->wip_id);
             }else if($status == 2){
                 \Auth::login($user);
                 return redirect("/profile");

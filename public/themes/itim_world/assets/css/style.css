@@ -357,3 +357,7 @@ margin: 10px 0 5px !important;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+.disable{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}

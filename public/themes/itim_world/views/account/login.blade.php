@@ -58,7 +58,7 @@
             <div class="col-xs-6">
                 <div>
                   <center>
-                    <a href="<?php echo url("account/register"); ?>"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/regis.png"  width="450"></a>
+                    <a href="#"><img src="<?php echo url(""); ?>/themes/itim_world/assets/img/disable.png"  width="450"></a>
                   </center>
                 </div>
             </div>

@@ -21,18 +21,18 @@ class AccountController extends ITIMController{
   }
 
   public function getRegister($wip_id = null){
+     return redirect('auth/login');
+      // $user = array();
+      // if($wip_id){
+      //     $user = $this->AccountRepository->findByWIPID($wip_id);
+      // }
 
-      $user = array();
-      if($wip_id){
-          $user = $this->AccountRepository->findByWIPID($wip_id);
-      }
+      // $view = array(
+      //     'provider' => array_get($user, 'provider','email'),
+      //     'user'    => $user
+      // );
 
-      $view = array(
-          'provider' => array_get($user, 'provider','email'),
-          'user'    => $user
-      );
-
-      return $this->theme->scope('account.regisSimple', $view)->layout('blank')->render();
+      // return $this->theme->scope('account.regisSimple', $view)->layout('blank')->render();
   }
 
   public function getMail(){

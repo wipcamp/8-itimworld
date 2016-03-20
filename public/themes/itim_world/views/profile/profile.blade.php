@@ -51,7 +51,7 @@
                          </div>
                       </div>
                       <div class="bg-btn">
-                         <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Cap.png" class="img-responsive" alt="">
+                         <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Cap.png" class="img-responsive disable" alt="">
                       </div>
                    </div>
                </a>
@@ -68,7 +68,7 @@
                        </div>
                     </div>
                     <div class="bg-btn">
-                       <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Scarlet.png" class="img-responsive" alt="">
+                       <img src="<?php echo url(""); ?>/themes/itim_world/assets/bar/Bar-Scarlet.png" class="img-responsive disable" alt="">
                     </div>
                  </div>
                </a>
