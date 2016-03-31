@@ -58,8 +58,10 @@
          <br>
          
          <a href="#">
-            @if(isset($slip_status) && ($slip_status=="0" || $slip_status == "2" || $slip_status == "3"))
+            @if(!isset($slip_status))
             <input type="file" id="upload" name="slip" id="slip" class="overlay buttonupload" alt="กดเพื่ออัพโหลด" style="height: 40%;">
+            @elseif(isset($slip_status)==1)
+            
             @endif
          </a>
             <div class="text row" style="height: 40%;">
