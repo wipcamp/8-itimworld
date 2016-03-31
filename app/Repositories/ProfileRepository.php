@@ -152,15 +152,15 @@ class ProfileRepository implements ProfileRepositoryInterface{
     $check = $this->confirm->where('wip_id',$wip_id)->first();
     if($check == null){
         $this->confirm->wip_id = $wip_id;
-        $this->confirm->silp_status = $status;
-        $this->confirm->silp_file = $file;
-        $this->confirm->silp_note = $note;
+        $this->confirm->slip_status = $status;
+        $this->confirm->slip_file = $file;
+        $this->confirm->slip_note = $note;
         $this->confirm->save();
     }else{
         $this->confirm->wip_id = $wip_id;
-        $this->confirm->silp_status = $status;
-        $this->confirm->silp_file = $file;
-        $this->confirm->silp_note = $note;
+        $this->confirm->slip_status = $status;
+        $this->confirm->slip_file = $file;
+        $this->confirm->slip_note = $note;
         $update = 
         $this->confirm->where('wip_id',$wip_id)
                                     ->update(array('wip_id'=>$wip_id,'slip_status'=>$status,'slip_file'=>$file,'slip_note'=>$note));
