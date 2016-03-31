@@ -23,10 +23,10 @@ class ProfileController extends ITIMController{
     public function getIndex(){
         $wip_id = $this->user->wip_id;
         $check = $this->ProfileRepository->checkPass($wip_id);
-        if ($check = "PASS") {
+        if ($check == "PASS") {
           $confirm = $this->ProfileRepository->getPass($wip_id);
-        $status = "";
-        $data = array(
+          $status = "";
+          $data = array(
           'transpot'=>$confirm['transpot'],
           'slip_status'=>$confirm['slip_status'],
           'slip_note'=>$confirm['slip_note'],
@@ -42,7 +42,7 @@ class ProfileController extends ITIMController{
     public function postIndex(){
         $wip_id = $this->user->wip_id;
         $check = $this->ProfileRepository->checkPass($wip_id);
-        if ($check = "PASS") {
+        if ($check == "PASS") {
           if (Input::hasFile('slip')){
             $file = Input::file('slip');
             $rules = array(
