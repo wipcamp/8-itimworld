@@ -34,13 +34,10 @@
                    <h2>มาสมัครใหม่กันปีหน้าน้าาาา ~ </h2>
                   <br>
                   <div class="col-sm-4 col-sm-offset-4">
-                    <a href="javascript:history.back();"><button type="submit" class="next" value="ย้อนกลับไป"></a>
+                    <a href="http://wip.camp"><button type="submit" class="next" value="">Home</button></a>
                   </div>
                </center>
             </div>
         <!--End Content-->
-            </div>
-            <div style="position:fixed; width:300px; right:0px; bottom:5px; text-align:right; z-index:50;">
-                Chat
             </div>
         </div>
