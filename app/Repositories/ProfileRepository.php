@@ -3,14 +3,23 @@ namespace App\Repositories;
 
 use App\Models\Wip8_profile;
 use App\Models\Wip8_school;
+use App\Models\Wip8_pass;
+use App\Models\Wip8_confirm;
+use App\Models\Wip8_confirm_log;
 
 class ProfileRepository implements ProfileRepositoryInterface{
   protected $profile;
   protected $school;
+  protected $pass;
+  protected $confirm;
+  protected $confirm_log;
 
   public function __construct(){
     $this->profile = new Wip8_profile();
     $this->school = new Wip8_school();
+    $this->pass = new Wip8_pass();
+    $this->confirm = new Wip8_confirm();
+    $this->confirm_log = new Wip8_confirm_log();
   }
 
   public function create($data){
@@ -128,6 +137,58 @@ class ProfileRepository implements ProfileRepositoryInterface{
 
   public function findByWIPID($wip_id){
       $result = $this->profile->where('wip_id',$wip_id)->first();
+      return $result;
+  }
+
+  public function checkPass($wip_id){
+    $result = $this->pass->where('wip_id',$wip_id)->first();
+    if ($result != null) {
+      return "PASS";
+    }else{
+      return "FAIL";
+    }
+  }
+  public function uploadSlip($wip_id,$status,$note,$file){
+    $check = $this->confirm->where('wip_id',$wip_id)->first();
+    if($check == null){
+        $this->confirm->wip_id = $wip_id;
+        $this->confirm->silp_status = $status;
+        $this->confirm->silp_file = $file;
+        $this->confirm->silp_note = $note;
+        $this->confirm->save();
+    }else{
+        $this->confirm->wip_id = $wip_id;
+        $this->confirm->silp_status = $status;
+        $this->confirm->silp_file = $file;
+        $this->confirm->silp_note = $note;
+        $update = 
+        $this->confirm->where('wip_id',$wip_id)
+                                    ->update(array('wip_id'=>$wip_id,'slip_status'=>$status,'slip_file'=>$file,'slip_note'=>$note));
+    }
+  }
+  public function setConfirm($wip_id,$size,$transpot){
+    $check = $this->confirm->where('wip_id',$wip_id)->first();
+    if($check == null){
+        $this->confirm->wip_id = $wip_id;
+        $this->confirm->size = $size;
+        $this->confirm->transpot = $transpot;
+        $this->confirm->save();
+    }else{
+        $this->confirm->wip_id = $wip_id;
+        $this->confirm->size = $size;
+        $this->confirm->transpot = $transpot;
+        $update = 
+        $this->confirm->where('wip_id',$wip_id)
+                                    ->update(array('size'=>$size,'transpot'=>$transpot));
+    }
+  }
+  public function confirm_add_log($wip_id,$slip_status){
+    $this->confirm_log->wip_id = $wip_id;
+    $this->confirm_log->slip_status = $slip_status;
+    $this->confirm_log->save();
+  }
+  public function getPass($wip_id){
+      $result = $this->confirm->where('wip_id',$wip_id)->first();
       return $result;
   }
 }

@@ -8,9 +8,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['middleware' => ['web','acl']], function () {
         Route::controller('profile','ProfileController');
-        Route::controller('question','QuestionController');
-        Route::controller('document','DocumentController');
-        Route::controller('avatar','AvatarController');
+        //Route::controller('question','QuestionController');
+        //Route::controller('document','DocumentController');
+        //Route::controller('avatar','AvatarController');
     });
 
 
