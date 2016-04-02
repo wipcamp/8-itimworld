@@ -60,8 +60,10 @@
          <a href="#">
             @if(!isset($slip_status))
             <input type="file" id="upload" name="slip" id="slip" class="overlay buttonupload" alt="กดเพื่ออัพโหลด" style="height: 40%;">
-            @elseif(isset($slip_status)==1)
-            
+            @elseif(isset($slip_status) && $slip_status==0)
+            <input type="file" id="upload" name="slip" id="slip" class="overlay buttonupload" alt="กดเพื่ออัพโหลด" style="height: 40%;">
+            @elseif(isset($slip_status) && $slip_status==1)
+
             @endif
          </a>
             <div class="text row" style="height: 40%;">
@@ -69,12 +71,15 @@
                   <h1 style="color:#fff;">อัพโหลดสลิป</h1>
                </div>
                <div class="status col-xs-3">
+                  @if(!isset($slip_status))
+                  <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">{{$slip_note}}</h3>
+                  @endif
                   @if(isset($slip_status))      
-                     @if($slip_status=="0")
+                     @if($slip_status==0)
                      <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">{{$slip_note}}</h3>
-                     @elseif($slip_status=="1")
+                     @elseif($slip_status==1)
                      <h2><i class="fa fa-check-circle-o" style="color: green;"></i></h2><h3 style="margin: 35% ;color:green;">{{$slip_note}}</h3>
-                     @elseif($slip_status=="2")
+                     @elseif($slip_status==2)
                      <br><br><h3><i class="fa fa-spinner" style="color: #FFFF66;"></i></h3><h3 style="margin: 35% ;color:#FFFF66;">{{$slip_note}}</h3>
                      @elseif($slip_status=="3")
                      <br>
