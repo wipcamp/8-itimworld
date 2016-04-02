@@ -63,7 +63,7 @@
             @elseif(isset($slip_status) && $slip_status==0)
             <input type="file" id="upload" name="slip" id="slip" class="overlay buttonupload" alt="กดเพื่ออัพโหลด" style="height: 40%;">
             @elseif(isset($slip_status) && $slip_status==1)
-
+	
             @endif
          </a>
             <div class="text row" style="height: 40%;">
@@ -72,11 +72,11 @@
                </div>
                <div class="status col-xs-3">
                   @if(!isset($slip_status))
-                  <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">{{$slip_note}}</h3>
+                  <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
                   @endif
                   @if(isset($slip_status))      
                      @if($slip_status==0)
-                     <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">{{$slip_note}}</h3>
+                     <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
                      @elseif($slip_status==1)
                      <h2><i class="fa fa-check-circle-o" style="color: green;"></i></h2><h3 style="margin: 35% ;color:green;">{{$slip_note}}</h3>
                      @elseif($slip_status==2)
