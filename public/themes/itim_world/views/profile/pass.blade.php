@@ -72,11 +72,11 @@
                </div>
                <div class="status col-xs-3">
                   @if(!isset($slip_status))
-                  <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
+                  <h2><i class="fa fa-hand-pointer-o" style="color:white;"></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
                   @endif
                   @if(isset($slip_status))      
                      @if($slip_status==0)
-                     <h2><i class="fa fa-hand-pointer-o" style=""></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
+                     <h2><i class="fa fa-hand-pointer-o" style="color:white;"></i></h2><h3 style="margin: 35% ;">กดเพื่ออัพโหลดเอกสาร</h3>
                      @elseif($slip_status==1)
                      <h2><i class="fa fa-check-circle-o" style="color: green;"></i></h2><h3 style="margin: 35% ;color:green;">{{$slip_note}}</h3>
                      @elseif($slip_status==2)
