@@ -1,5 +1,8 @@
 <?php
 Route::controller('itim', 'RegisterController');
+
+Route::controller('random','RandomController');
+
 Route::group(['middleware' => ['web']], function () {
     Route::controller('auth','Auth\AuthController');
     Route::get('verify/{wip_id}/{verify_code}','AccountController@getVerify');
