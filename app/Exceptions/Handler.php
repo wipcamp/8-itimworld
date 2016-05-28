@@ -46,9 +46,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        //if( strpos($exception->__toString(), 'Illuminate\Session\TokenMismatchException') !== false ){
-            //return response()->view('errors.404', ['message' => 'custom message'], 500);
-        //}
+        // if( strpos($exception->__toString(), 'Illuminate\Session\TokenMismatchException') !== false ){
+        //     return response()->view('errors.404', ['message' => 'custom message'], 500);
+        // }
         return parent::render($request, $e);
         return \View::make('errors.404');
     }

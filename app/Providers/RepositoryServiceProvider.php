@@ -30,6 +30,7 @@ class RepositoryServiceProvider extends ServiceProvider
         App::bind('App\Repositories\DashboardRepositoryInterface', 'App\Repositories\DashboardRepository');
         App::bind('App\Repositories\DocumentRepositoryInterface', 'App\Repositories\DocumentRepository');
         App::bind('App\Repositories\QuestionRepositoryInterface', 'App\Repositories\QuestionRepository');
-        
+        App::bind('App\Repositories\PosttestRepositoryInterface', 'App\Repositories\PosttestRepository');
+
     }
 }

@@ -11,6 +11,8 @@
 */
 $envMapping = [
     'itim.wip.loc'  => 'local',
+    'wipcamp.local'  => 'local',
+    'pre.wip.loc'  => 'local',
     'itim.freezer.wip.camp'  => 'vanila',
     'itim.wip.camp' => 'kati',
     'itim8.wip.camp' => 'kati-test',

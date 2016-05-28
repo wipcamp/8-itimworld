@@ -19,9 +19,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </head>
     <body>
-        <div class="container">
+        {{-- <div class="container"> --}}
             {!! Theme::content() !!}
-        </div>
+        {{-- </div> --}}
         {!!HTML::script('themes/itim_world/assets/js/jquery.min.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.min.js')!!}
         {!!HTML::script('themes/itim_world/assets/js/bootstrap.js')!!}

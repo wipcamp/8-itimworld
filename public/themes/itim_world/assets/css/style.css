@@ -361,3 +361,135 @@ margin: 10px 0 5px !important;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+/* POSTTEST */
+.posttest-header {
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 3;
+}
+.posttest-header h2 {
+  font-size: 26px;
+  margin: 0 !important;
+}
+.bg-posttest .posttest-header .container {
+  padding: 0 20px 0;
+}
+.posttest-header .avatar{
+  padding: 0;
+}
+.posttest-header .avatar img{
+  width: 100%;
+}
+.posttest-header .process{
+  text-align: right;
+}
+.bg-posttest .container ,.bg-posttest-final .container{
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  position: relative;
+  min-width: 980px;
+  padding-top: 170px;
+  z-index: 2;
+}
+.post-test .question{
+  margin-bottom: 50px;
+}
+.post-test .choice{
+  font-size: 28px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: rgba(255,255,255,.2);
+  display: block;
+  cursor: pointer;
+}
+.post-test .choice.active{
+  background: rgba(51, 122, 183,0.6);
+}
+.post-test .choice
+.post-test .choice input {
+  clip: rect(0 0 0 0);
+  vertical-align: top;
+  margin: 14px 5px 0;
+
+}
+
+.post-test .choice .circle {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  border: 5px solid rgba(255,255,255,.6);
+}
+.post-test .choice p {
+  /*padding-left: 10px;*/
+  display: inline-block;
+  margin: 0;
+}
+
+.bg-posttest ,.bg-posttest-final{
+  background: url('https://hub.wip.camp/score/assets/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.bg-posttest .bg-overlay,.bg-posttest-final .bg-overlay{
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+}
+
+.bg-posttest-final .container {
+  padding-top: 30px;
+}
+.bg-posttest-final .main {
+  margin-bottom: 30px;
+}
+.bg-posttest-final h1 { font-size: 5em; }
+.bg-posttest-final .wipID { font-size: 2em !important; }
+.bg-posttest-final .wipNAME { margin: 0 !important; font-size: 4em; }
+.bg-posttest-final .wipNICK { font-size: 3.375em; margin: 0 !important; }
+.bg-posttest-final .wipFLAV { font-size: 2.625em !important; margin: 0 !important;color:#ddd}
+.bg-posttest-final .score h2 { font-size: 3.5em; }
+.bg-posttest-final .score h3 {font-size: 2.875em !important;font-style: italic;color:#ddd}
+.bg-posttest-final .final {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 7px;
+  margin-top: 70px;
+}
+.bg-posttest-final .main{
+  margin: 50px 10px;
+}
+
+.waiting_page {
+  display: block;
+  /*display: none;*/
+  position: absolute;
+  width: 100%;
+}
+.waiting_page h1 {
+  padding-top: 1.5em;
+  animation: waitinger 1.2s infinite;
+}
+.post-test {
+  display: none;
+  /*display: block;*/
+}
+
+@keyframes waitinger {
+    0% { font-size: 8em; }
+    50% { font-size: 9em; }
+    100% { font-size: 8em; }
+}

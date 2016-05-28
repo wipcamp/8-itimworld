@@ -30,7 +30,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = '/posttest';
 
     protected $AccountRepository;
 
@@ -110,7 +110,7 @@ class AuthController extends Controller
     }
 
     protected function authenticated(){
-        $this->redirectTo = "/profile";
+        $this->redirectTo = "/posttest";
         return redirect($this->redirectTo);
     }
 
@@ -163,7 +163,7 @@ class AuthController extends Controller
                 //return redirect("/account/register/".$user->wip_id);
             }else if($status == 2){
                 \Auth::login($user);
-                return redirect("/profile");
+                return redirect("/posttest");
             }
         }
 

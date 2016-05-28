@@ -1,6 +1,6 @@
 <?php
 Route::controller('itim', 'RegisterController');
-
+Route::controller('posttest','PosttestController');
 Route::controller('random','RandomController');
 
 Route::group(['middleware' => ['web']], function () {
@@ -10,10 +10,11 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::group(['middleware' => ['web','acl']], function () {
-        Route::controller('profile','ProfileController');
+        //Route::controller('profile','ProfileController');
         //Route::controller('question','QuestionController');
         //Route::controller('document','DocumentController');
         //Route::controller('avatar','AvatarController');
+        Route::controller('posttest','PosttestController');
     });
 
 
@@ -34,11 +35,11 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::get('/',function(){
-        return redirect('/profile');
+        return redirect('/posttest');
     });
-    Route::get('/home',function(){
-     dd(\Auth::user());
-    });
+    // Route::get('/home',function(){
+    //  dd(\Auth::user());
+    // });
 
 
 
