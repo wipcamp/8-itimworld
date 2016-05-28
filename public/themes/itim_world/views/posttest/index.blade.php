@@ -4,19 +4,19 @@
   <div class="header posttest-header">
      <div class="container">
         <div class="col-xs-1 avatar">
-           <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/img/pro3.png">
+           <img class="img-circle img-responsive" src="<?php echo url(""); ?>/themes/itim_world/assets/fb/{{ array_get($profile, 'wip_id', 'XXXXXX')}}.jpg">
         </div>
         <div class="col-xs-4">
            <h1>น้อง{{ !empty($profile['nickname']) ? $profile['nickname'] : $profile['name_th'].' '.$profile['surname_th'] }}</h1>
            <h2>WIP ID {{ array_get($profile, 'wip_id', 'XXXXXX')}}</h2>
         </div>
-        {{-- <div class="col-xs-2">
+        <div class="col-xs-2 clock">
            <center>
              <h2>เหลือเวลา</h2>
-             <h1>20:00</h1>
+             <h1><span class="min"></span>:<span class="sec"></span></h1>
            </center>
-        </div> --}}
-        <div class="col-xs-7 process">
+        </div>
+        <div class="col-xs-5 process">
           <h1><span class="process-count">0</span>/20</h1>
           <h2>ข้อสอบทั้งหมด</h2>
         </div>

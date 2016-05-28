@@ -40,7 +40,7 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <button style="height: 70px; font-size:25px;" class="btn btn-success btn-block">กรอกแบบสำรวจค่าย</button>
+          <a style="text-decoration:none;" href="https://goo.gl/V1w3Br"><button style="height: 70px; font-size:25px;" class="btn btn-success btn-block">กรอกแบบสำรวจค่าย</button></a>
         </div>
       </div>
     </div>

@@ -440,6 +440,14 @@ $(document).ready(function() {
 //
 (function ($) {
 
+    time = 1200;
+    $(".clock .min").text(Math.floor(time/60))
+    if (time%60>=10) {
+      $(".clock .sec").text(time%60)
+    }else{
+      $(".clock .sec").text("0"+(time%60))
+    }
+
   $('.choice').on("click", function() {
       var currentQuestion = $(this).attr("data-qno");
       $(".q-"+currentQuestion).removeClass("active");
@@ -454,6 +462,20 @@ $(document).ready(function() {
 
 }(jQuery));
 
+function timer(){
+  if (time < 0) {
+    console.log('ok');
+  }else{
+    $(".clock .min").text(Math.floor(time/60))
+    if (time%60>=10) {
+      $(".clock .sec").text(time%60)
+    }else{
+      $(".clock .sec").text("0"+(time%60))
+    }
+    time--;
+    setTimeout(timer,1000);
+  }
+}
 
 function standBy(){
   $.ajax({
@@ -464,6 +486,7 @@ function standBy(){
       if(data=="1"){
         $(".post-test").fadeIn(500);
         $(".waiting_page").fadeOut(500);
+        timer();
       }else{
         //$(".post-test").fadeOut(500);
         //$(".waiting_page").fadeIn(500);
