@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'vanilla.wip.camp',
-            'database'  => 'wipcamp',
-            'username'  => 'wipcamp',
-            'password'  => 'teamdev',
+            'host'      => 'kati.wip.camp',
+            'database'  => 'wipcamp_8',
+            'username'  => 'wipcamp_apps',
+            'password'  => 'passionatedev',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

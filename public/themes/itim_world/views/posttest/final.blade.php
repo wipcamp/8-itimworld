@@ -18,6 +18,7 @@
             <h3 class="wipID">WIP ID {{ $wip_id }}</h3>
             <h2 class="wipNAME">{{$profile['name_th']}} {{$profile['surname_th']}}</h2>
             <h2 class="wipNICK">{{$profile['nickname']}}</h2>
+            <h2 class="wipFLAV">{{$profile['flavor_th']}}</h2>
           </div>
 
         </div>

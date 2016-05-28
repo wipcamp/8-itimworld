@@ -22,11 +22,8 @@ class PosttestController extends ITIMController{
 
    public function getWippo(){
      $wip = $this->user->wip_id;
-     $array = DB::table('wip8_passes')->where('wip8_passes.wip_id',$wip)->get(array('wip8_passes.wip_id','wip8_passes.nickname',
-                       'wip8_passes.surname_th','wip8_passes.name_th'));
-     $profile = json_decode(json_encode($array), true);
-     $res = array_get($profile,'0');
-     return $res;
+     $score = $this->PosttestRepository->getPrescore($wip)->first();
+     return $score;
   }
 
   public function getIndex() {
@@ -37,9 +34,14 @@ class PosttestController extends ITIMController{
 
       $count = DB::table('wip8_passes')->join('users',function($join){
         $join->on('wip8_passes.wip_id','=','users.wip_id');
-      })->where('wip8_passes.wip_id',$wip_id)
+      })->join('wip8_checkins',function($join){
+        $join->on('wip8_passes.wip_id','=','wip8_checkins.wip_id');
+      })->join('wip8_flavors',function($join){
+        $join->on('wip8_flavors.flavor_id','=','wip8_checkins.group');
+      })
+      ->where('wip8_passes.wip_id',$wip_id)
       ->get(array('wip8_passes.wip_id','wip8_passes.nickname','users.avatar'
-                  ,'wip8_passes.nickname','wip8_passes.name_th','wip8_passes.surname_th'));
+                  ,'wip8_passes.nickname','wip8_passes.name_th','wip8_passes.surname_th','wip8_flavors.flavor_th'));
       // foreach ($count as $a) {
       //   echo $a->wip_id."\n";
       // }
@@ -97,9 +99,14 @@ class PosttestController extends ITIMController{
 
     $count = DB::table('wip8_passes')->join('users',function($join){
       $join->on('wip8_passes.wip_id','=','users.wip_id');
-    })->where('wip8_passes.wip_id',$wip_id)
+    })->join('wip8_checkins',function($join){
+      $join->on('wip8_passes.wip_id','=','wip8_checkins.wip_id');
+    })->join('wip8_flavors',function($join){
+      $join->on('wip8_flavors.flavor_id','=','wip8_checkins.group');
+    })
+    ->where('wip8_passes.wip_id',$wip_id)
     ->get(array('wip8_passes.wip_id','wip8_passes.nickname','users.avatar'
-                ,'wip8_passes.nickname','wip8_passes.name_th','wip8_passes.surname_th'));
+                ,'wip8_passes.nickname','wip8_passes.name_th','wip8_passes.surname_th','wip8_flavors.flavor_th'));
     // foreach ($count as $a) {
     //   echo $a->wip_id."\n";
     // }
